@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 
-
-
 ReactDOM.render(
     <h1>Test test</h1>,
   document.getElementById('content')

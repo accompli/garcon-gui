@@ -7,18 +7,140 @@ and open the template in the editor.
     Created on : Oct 27, 2015, 10:24:38 AM
     Author     : jinhua
 */
-
-#header{
-    background: #ffffff;
-    height: 50px;
-    width:100%;
-    position:fixed;
-    top:0px;
-    left: 0px;
+html, body{
+    height: 100%;
+    background-color: #f7f7f8;
+    color: #767e8a;
 }
 
+.mdl-card__title-text{
+    font-size: 36px;
+}
+
+a{
+    color: #24c58f;
+    font-size: 16px;
+}
+
+/*HEADER*/
+.mdl-layout__header-row{
+    padding: 0 0 0 0;
+}
 #garconlogo{
-    width: 10%;
-    padding-left: 10px;
+    width: 15%;
+    margin-left: 15px;
+
 }
 
+.header{
+    background-color: #FFFFFF;
+}
+
+
+.login_button{
+    background-color: #fff;
+    border-left:#EBEBEB solid 1px;
+}
+
+.login_button a{
+    color: #767e8a;
+    display: block; 
+    /*border-left: solid 2px;*/
+    padding: 20px;
+    text-decoration: none;
+    font-family: Lato;
+}
+
+.icon{
+}
+
+.icon-login-1{
+    fill: #FF6699
+}
+
+#login_txt{
+    padding-left: 5px;
+}
+
+/*BACKGROUND*/
+
+#deployment_txt{
+    width: 200px;
+    color: white;
+    font-size: 26px;
+    z-index: 2;
+    position: absolute;
+    margin-top: 580px;
+    margin-left: 30px;
+    font-family: Proxima Nova;
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+
+/*#bot{
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f7f8;
+    margin: 0px;
+    position: absolute;
+}*/
+
+#top { 
+    width: 0; 
+    height: 0; 
+    border-top: 800px solid #24c58f; 
+    border-right: 1300px solid transparent;
+    z-index: 1;
+    
+}
+
+/*LOGIN*/
+
+.demo-card-square.mdl-card {
+    width: 400px;
+
+}
+.demo-card-square{
+    color: #24c58f;
+}
+
+ .mdl-card__title {
+     
+ }
+ 
+ #head{
+     font-size: 36px;
+     margin: 20px 0 30px 0;
+     color: #24c58f;
+     font-family: Proxima Nova;
+ }
+ 
+ .mdl-textfield__label{
+     font-size: 16px;
+     color: #999;
+ }
+ 
+ .mdl-textfield__input{
+     width: 350px;
+ }
+ 
+ .mdl-checkbox__label{
+     font-size: 16px;
+ }
+ 
+ .login_block{
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ 
+ .forget_pwd{
+     padding: 35px 0 10px 0;
+ }
+ .mdl-button{
+     background-color: #24c58f;
+     color: #fff;
+     margin-left: 90px;
+     width: 100px;
+ }
