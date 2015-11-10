@@ -26,16 +26,20 @@ a{
 .mdl-layout__header-row{
     padding: 0 0 0 0;
 }
-#garconlogo{
-    width: 15%;
-    margin-left: 15px;
 
+#garconlogo{
+    margin: 20px 0 0 20px;
 }
 
 .header{
     background-color: #FFFFFF;
+    height: 90px;
+
 }
 
+.mdl-layout__header-row{
+    height: 90px;
+}
 
 .login_button{
     background-color: #fff;
@@ -44,22 +48,23 @@ a{
 
 .login_button a{
     color: #767e8a;
-    display: block; 
+    display: table-cell;
+    vertical-align: middle;
     /*border-left: solid 2px;*/
-    padding: 20px;
     text-decoration: none;
     font-family: Lato;
+    height: 90px;
+    
 }
 
-.icon{
-}
-
-.icon-login-1{
-    fill: #FF6699
+#icon_login{
+    padding: 0 35px 0 35px;
+    fill: #C6C9C9;
+    
 }
 
 #login_txt{
-    padding-left: 5px;
+    padding-right: 35px;
 }
 
 /*BACKGROUND*/
@@ -70,9 +75,10 @@ a{
     font-size: 26px;
     z-index: 2;
     position: absolute;
-    margin-top: 580px;
+    margin-top: 700px;
     margin-left: 30px;
     font-family: Proxima Nova;
+    font-weight: bold;
     letter-spacing: 3px;
     line-height: 30px;
 }
@@ -88,8 +94,8 @@ a{
 #top { 
     width: 0; 
     height: 0; 
-    border-top: 800px solid #24c58f; 
-    border-right: 1300px solid transparent;
+    border-top: 1000px solid #24c58f; 
+    border-right: 2000px solid transparent;
     z-index: 1;
     
 }
