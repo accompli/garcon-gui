@@ -112,15 +112,21 @@ a{
      left: 50%;
      transform: translate(-50%, 0%);
      padding-top: 50px;
+     width: 560px;
  }
  
 .demo-card-square.mdl-card {
     width: 560px;
+}
 
-}
-.demo-card-square{
-    color: #24c58f;
-}
+
+ .mdl-card__supporting-text{
+
+ }
+
+ .mdl-cardd{
+     padding:40px;
+ }
 
  .mdl-card__title {
      
@@ -128,48 +134,59 @@ a{
  
  #head{
      font-size: 36px;
-     margin: 20px 0 30px 0;
+     margin-bottom: 30px;
      color: #24c58f;
      font-family: Proxima Nova;
-     font-weight: bold;
+     font-weight: semi-bold;
  }
  
  .mdl-textfield{
-     
+     width: 100%;
  }
  
  .mdl-textfield__label{
      font-size: 16px;
      color: #999;
-     width: 410px;
      font-family: Lato;
+     width: 100%;
+     white-space: normal;
  }
  
  .mdl-textfield__input{
-     width: 410px;
- }
- 
- .mdl-checkbox__label{
-     font-size: 16px;
+     padding-bottom: 10px;
  }
  
  .form_icon{
-     margin-left: 300px;
+     float: right;
+     fill: #C6C9C9;
  }
  
+ .mdl-checkbox__label{
+    font-size: 16px;
+    color: #999;
+    font-family: Lato;
+ }
  
  .forget_pwd{
-     padding: 35px 0 10px 0;
-     
+    padding: 40px 0 10px 0;
+    font-family: Lato;
  }
  
- .mdl-button{
+ .forget_pwd span{
+
+ }
+ 
+ .mdl-button {
      background-color: #24c58f;
      color: #fff;
-     margin-left: 135px;
-     width: 100px;
+     width: 120px;
+     height: 40px;
      font-family: Lato;
      font-size: 18px;
+ }
+ 
+ .login{
+     float: right;
  }
  
  .mdl-card__actions.mdl-card--border{
