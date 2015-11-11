@@ -27,14 +27,19 @@ a{
     padding: 0 0 0 0;
 }
 
-#garconlogo{
-    margin: 20px 0 0 20px;
+.garconlogo{
+    background: url('../img/logo.png') no-repeat;
+    background-size: 135px;
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    margin: 0 0 0 20px;
 }
 
 .header{
     background-color: #FFFFFF;
     height: 90px;
-
+    position: relative;
 }
 
 .mdl-layout__header-row{
@@ -70,26 +75,26 @@ a{
 /*BACKGROUND*/
 
 #deployment_txt{
-    width: 200px;
+    width: 250px;
     color: white;
-    font-size: 26px;
+    font-size: 32px;
     z-index: 2;
     position: absolute;
-    margin-top: 700px;
+    margin-top: 750px;
     margin-left: 30px;
     font-family: Proxima Nova;
-    font-weight: bold;
+    font-weight: semi-bold;
     letter-spacing: 3px;
     line-height: 30px;
 }
 
-/*#bot{
+#bot{
     width: 100%;
     overflow: hidden;
     background-color: #f7f7f8;
     margin: 0px;
     position: absolute;
-}*/
+}
 
 #top { 
     width: 0; 
@@ -100,10 +105,17 @@ a{
     
 }
 
-/*LOGIN*/
 
+/*LOGIN*/
+ .login_block{
+     position: absolute;
+     left: 50%;
+     transform: translate(-50%, 0%);
+     padding-top: 50px;
+ }
+ 
 .demo-card-square.mdl-card {
-    width: 470px;
+    width: 560px;
 
 }
 .demo-card-square{
@@ -145,12 +157,6 @@ a{
      margin-left: 300px;
  }
  
- .login_block{
-     position: fixed;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
- }
  
  .forget_pwd{
      padding: 35px 0 10px 0;
