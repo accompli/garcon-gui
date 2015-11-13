@@ -117,6 +117,7 @@ a{
  
 .demo-card-square.mdl-card {
     width: 560px;
+         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -168,59 +169,75 @@ a{
  }
  
  .forget_pwd{
-    padding: 40px 0 10px 0;
+    padding: 50px 0 30px 0;
     font-family: Lato;
  }
  
  .forget_pwd span{
-
+     transform: translateY(-25%);
  }
  
  .mdl-button {
      background-color: #24c58f;
      color: #fff;
-     width: 120px;
-     height: 40px;
+     width: 130px;
+     height: 50px;
      font-family: Lato;
      font-size: 18px;
+     border-radius: 4px;
+     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
  }
+ 
+ .mdl-button:hover{
+     background-color: #0BAC76;
+ }
+ 
  
  .login{
      float: right;
+     transform: translateY(-25%);
  }
  
- .mdl-card__actions.mdl-card--border{
-     position: relative;
-     margin-top: 15px;
-     z-index: 1;
-     padding-top: 30px;
-     margin-left: auto;
-     margin-right: auto;
-     width: auto;
+ 
+ hr{
+    width: 200%;
+    position: relative;
+    margin-left: -50%;
+    background-color: #fff;
+     
  }
 
  .circle{
     width:30px;
     height:30px;
     border-radius:250px;
-    border: solid #EBEBEB 1px;
+    border: solid #EFECEC 1px;
+    font-family: Lato;
     font-size:12px;
-    color:#999;
+    color:#ccc;
     line-height:30px;
     text-align:center;
     background-color: #fff;
     position: absolute;
     z-index: 2;
-    left: 50%;
-    right: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
+.extern_login{
+    padding-top: 20px;
+ }
+ 
 .ext_login_button{
     background-color: #fff ;
-    font-size: 14px;
-    font-family: Roboto Medium;
-    margin: 0 10px 20px 10px;
-    width: 200px;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: bold;
+    padding: 10px 50px 10px 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border:none;
+    border-radius: 3px;
 }
 
 .icon-ext{
@@ -229,19 +246,16 @@ a{
     height: 20px;
 }
 
-.text_button{
-    margin: 10px;
-}
-
 .github{
     color: #3d76c3;
     fill: #3d76c3;
+    float: left;
     
 }
-
 .google{
     color: #dc4e41;
     fill: #dc4e41;
+    float: right;
 }
 
 
