@@ -13,11 +13,10 @@ and open the template in the editor.
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.grey-green.min.css" /> 
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-        
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +46,6 @@ and open the template in the editor.
 
             <!--BACKGROUND-->
             <main class="mdl-layout__content">
-                <div class="page-content">
                     <div id="bot">
                         <div id="deployment_txt">
                                 DEPLOYMENT MADE EASY
@@ -63,8 +61,8 @@ and open the template in the editor.
                                 <div id="head">Login</div>
                                 
                                 
-                                    <div class="mdl-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="username" />
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="username">
                                         <label class="mdl-textfield__label" for="username">
                                             Username
                                             <span class="form_icon">
@@ -76,8 +74,8 @@ and open the template in the editor.
                                       </label>
                                     </div>
                                     
-                                    <div class="mdl-textfield">
-                                        <input class="mdl-textfield__input" type="password" id="password" />
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="password" id="password">
                                         <label class="mdl-textfield__label" for="password">
                                             Password
                                             <span class="form_icon">
@@ -89,7 +87,7 @@ and open the template in the editor.
                                         </label>
                                     </div>
                                 
-                                <label class="mdl-checkbox" for="checkbox-signin">
+                                <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-signin">
                                     <input type="checkbox" id="checkbox-signin" class="mdl-checkbox__input"/>
                                     <span class="mdl-checkbox__label">Keep me signed in</span>
                                 </label>
@@ -121,11 +119,9 @@ and open the template in the editor.
                             </div>
                         </div>        
                     </div>
-                </div>
-
             </main>
         </div>
-        
+
     <script src="../lib/login.js"></script>
     </body>
 </html>
