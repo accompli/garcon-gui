@@ -48,20 +48,34 @@ a{
     height: 90px;
 }
 
-.login_button{
-    background-color: #fff;
-    border-left:#EBEBEB solid 1px;
-}
-
-.login_button a{
+.navigation a{
     color: #767e8a;
     display: table-cell;
     vertical-align: middle;
-    /*border-left: solid 2px;*/
     text-decoration: none;
     font-family: Lato;
     height: 90px;
-    
+    font-size: 16px;
+}
+
+.menu{
+    padding-right: 50px;
+}
+
+.menu a{
+   padding: 0 10px 0 10px;
+   text-transform: uppercase;
+   border-bottom: 3px solid #fff;
+}
+
+.menu a:hover{
+   color: #24c58f;
+   border-bottom: 3px solid #E5E5E5;
+}
+
+.login_button{
+    background-color: #fff;
+    border-left:#EBEBEB solid 1px;
 }
 
 #icon_login{
@@ -73,6 +87,7 @@ a{
 #login_txt{
     padding-right: 35px;
 }
+
 
 /*BACKGROUND*/
 
@@ -90,7 +105,7 @@ a{
     margin-top: 750px;
     margin-left: 30px;
     font-family: Proxima Nova;
-    font-weight: semi-bold;
+    font-weight: 500;
     letter-spacing: 3px;
     line-height: 30px;
 }
@@ -109,7 +124,6 @@ a{
     border-top: 1000px solid #24c58f; 
     border-right: 2000px solid transparent;
     z-index: 1;
-    
 }
 
 
@@ -266,7 +280,6 @@ a{
 .github{
     color: #3d76c3;
     fill: #3d76c3;
-    float: left;
     
 }
 .google{
