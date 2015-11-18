@@ -23,11 +23,11 @@
     <body>
         
 
-     <!-- HEADER -->
+        <!-- HEADER -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <div class ="header">
             <div class="mdl-layout__header-row">
-<!--                <img src="../img/logo.png" id="garconlogo" alt="garcon-logo">-->
+                <!--<img src="../img/logo.png" id="garconlogo" alt="garcon-logo">-->
                     <div class="garconlogo"></div>
                     <!-- Add spacer, to align navigation to the right --> 
                     <div class="mdl-layout-spacer"></div>
@@ -46,15 +46,13 @@
                                 </span>
                             </a>
                     </div>
-                            
                     
-                            <ul class="mdl-menu mdl-js-menu navigation tabmenu_item" for="settings">
-                                <li class="mdl-menu__item"><a href="">Users</a></li>
-                                <li class="mdl-menu__item"><a href="">System</a></li>
-                            </ul>
-                            
-                 
-                    
+                    <ul class="mdl-menu mdl-js-menu navigation tabmenu_item" for="settings">
+                        <li class="mdl-menu__item"><a href="">Users</a></li>
+                        <li class="mdl-menu__item"><a href="">System</a></li>
+                    </ul>
+
+                    <!--LOGIN BUTTON-->
                     <div class="navigation login_button">
                         <a href="">  
                         <span><svg id="icon_login" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -68,14 +66,17 @@
             <!--BACKGROUND-->
             <main class="mdl-layout__content">
                     <div id="bot">
-                        
-                        
                     </div>
 
-                    <!--LOGIN-->
-                    <div class="login_block">
-                        
-                        
+                    <!--GREEN BLOCK-->
+                    <div class="block green">
+                        <div class="block_text">
+                            Users
+                        </div>
+                    </div>
+                    
+                    <div class="block white">
+                        <div class=""
                     </div>
             </main>
         </div>

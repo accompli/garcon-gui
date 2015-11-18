@@ -74,6 +74,10 @@ a{
    border-bottom: 3px solid #E5E5E5;
 }
 
+.mdl-menu__outline {
+    border-radius: 0;
+}
+
 .tabmenu_item a{
     height: 0px;
 }
@@ -293,4 +297,31 @@ a{
     color: #dc4e41;
     fill: #dc4e41;
     float: right;
+}
+
+/*GREEN BLOCK*/
+.block_text{
+    font-family: Proxima nova;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.block{
+    width: 100%;
+    position: relative;
+}
+
+.green{
+    height: 200px;
+    background-color: #24c58f;
+}
+
+.white{
+    height: 50px;
+    background-color: #fff;
 }
