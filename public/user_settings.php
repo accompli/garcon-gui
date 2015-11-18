@@ -36,8 +36,24 @@
                     <div class="navigation menu">
                             <a href="">Dashboard</a>
                             <a href="">Organisations</a>
-                            <a href="">Settings</a>
+                            
+                            <a id="settings">Settings  
+                                <span>
+                                    <svg id="arrow_dropdown" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10l5 5 5-5z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                </span>
+                            </a>
                     </div>
+                            
+                    
+                            <ul class="mdl-menu mdl-js-menu navigation tabmenu_item" for="settings">
+                                <li class="mdl-menu__item"><a href="">Users</a></li>
+                                <li class="mdl-menu__item"><a href="">System</a></li>
+                            </ul>
+                            
+                 
                     
                     <div class="navigation login_button">
                         <a href="">  
