@@ -44,7 +44,7 @@ li {
 }
 
 .garconlogo {
-    max-width: 130px;
+    max-width: 150px;
     margin: 0 0 0 20px;
     vertical-align: middle;
 }
@@ -158,7 +158,7 @@ li {
 
 
 /*LOGIN*/
- .login_block {
+ #login_block {
      position: absolute;
      left: 50%;
      transform: translate(-50%, 0%);
@@ -169,7 +169,7 @@ li {
  
  @media (min-width: 320px) {
      
-     .login_block {
+     #login_block {
          padding-top: 150px;
      }
 }
@@ -184,15 +184,16 @@ li {
      
  }
 
- .mdl-cardd {
+ .mdl-card {
      padding:40px;
+     width: 100%;
  }
 
  .mdl-card__title {
      
  }
  
- #head {
+ .head {
      font-size: 36px;
      margin-bottom: 30px;
      color: #24c58f;
