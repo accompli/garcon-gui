@@ -1,0 +1,148 @@
+                        <Link to="/newuser">
+                        <button className = "mdl-button mdl-js-button add_user"
+                                type=""
+                                name="submit">
+                                    <svg className="add_icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                    </svg>
+                                    New User
+                        </button>
+                        </Link>
+
+
+$.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/users",
+            type: 'POST',
+            data: newusername,
+            success:
+                    function(data){ 
+                        if (data.status === "success"){
+                            console.log(data.status);
+                        }
+                        else if (data.status === "fail"){
+                            console.log(data);
+                        }
+                    }.bind(this),
+                    
+            error:
+                    function(xhr, status, err){
+                        console.error(this.props.url, status, err.toString());
+                    }.bind(this)
+        });
+
+
+
+
+
+
+        return (
+                 <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                        <thead>               
+                            <tr>
+                                <th className="mdl-data-table__cell--non-numeric">Photo</th>
+                                <th>Username</th>
+                                <th>E-mail</th>
+                                <th>Projects</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="mdl-data-table__cell--non-numeric">foto1</td>
+                                <td>Rik Speel</td>
+                                <td>rikspeel@connectholland.nl</td>
+                                <td>4</td>
+                                <td>edit
+                                </td>
+                            </tr>
+                    
+                            <tr>
+                                <td className="mdl-data-table__cell--non-numeric">foto2</td>
+                                <td>Giso Stallenberg</td>
+                                <td>giso@connectholland.nl</td>
+                                <td>4</td>
+                                <td>edit</td>
+                            </tr>
+                    
+                            <tr>
+                                <td className="mdl-data-table__cell--non-numeric">foto3</td>
+                                <td>Paul Niehuis</td>
+                                <td>paulniehuis@connectholland.nl</td>
+                                <td>4</td>
+                                <td>edit</td>
+                            </tr>
+   
+                    
+                        </tbody>
+                    </table>
+                );
+
+
+
+
+
+                        for (var i=0; i < this.props.length; i++){
+                            var propsObject = this.props[i];
+                            console.log("username:" + propsObject.username)
+                        }
+
+
+<span dangerouslySetInnerHTML={this.rawMarkup()} />
+
+
+
+
+
+ var usersNodes = this.props.data.map(function(user, index) {
+                                            
+            return (
+                    <Users name={user.username} key={index}
+                        email = {user.email}
+                        project = {user.projects} 
+                        photo = {user.photo} >
+                    </Users>
+                    );
+        });
+        
+        
+        
+        
+                var propsData = this.props.data;
+        
+        console.log(propsData);
+        
+        for(var i=0; i<propsData.length; i++){
+            var userObject = propsData[i];
+            console.log(userObject)
+                                  
+            return (
+                    <Users name={userObject.username}
+                        email = {userObject.email}
+                        project = {userObject.projects} 
+                        photo = {userObject.photo} >
+                    </Users>
+                    );
+        }
+        
+        
+        
+ var userData = this.props.data.map(function(user, index) {
+                                            
+            return (
+                    <Users name={user.username} key={index}
+                        email = {user.email}
+                        project = {user.projects} 
+                        photo = {user.photo} >
+                    </Users>
+                    );
+        });
+        
+        return (
+                <div className="usersList">
+                    {usersNodes}
+                </div>
+                );
+
+                                <{userObject.username}
+                                {userObject.email}
+                                {userObject.projects}
