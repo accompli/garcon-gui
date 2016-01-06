@@ -9,11 +9,13 @@ import { createHistory, useBasename } from 'history'
 
 import Forgetpass from './components/forgetpass.js'
 import Login from './components/login.js'
-import Dashboard from './components/dashboard.js'
-import Usersettings from './components/usersettings.js'
+import Dashboard from './components/Dashboard/dashboard.js'
+import Usersettings from './components/Usersetting/usersettings.js'
 import Newuser from './components/newuser.js'
-import Organisations from './components/organisations.js'
+import Organisations from './components/Organisations/organisations.js'
 import Header from './components/header.js'
+import AccountSetting from './components/Accountsetting/accountsetting.js'
+
 
 const history = useBasename(createHistory)({
   basename: '/breadcrumbs'
@@ -101,7 +103,13 @@ ReactDOM.render(
             <Route name="Usersettings" path={Usersettings.path} component={Usersettings} />
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
             <Route name="Organisations" path={Organisations.path} component={Organisations} />
+            <Route name="Account setting" path={AccountSetting.path} component={AccountSetting} />
+            
             </Route>
         </Router>,
         document.getElementById("content")
                 );
+        
+        
+        
+       

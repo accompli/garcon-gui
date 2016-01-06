@@ -4,33 +4,22 @@
  * and open the template in the editor.
  */
 
-
-
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link, History } from 'react-router'
 
-var Organisations = React.createClass({
+import GreenBox from '../greenbox.js'
+
+var Dashboard = React.createClass({
+    
     render : function(){
         return (
                 <div className="dashboard">
-                <GreenBox />
-                <BreadcrumbsBox />
+                    <GreenBox title={Dashboard.title}/>
+                    <BreadcrumbsBox />
                 </div>
                 );
-    }
-});
-
-var GreenBox = React.createClass({
-    render : function(){
-        return (
-                <div className="block green">
-                    <div className="block_text">
-                        Organisations
-                    </div>
-                </div>
-                );
-    }
+}
 });
 
 var BreadcrumbsBox = React.createClass({
@@ -44,17 +33,18 @@ var BreadcrumbsBox = React.createClass({
 });
 
 var BreadcrumbsList = React.createClass({
+    
     render : function () {
         return (
                 <div className ="breadcrumbs">
-                 
+     
                 </div>
-                );
-    }
+                    );
+        }
 });
 
-Organisations.title = 'Organisations'
-Organisations.path = '/organisations'
+Dashboard.title = 'Dashboard'
+Dashboard.path = '/dashboard'
 
 
-export default Organisations;
+export default Dashboard;

@@ -26,6 +26,10 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _greenboxJs = require('../greenbox.js');
+
+var _greenboxJs2 = _interopRequireDefault(_greenboxJs);
+
 var Usersettings = _react2['default'].createClass({
     displayName: 'Usersettings',
 
@@ -33,53 +37,9 @@ var Usersettings = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { className: 'usersettings' },
-            _react2['default'].createElement(GreenBox, null),
+            _react2['default'].createElement(_greenboxJs2['default'], { title: Usersettings.title }),
             _react2['default'].createElement(BreadcrumbsBox, null),
             _react2['default'].createElement(UsersBox, null)
-        );
-    }
-});
-
-var GreenBox = _react2['default'].createClass({
-    displayName: 'GreenBox',
-
-    render: function render() {
-        return _react2['default'].createElement(
-            'div',
-            { className: 'block green' },
-            _react2['default'].createElement(
-                'div',
-                { className: 'block_text' },
-                'Users',
-                _react2['default'].createElement(
-                    'button',
-                    { id: 'edit-options' },
-                    _react2['default'].createElement(
-                        'i',
-                        { className: 'material-icons' },
-                        _react2['default'].createElement(
-                            'svg',
-                            { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
-                            _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
-                            _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })
-                        )
-                    )
-                ),
-                _react2['default'].createElement(
-                    'ul',
-                    { className: 'mdl-menu mdl-js-menu mdl-js-ripple-effect edit-btn', htmlFor: 'edit-options' },
-                    _react2['default'].createElement(
-                        'li',
-                        { disabled: true, className: 'mdl-menu__item' },
-                        'Disabled Action'
-                    ),
-                    _react2['default'].createElement(
-                        'li',
-                        { className: 'mdl-menu__item' },
-                        'Yet Another Action'
-                    )
-                )
-            )
         );
     }
 });
@@ -329,7 +289,7 @@ var Users = _react2['default'].createClass({
     }
 });
 
-Usersettings.title = 'User settings';
+Usersettings.title = 'Users';
 Usersettings.path = '/usersettings';
 
 exports['default'] = Usersettings;

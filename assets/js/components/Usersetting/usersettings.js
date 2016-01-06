@@ -7,29 +7,19 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
-import $ from 'jquery'
 import { createHistory, useBasename } from 'history'
+import $ from 'jquery'
+
+import GreenBox from '../greenbox.js'
 
 
 var Usersettings = React.createClass({
     render: function() {
         return (
                 <div className ="usersettings">
-                        <GreenBox />
+                        <GreenBox title={Usersettings.title} />
                         <BreadcrumbsBox />
                         <UsersBox />
-                </div>
-                );
-    }
-});
-
-var GreenBox = React.createClass({
-    render : function(){
-        return (
-                <div className="block green">
-                    <div className="block_text">
-                        Users
-                    </div>
                 </div>
                 );
     }
@@ -191,6 +181,7 @@ var Users = React.createClass({
     render: function(){
         return (
                 <div>
+                
                 <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                 <thead>               
                             <tr>
@@ -211,41 +202,18 @@ var Users = React.createClass({
                                 <td> 
                                 
 
-
                                 </td>
                             </tr>
 
                         </tbody>     
                     </table>
-                    
-                    
-                    
-                                                        <button id="edit-options">
-                                     <i className="material-icons">
-                                     
-                                        <svg className="edit_icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                                        </svg>
-                                        
-                                    </i>
-                                    </button>
-
-                                    <ul className="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
-                                        htmlFor="edit-options">
-                                      <li className="mdl-menu__item">Some Action</li>
-                                      <li className="mdl-menu__item">Another Action</li>
-                                      <li disabled className="mdl-menu__item">Disabled Action</li>
-                                      <li className="mdl-menu__item">Yet Another Action</li>
-                                    </ul>
-                           
-                    </div>
+            </div>
 );
     }
 })
         
         
-Usersettings.title = 'User settings'
+Usersettings.title = 'Users'
 Usersettings.path = '/usersettings'
 
 export default Usersettings;

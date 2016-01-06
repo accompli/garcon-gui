@@ -28,25 +28,29 @@ var _componentsLoginJs = require('./components/login.js');
 
 var _componentsLoginJs2 = _interopRequireDefault(_componentsLoginJs);
 
-var _componentsDashboardJs = require('./components/dashboard.js');
+var _componentsDashboardDashboardJs = require('./components/Dashboard/dashboard.js');
 
-var _componentsDashboardJs2 = _interopRequireDefault(_componentsDashboardJs);
+var _componentsDashboardDashboardJs2 = _interopRequireDefault(_componentsDashboardDashboardJs);
 
-var _componentsUsersettingsJs = require('./components/usersettings.js');
+var _componentsUsersettingUsersettingsJs = require('./components/Usersetting/usersettings.js');
 
-var _componentsUsersettingsJs2 = _interopRequireDefault(_componentsUsersettingsJs);
+var _componentsUsersettingUsersettingsJs2 = _interopRequireDefault(_componentsUsersettingUsersettingsJs);
 
 var _componentsNewuserJs = require('./components/newuser.js');
 
 var _componentsNewuserJs2 = _interopRequireDefault(_componentsNewuserJs);
 
-var _componentsOrganisationsJs = require('./components/organisations.js');
+var _componentsOrganisationsOrganisationsJs = require('./components/Organisations/organisations.js');
 
-var _componentsOrganisationsJs2 = _interopRequireDefault(_componentsOrganisationsJs);
+var _componentsOrganisationsOrganisationsJs2 = _interopRequireDefault(_componentsOrganisationsOrganisationsJs);
 
 var _componentsHeaderJs = require('./components/header.js');
 
 var _componentsHeaderJs2 = _interopRequireDefault(_componentsHeaderJs);
+
+var _componentsAccountsettingAccountsettingJs = require('./components/Accountsetting/accountsetting.js');
+
+var _componentsAccountsettingAccountsettingJs2 = _interopRequireDefault(_componentsAccountsettingAccountsettingJs);
 
 var history = (0, _history.useBasename)(_history.createHistory)({
     basename: '/breadcrumbs'
@@ -139,9 +143,10 @@ _reactDom2['default'].render(_react2['default'].createElement(
         { path: App.path, name: 'App', component: App },
         _react2['default'].createElement(_reactRouter.IndexRoute, { name: 'Login', component: _componentsLoginJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Forgetpass', path: _componentsForgetpassJs2['default'].path, component: _componentsForgetpassJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Dashboard', path: _componentsDashboardJs2['default'].path, component: _componentsDashboardJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingsJs2['default'].path, component: _componentsUsersettingsJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Dashboard', path: _componentsDashboardDashboardJs2['default'].path, component: _componentsDashboardDashboardJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingUsersettingsJs2['default'].path, component: _componentsUsersettingUsersettingsJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Organisations', path: _componentsOrganisationsJs2['default'].path, component: _componentsOrganisationsJs2['default'] })
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Organisations', path: _componentsOrganisationsOrganisationsJs2['default'].path, component: _componentsOrganisationsOrganisationsJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] })
     )
 ), document.getElementById("content"));

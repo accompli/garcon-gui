@@ -161,7 +161,7 @@ var Header = _react2['default'].createClass({
                         { className: 'mdl-menu__item' },
                         _react2['default'].createElement(
                             _reactRouter.Link,
-                            { to: '/editprofile' },
+                            { to: '/accountsetting' },
                             'Edit profile'
                         )
                     ),

@@ -105,7 +105,7 @@ var Header = React.createClass({
         
                 <ul className="mdl-menu mdl-js-menu navigation tabmenu_item" htmlFor="btn-login">
                     <li className="mdl-menu__item">
-                        <Link to="/editprofile">Edit profile</Link>
+                        <Link to="/accountsetting">Edit profile</Link>
                     </li>
 
                     <li className="mdl-menu__item">

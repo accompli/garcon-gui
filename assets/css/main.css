@@ -431,9 +431,12 @@ input::-moz-placeholder {
 
 .add_user {
     border-radius: 50%;
-    height: 60px;
+    height: 56px;
     float: right;
     margin-right: -150px;
+    width: 56px;
+    min-width: 56px;
+    box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
 }
 
 .filterbox {
@@ -525,10 +528,12 @@ input::-moz-placeholder {
 .mdl-data-table td {
     text-align: left;
     color: #767e8A;
+    
 }
 .mdl-data-table th {
     text-align: left;
     color: #999;
+    
 }
 
 #usericons {
@@ -544,4 +549,8 @@ input::-moz-placeholder {
     height:40px;
     border-radius:50px;
     border: solid #fff;
+}
+
+.edit-btn {
+    
 }

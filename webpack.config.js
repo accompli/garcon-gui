@@ -3,7 +3,7 @@ require('es6-promise').polyfill();
 
 module.exports = { 
     entry:  [
-//        'webpack/hot/only-dev-server',
+        'webpack/hot/only-dev-server',
        "./assets/jsx-output/main.js"
     ],
     
