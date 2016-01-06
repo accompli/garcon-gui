@@ -7,13 +7,15 @@
 import React from 'react'
 
 import MyProfileBox from './myprofile.js'
-import GreenBox from '../greenbox.js'
+import GreenBox from '../Layout/greenbox.js'
+import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 
 var AccountSetting = React.createClass({
     render: function(){
         return (
                 <div className="myprofilebox">
                     <GreenBox title={AccountSetting.title}/>
+                    <BreadcrumbsBox />
                     <MyProfileBox />
                 </div>
                 );

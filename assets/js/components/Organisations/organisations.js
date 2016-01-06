@@ -10,7 +10,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link, History } from 'react-router'
 
-import GreenBox from '../greenbox.js'
+import GreenBox from '../Layout/greenbox.js'
+import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 
 var Organisations = React.createClass({
     render : function(){
@@ -18,26 +19,6 @@ var Organisations = React.createClass({
                 <div className="dashboard">
                     <GreenBox title={Organisations.title}/>
                     <BreadcrumbsBox />
-                </div>
-                );
-    }
-});
-
-var BreadcrumbsBox = React.createClass({
-    render : function() {
-        return (
-                <div className="block white">
-                    <BreadcrumbsList />
-                </div>
-                );
-    }
-});
-
-var BreadcrumbsList = React.createClass({
-    render : function () {
-        return (
-                <div className ="breadcrumbs">
-                 
                 </div>
                 );
     }

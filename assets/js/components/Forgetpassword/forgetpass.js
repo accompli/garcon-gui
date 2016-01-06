@@ -8,22 +8,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
-var Background = React.createClass({
-    render : function(){
-        return (
-                    <div id="bot">
-                        <div className="green-white-background">
-                            <div className="deployment_txt">
-                                Deployment made easy
-                            </div>
-
-                            <div className="top">
-                            </div>
-                        </div>
-                    </div>
-                );
-    }
-});
+import Background from '../Layout/background-deployment-text.js'
 
 var Forgetpass = React.createClass({
     getInitialState: function(){

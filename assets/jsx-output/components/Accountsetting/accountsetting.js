@@ -20,9 +20,13 @@ var _myprofileJs = require('./myprofile.js');
 
 var _myprofileJs2 = _interopRequireDefault(_myprofileJs);
 
-var _greenboxJs = require('../greenbox.js');
+var _LayoutGreenboxJs = require('../Layout/greenbox.js');
 
-var _greenboxJs2 = _interopRequireDefault(_greenboxJs);
+var _LayoutGreenboxJs2 = _interopRequireDefault(_LayoutGreenboxJs);
+
+var _LayoutBreadcrumbsJs = require('../Layout/breadcrumbs.js');
+
+var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
 var AccountSetting = _react2['default'].createClass({
     displayName: 'AccountSetting',
@@ -31,7 +35,8 @@ var AccountSetting = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { className: 'myprofilebox' },
-            _react2['default'].createElement(_greenboxJs2['default'], { title: AccountSetting.title }),
+            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: AccountSetting.title }),
+            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
             _react2['default'].createElement(_myprofileJs2['default'], null)
         );
     }

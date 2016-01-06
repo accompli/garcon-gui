@@ -8,7 +8,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link, History } from 'react-router'
 
-import GreenBox from '../greenbox.js'
+import GreenBox from '../Layout/greenbox.js'
+import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 
 var Dashboard = React.createClass({
     
@@ -22,26 +23,6 @@ var Dashboard = React.createClass({
 }
 });
 
-var BreadcrumbsBox = React.createClass({
-    render : function() {
-        return (
-                <div className="block white">
-                    <BreadcrumbsList />
-                </div>
-                );
-    }
-});
-
-var BreadcrumbsList = React.createClass({
-    
-    render : function () {
-        return (
-                <div className ="breadcrumbs">
-     
-                </div>
-                    );
-        }
-});
 
 Dashboard.title = 'Dashboard'
 Dashboard.path = '/dashboard'

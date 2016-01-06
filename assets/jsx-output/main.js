@@ -20,13 +20,13 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 var _history = require('history');
 
-var _componentsForgetpassJs = require('./components/forgetpass.js');
+var _componentsForgetpasswordForgetpassJs = require('./components/Forgetpassword/forgetpass.js');
 
-var _componentsForgetpassJs2 = _interopRequireDefault(_componentsForgetpassJs);
+var _componentsForgetpasswordForgetpassJs2 = _interopRequireDefault(_componentsForgetpasswordForgetpassJs);
 
-var _componentsLoginJs = require('./components/login.js');
+var _componentsLoginLoginJs = require('./components/Login/login.js');
 
-var _componentsLoginJs2 = _interopRequireDefault(_componentsLoginJs);
+var _componentsLoginLoginJs2 = _interopRequireDefault(_componentsLoginLoginJs);
 
 var _componentsDashboardDashboardJs = require('./components/Dashboard/dashboard.js');
 
@@ -44,9 +44,9 @@ var _componentsOrganisationsOrganisationsJs = require('./components/Organisation
 
 var _componentsOrganisationsOrganisationsJs2 = _interopRequireDefault(_componentsOrganisationsOrganisationsJs);
 
-var _componentsHeaderJs = require('./components/header.js');
+var _componentsLayoutHeaderJs = require('./components/Layout/header.js');
 
-var _componentsHeaderJs2 = _interopRequireDefault(_componentsHeaderJs);
+var _componentsLayoutHeaderJs2 = _interopRequireDefault(_componentsLayoutHeaderJs);
 
 var _componentsAccountsettingAccountsettingJs = require('./components/Accountsetting/accountsetting.js');
 
@@ -100,7 +100,7 @@ var App = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'div',
                     { className: 'no_login_header' },
-                    _react2['default'].createElement(_componentsHeaderJs2['default'], { status: this.state.status,
+                    _react2['default'].createElement(_componentsLayoutHeaderJs2['default'], { status: this.state.status,
                         photo: this.state.photo })
                 ),
                 _react2['default'].createElement(
@@ -141,8 +141,8 @@ _reactDom2['default'].render(_react2['default'].createElement(
     _react2['default'].createElement(
         _reactRouter.Route,
         { path: App.path, name: 'App', component: App },
-        _react2['default'].createElement(_reactRouter.IndexRoute, { name: 'Login', component: _componentsLoginJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Forgetpass', path: _componentsForgetpassJs2['default'].path, component: _componentsForgetpassJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.IndexRoute, { name: 'Login', component: _componentsLoginLoginJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Forgetpass', path: _componentsForgetpasswordForgetpassJs2['default'].path, component: _componentsForgetpasswordForgetpassJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Dashboard', path: _componentsDashboardDashboardJs2['default'].path, component: _componentsDashboardDashboardJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingUsersettingsJs2['default'].path, component: _componentsUsersettingUsersettingsJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),

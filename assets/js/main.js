@@ -7,13 +7,13 @@ import { Router, Route, Link, IndexRoute, IndexRedirect, History } from 'react-r
 import $ from 'jquery'
 import { createHistory, useBasename } from 'history'
 
-import Forgetpass from './components/forgetpass.js'
-import Login from './components/login.js'
+import Forgetpass from './components/Forgetpassword/forgetpass.js'
+import Login from './components/Login/login.js'
 import Dashboard from './components/Dashboard/dashboard.js'
 import Usersettings from './components/Usersetting/usersettings.js'
 import Newuser from './components/newuser.js'
 import Organisations from './components/Organisations/organisations.js'
-import Header from './components/header.js'
+import Header from './components/Layout/header.js'
 import AccountSetting from './components/Accountsetting/accountsetting.js'
 
 

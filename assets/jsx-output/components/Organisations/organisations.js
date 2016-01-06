@@ -20,9 +20,13 @@ var _reactDom = require('react-dom');
 
 var _reactRouter = require('react-router');
 
-var _greenboxJs = require('../greenbox.js');
+var _LayoutGreenboxJs = require('../Layout/greenbox.js');
 
-var _greenboxJs2 = _interopRequireDefault(_greenboxJs);
+var _LayoutGreenboxJs2 = _interopRequireDefault(_LayoutGreenboxJs);
+
+var _LayoutBreadcrumbsJs = require('../Layout/breadcrumbs.js');
+
+var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
 var Organisations = _react2['default'].createClass({
     displayName: 'Organisations',
@@ -31,29 +35,9 @@ var Organisations = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { className: 'dashboard' },
-            _react2['default'].createElement(_greenboxJs2['default'], { title: Organisations.title }),
-            _react2['default'].createElement(BreadcrumbsBox, null)
+            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Organisations.title }),
+            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null)
         );
-    }
-});
-
-var BreadcrumbsBox = _react2['default'].createClass({
-    displayName: 'BreadcrumbsBox',
-
-    render: function render() {
-        return _react2['default'].createElement(
-            'div',
-            { className: 'block white' },
-            _react2['default'].createElement(BreadcrumbsList, null)
-        );
-    }
-});
-
-var BreadcrumbsList = _react2['default'].createClass({
-    displayName: 'BreadcrumbsList',
-
-    render: function render() {
-        return _react2['default'].createElement('div', { className: 'breadcrumbs' });
     }
 });
 

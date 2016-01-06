@@ -5,48 +5,9 @@
  */
 
 import React from 'react'
-import $ from 'jquery'
-import { render } from 'react-dom'
 import { Router, Route, Link, History, Navigation } from 'react-router'
 
-var Login= React.createClass({ 
-    render : function(){
-        return (
-                <div>
-                <Background />
-                <div className="white_block">
-                    <div className="loginbox">
-                        <LoginBox />
-                    </div>
-                </div>
-                </div>
-                );
-    }
-});
-
-var Background = React.createClass({
-    render : function(){
-        return (
-                    <div id="bot">
-                        <div className="green-white-background">
-                            <div className="deployment_txt">
-                                Deployment made easy
-                            </div>
-
-                            <div className="top">
-                            </div>
-                        </div>
-                    </div>
-                );
-    }
-});
-
-//        var firstName = 'jinhua';
-//        var lastName = 'Than'; 
-//        localStorage.profile = {firstname:firstName, lastname:lastName}
-//        
-//        this.context.history.pushState(null, '/dashboard');
-//        location.reload();
+import ExternLoginBox from './extern-loginbox.js'
 
 var LoginBox = React.createClass({
     
@@ -272,27 +233,4 @@ var LoginForm = React.createClass({
     }
 });
 
-var ExternLoginBox = React.createClass({
-    render: function(){
-        return(
-                <div className="externLoginBox">
-                    <div className="mdl-extern_login">
-                    
-                        <button className="ext_login_button github">
-                            Login with Github
-                        </button>
-                
-                        <button className="ext_login_button google">
-                            Login with Google
-                        </button>
-                    </div>
-                </div>
-                );
-    }
-});
-
-Login.title = 'Login'
-Login.path = '/login'
-
-
-export default Login;
+ export default LoginBox;
