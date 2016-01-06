@@ -32,11 +32,7 @@ var BreadcrumbsList = _react2["default"].createClass({
     displayName: "BreadcrumbsList",
 
     render: function render() {
-        return _react2["default"].createElement(
-            "div",
-            { className: "breadcrumbs" },
-            "bread"
-        );
+        return _react2["default"].createElement("div", { className: "breadcrumbs" });
     }
 });
 

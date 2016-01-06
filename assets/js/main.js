@@ -15,7 +15,7 @@ import Newuser from './components/newuser.js'
 import Organisations from './components/Organisations/organisations.js'
 import Header from './components/Layout/header.js'
 import AccountSetting from './components/Accountsetting/accountsetting.js'
-
+import SystemSetting from './components/Systemsetting/systemsetting.js'
 
 const history = useBasename(createHistory)({
   basename: '/breadcrumbs'
@@ -54,7 +54,7 @@ var App = React.createClass({
 //        },
     
     render : function() {
-            const depth = this.props.routes.length;
+        const depth = this.props.routes.length;
             
     return (
             <div className="app">
@@ -63,8 +63,8 @@ var App = React.createClass({
                     <Header status={this.state.status}
                             photo={this.state.photo}/>
                 </div>
-
-            <ul className="breadcrumbs-list">
+        
+         <ul className="breadcrumbs-list">
                 {this.props.routes.map((item, index) =>
                   <li key={index}>
                     <Link
@@ -77,8 +77,7 @@ var App = React.createClass({
                   </li>
                 )}
               </ul>
-                      
-
+        
                 <main className="mdl-layout__content">
 
                         {React.cloneElement(this.props.children, {onUpdate: this.onUpdate})}
@@ -97,13 +96,14 @@ App.title='Home'
 ReactDOM.render(
         <Router>
             <Route path={App.path} name="App" component={App}>
-            <IndexRoute name="Login" component={Login}/>
+            <IndexRoute name="Dashboard" component={Dashboard}/>
             <Route name="Forgetpass" path={Forgetpass.path} component={Forgetpass}/>
-            <Route name="Dashboard" path={Dashboard.path} component={Dashboard}/>
+            <Route name="Login" path={Login.path} component={Login}/>
             <Route name="Usersettings" path={Usersettings.path} component={Usersettings} />
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
             <Route name="Organisations" path={Organisations.path} component={Organisations} />
             <Route name="Account setting" path={AccountSetting.path} component={AccountSetting} />
+            <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />
             
             </Route>
         </Router>,

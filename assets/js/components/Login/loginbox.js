@@ -30,7 +30,7 @@ var LoginBox = React.createClass({
                             profile.push({firstname: data.firstname, lastname: data.lastname, profilepic: data.profilepicture});              
                             localStorage.profile = JSON.stringify(profile);
                             
-                            this.context.history.pushState(null, '/dashboard');
+                            this.context.history.pushState(null, '/');
                             location.reload();
                         }
                         else if (data.status === "fail"){
@@ -154,9 +154,10 @@ var LoginForm = React.createClass({
         
     },
     
-    destorayLocalstorage : function(){
-        window.localStorage.removeItem('profile');
-    },
+//    Aanvinken van loginblijven functie
+//    destorayLocalstorage : function(){
+//        window.localStorage.removeItem('profile');
+//    },
     
     render: function() {
         return (

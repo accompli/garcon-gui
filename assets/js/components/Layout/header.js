@@ -22,9 +22,9 @@ var Header = React.createClass({
             return (
                 <div className = "mdl-layout__header-row">
                     <div className = "garconlogo">
-                        <a href="login.html">
+                        <Link to='/login'> 
                         <img className="image" src={'assets/img/logo.png'} alt="garcon-logo" />
-                        </a>
+                        </Link>
                     </div>
             
                     <div className = "mdl-layout-spacer">
@@ -33,7 +33,7 @@ var Header = React.createClass({
                            
                      <div className = "navigation login_button">
 
-                            <Link to="">
+                            <Link to="/login">
                             <span>
                                 <svg id="icon_login" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
@@ -56,16 +56,16 @@ var Header = React.createClass({
             return (
             <div className = "mdl-layout__header-row">
                 <div className = "garconlogo">
-                    <a href="login.html">
+                    <Link to='/'>
                     <img className="image" src={'assets/img/logo.png'} alt="garcon-logo" />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className = "mdl-layout-spacer">
                 </div>
 
                 <div className="navigation menu">
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/">Dashboard</Link>
                     <Link to="/organisations">Organisations</Link>
 
                     <a id="settings">Settings
@@ -85,7 +85,7 @@ var Header = React.createClass({
                     </li>
 
                     <li className="mdl-menu__item">
-                        <Link to="/systemsettings">System</Link>
+                        <Link to="/systemsetting">System</Link>
                     </li>
                 </ul>
 

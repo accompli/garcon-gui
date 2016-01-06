@@ -38,8 +38,8 @@ var Header = _react2['default'].createClass({
                     'div',
                     { className: 'garconlogo' },
                     _react2['default'].createElement(
-                        'a',
-                        { href: 'login.html' },
+                        _reactRouter.Link,
+                        { to: '/login' },
                         _react2['default'].createElement('img', { className: 'image', src: 'assets/img/logo.png', alt: 'garcon-logo' })
                     )
                 ),
@@ -49,7 +49,7 @@ var Header = _react2['default'].createClass({
                     { className: 'navigation login_button' },
                     _react2['default'].createElement(
                         _reactRouter.Link,
-                        { to: '' },
+                        { to: '/login' },
                         _react2['default'].createElement(
                             'span',
                             null,
@@ -77,8 +77,8 @@ var Header = _react2['default'].createClass({
                     'div',
                     { className: 'garconlogo' },
                     _react2['default'].createElement(
-                        'a',
-                        { href: 'login.html' },
+                        _reactRouter.Link,
+                        { to: '/' },
                         _react2['default'].createElement('img', { className: 'image', src: 'assets/img/logo.png', alt: 'garcon-logo' })
                     )
                 ),
@@ -88,7 +88,7 @@ var Header = _react2['default'].createClass({
                     { className: 'navigation menu' },
                     _react2['default'].createElement(
                         _reactRouter.Link,
-                        { to: '/dashboard' },
+                        { to: '/' },
                         'Dashboard'
                     ),
                     _react2['default'].createElement(
@@ -129,7 +129,7 @@ var Header = _react2['default'].createClass({
                         { className: 'mdl-menu__item' },
                         _react2['default'].createElement(
                             _reactRouter.Link,
-                            { to: '/systemsettings' },
+                            { to: '/systemsetting' },
                             'System'
                         )
                     )

@@ -43,7 +43,7 @@ var LoginBox = _react2['default'].createClass({
                     profile.push({ firstname: data.firstname, lastname: data.lastname, profilepic: data.profilepicture });
                     localStorage.profile = JSON.stringify(profile);
 
-                    this.context.history.pushState(null, '/dashboard');
+                    this.context.history.pushState(null, '/');
                     location.reload();
                 } else if (data.status === "fail") {
                     console.log(data);
@@ -170,9 +170,10 @@ var LoginForm = _react2['default'].createClass({
         });
     },
 
-    destorayLocalstorage: function destorayLocalstorage() {
-        window.localStorage.removeItem('profile');
-    },
+    //    Aanvinken van loginblijven functie
+    //    destorayLocalstorage : function(){
+    //        window.localStorage.removeItem('profile');
+    //    },
 
     render: function render() {
         return _react2['default'].createElement(

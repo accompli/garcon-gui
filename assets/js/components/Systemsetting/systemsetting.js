@@ -5,26 +5,23 @@
  */
 
 import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link, History } from 'react-router'
 
 import GreenBox from '../Layout/greenbox.js'
 import BreadcrumbsBox from '../Layout/breadcrumbs.js'
+import SystemSettingBox from './systemsettingbox.js'
 
-var Dashboard = React.createClass({
-    render : function(){
+var SystemSetting = React.createClass({
+    render: function(){
         return (
-                <div className="dashboard">
-                    <GreenBox title={Dashboard.title}/>
+                <div className="systemsetting">
+                    <GreenBox title={SystemSetting.title}/>
                     <BreadcrumbsBox />
                 </div>
                 );
-}
+    }
 });
 
+SystemSetting.title = 'System setting';
+SystemSetting.path = '/systemsetting';
 
-Dashboard.title = 'Dashboard'
-Dashboard.path = '/dashboard'
-
-
-export default Dashboard;
+export default SystemSetting;

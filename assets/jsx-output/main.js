@@ -52,6 +52,10 @@ var _componentsAccountsettingAccountsettingJs = require('./components/Accountset
 
 var _componentsAccountsettingAccountsettingJs2 = _interopRequireDefault(_componentsAccountsettingAccountsettingJs);
 
+var _componentsSystemsettingSystemsettingJs = require('./components/Systemsetting/systemsetting.js');
+
+var _componentsSystemsettingSystemsettingJs2 = _interopRequireDefault(_componentsSystemsettingSystemsettingJs);
+
 var history = (0, _history.useBasename)(_history.createHistory)({
     basename: '/breadcrumbs'
 });
@@ -141,12 +145,13 @@ _reactDom2['default'].render(_react2['default'].createElement(
     _react2['default'].createElement(
         _reactRouter.Route,
         { path: App.path, name: 'App', component: App },
-        _react2['default'].createElement(_reactRouter.IndexRoute, { name: 'Login', component: _componentsLoginLoginJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.IndexRoute, { name: 'Dashboard', component: _componentsDashboardDashboardJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Forgetpass', path: _componentsForgetpasswordForgetpassJs2['default'].path, component: _componentsForgetpasswordForgetpassJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Dashboard', path: _componentsDashboardDashboardJs2['default'].path, component: _componentsDashboardDashboardJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Login', path: _componentsLoginLoginJs2['default'].path, component: _componentsLoginLoginJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingUsersettingsJs2['default'].path, component: _componentsUsersettingUsersettingsJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Organisations', path: _componentsOrganisationsOrganisationsJs2['default'].path, component: _componentsOrganisationsOrganisationsJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] })
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'System setting', path: _componentsSystemsettingSystemsettingJs2['default'].path, component: _componentsSystemsettingSystemsettingJs2['default'] })
     )
 ), document.getElementById("content"));
