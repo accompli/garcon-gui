@@ -18,9 +18,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
-var _edituserJs = require('./edituser.js');
+var _editJs = require('./edit.js');
 
-var _edituserJs2 = _interopRequireDefault(_edituserJs);
+var _editJs2 = _interopRequireDefault(_editJs);
 
 var UsersTable = _react2['default'].createClass({
     displayName: 'UsersTable',
@@ -165,7 +165,7 @@ var Users = _react2['default'].createClass({
                 null,
                 this.props.user.projects
             ),
-            _react2['default'].createElement(_edituserJs2['default'], { editid: this.props.countdata })
+            _react2['default'].createElement(_editJs2['default'], { userid: this.props.countdata, username: this.props.user.username, email: this.props.user.email })
         );
     }
 });

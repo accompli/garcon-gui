@@ -10,11 +10,13 @@ import { Router, Route, Link } from 'react-router'
 var Edit = React.createClass({
     
     showEdit: function(){
-        console.log(this.props.editid)  
+
     },
     
     
     render: function(){
+        console.log(this.props)
+        
         return (
                 <td>
                 
@@ -34,7 +36,7 @@ var Edit = React.createClass({
                         <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
                             htmlFor={this.props.editid}>
                             <Link to="/RecentActivity"><li className="mdl-menu__item">Recent activity</li></Link>
-                            <Link to="/Edit"><li className="mdl-menu__item">Edit</li></Link>
+                            <li className="mdl-menu__item">Edit</li>
                             <li className="mdl-menu__item">Delete</li>
                         </ul>
                 </td>

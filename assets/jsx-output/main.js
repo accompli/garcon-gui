@@ -60,6 +60,10 @@ var _componentsRecentactivityRecentactivityJs = require('./components/Recentacti
 
 var _componentsRecentactivityRecentactivityJs2 = _interopRequireDefault(_componentsRecentactivityRecentactivityJs);
 
+var _componentsEdituserEdituserJs = require('./components/Edituser/edituser.js');
+
+var _componentsEdituserEdituserJs2 = _interopRequireDefault(_componentsEdituserEdituserJs);
+
 var history = (0, _history.useBasename)(_history.createHistory)({
     basename: '/breadcrumbs'
 });
@@ -137,6 +141,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
         _react2['default'].createElement(_reactRouter.Route, { name: 'Login', path: _componentsLoginLoginJs2['default'].path, component: _componentsLoginLoginJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingUsersettingsJs2['default'].path, component: _componentsUsersettingUsersettingsJs2['default'], onEnter: requireAuth }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Recent activity', path: _componentsRecentactivityRecentactivityJs2['default'].path, component: _componentsRecentactivityRecentactivityJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Edit user', path: _componentsEdituserEdituserJs2['default'].path, component: _componentsEdituserEdituserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Organisations', path: _componentsOrganisationsOrganisationsJs2['default'].path, component: _componentsOrganisationsOrganisationsJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] }),

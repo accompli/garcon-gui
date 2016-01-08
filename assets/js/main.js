@@ -17,6 +17,7 @@ import Header from './components/Layout/header.js'
 import AccountSetting from './components/Accountsetting/accountsetting.js'
 import SystemSetting from './components/Systemsetting/systemsetting.js'
 import RecentActivity from './components/Recentactivity/recentactivity.js'
+import EditUser from './components/Edituser/edituser.js'
 
 const history = useBasename(createHistory)({
   basename: '/breadcrumbs'
@@ -95,6 +96,7 @@ ReactDOM.render(
             
             <Route name="Usersettings" path={Usersettings.path} component={Usersettings} onEnter={requireAuth}/>
             <Route name="Recent activity" path={RecentActivity.path} component={RecentActivity}/>
+            <Route name="Edit user" path={EditUser.path} component={EditUser} /> 
             
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
             <Route name="Organisations" path={Organisations.path} component={Organisations} />

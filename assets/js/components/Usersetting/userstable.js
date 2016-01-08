@@ -7,7 +7,7 @@
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
 
-import Edit from './edituser.js'
+import Edit from './edit.js'
 
 var UsersTable= React.createClass({
     getInitialState: function() {
@@ -108,7 +108,7 @@ var Users = React.createClass({
                     <td>{this.props.user.username}</td>
                     <td>{this.props.user.email}</td>
                     <td>{this.props.user.projects}</td>
-                    <Edit editid={this.props.countdata}/>
+                    <Edit userid={this.props.countdata} username={this.props.user.username} email={this.props.user.email}/>
                 </tr>
         );
     }
