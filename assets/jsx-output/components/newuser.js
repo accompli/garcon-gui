@@ -100,14 +100,12 @@ var NewUser = _react2['default'].createClass({
 
         var newusername = this.refs.username.value;
         var newemail = this.refs.email.value;
-        var newprojects = this.refs.project.value;
         var newphoto = this.refs.photo.value;
 
-        if (newusername && newemail && newprojects && newphoto !== "") {
+        if (newusername && newemail !== "") {
             this.AddNewUser({
                 username: newusername,
                 email: newemail,
-                projects: newprojects,
                 photo: newphoto
             });
         }
@@ -153,12 +151,6 @@ var NewUser = _react2['default'].createClass({
                             type: 'text',
                             id: 'email',
                             ref: 'photo' }),
-                        _react2['default'].createElement('p', null),
-                        'Projects: ',
-                        _react2['default'].createElement('input', { className: 'mdl-textfield__input',
-                            type: 'number',
-                            id: 'projects',
-                            ref: 'project' }),
                         _react2['default'].createElement('p', null),
                         _react2['default'].createElement(
                             'button',

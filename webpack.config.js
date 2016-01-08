@@ -17,6 +17,7 @@ module.exports = {
         path: __dirname + '/build',
         filename: "bundle.js"
     },
+
     module: {
         loaders: [
             {test: /\.html$/, loader: "file?name=[name].[ext]"},

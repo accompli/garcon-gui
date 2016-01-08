@@ -7,7 +7,7 @@
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+    value: true
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -15,8 +15,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require('react-dom');
 
 var _reactRouter = require('react-router');
 
@@ -28,22 +26,21 @@ var _LayoutBreadcrumbsJs = require('../Layout/breadcrumbs.js');
 
 var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-var Dashboard = _react2['default'].createClass({
-  displayName: 'Dashboard',
+var RecentActivity = _react2['default'].createClass({
+    displayName: 'RecentActivity',
 
-  render: function render() {
-
-    return _react2['default'].createElement(
-      'div',
-      { className: 'dashboard' },
-      _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Dashboard.title }),
-      _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null)
-    );
-  }
+    render: function render() {
+        return _react2['default'].createElement(
+            'div',
+            { className: 'recentactivity' },
+            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: RecentActivity.title }),
+            _react2['default'].createElement(BreadcrumsBox, null)
+        );
+    }
 });
 
-Dashboard.title = 'Dashboard';
-Dashboard.path = '/dashboard';
+RecentActivity.title = 'Recent activity';
+RecentActivity.path = '/recentactivity/userid';
 
-exports['default'] = Dashboard;
+exports['default'] = RecentActivity;
 module.exports = exports['default'];

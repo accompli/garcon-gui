@@ -169,3 +169,164 @@ $.ajax({
                           <li className="mdl-menu__item">Yet Another Action</li>
                         </ul>
 
+
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Router, Route, Link, IndexRoute, IndexRedirect, History } from 'react-router'
+import $ from 'jquery'
+import { createHistory, useBasename } from 'history'
+
+
+const history = useBasename(createHistory)({
+  basename: '/breadcrumbs'
+})
+
+
+render : function() {
+            const depth = this.props.routes.length;
+            
+    return (
+            <div className="app">
+            <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                <div className="no_login_header">
+                    <Header status={this.state.status}
+                            photo={this.state.photo}/>
+                </div>
+
+            <ul className="breadcrumbs-list">
+                {this.props.routes.map((item, index) =>
+                  <li key={index}>
+                    <Link
+                      onlyActiveOnIndex={true}
+                      activeClassName="breadcrumb-active"
+                      to={item.path || ''} > 
+                      {item.component.title}
+                    </Link>
+                    {(index + 1) < depth && '\u2192'}
+                  </li>
+                )}
+              </ul>
+                      
+
+                <main className="mdl-layout__content">
+
+                        {React.cloneElement(this.props.children, {onUpdate: this.onUpdate})}
+
+
+
+
+
+    render: function(){
+        var userData = this.props.data.map(function(user, index) {
+//                                   console.log(user)                 
+            return (
+                    <Users user={user} key={index}>
+                    </Users>
+                    );
+        });
+        
+        return (
+                <div className="usersList">
+                    {userData}
+                </div>
+                );
+    }
+
+
+
+
+
+
+
+
+
+var UsersList = React.createClass({
+    propTypes: {
+        data: React.PropTypes.array.isRequired
+    },
+        
+    render: function(){
+        
+        var dataLength = this.props.data.length;
+        
+        function getFields(input, field){
+            var output = [];
+            for (var i=0; i <input.length; i++)
+                output.push(input[i][field]);
+                return output;
+        }
+        
+        var data=this.props.data;
+        
+        var usernameArray = getFields(data, "username");
+        var emailArray = getFields(data, "email");
+        
+        
+        var userData = this.props.data.map(function(user, index) {
+            
+            return (
+                    <Users user={user} key={index} length={dataLength}>
+                        
+                    </Users>
+                    );
+        });
+
+        return (
+                <div className="usersList">
+                    <Users  usernamedata={usernameArray}
+                            emaildata={emailArray} />
+                </div>
+                );
+    }
+});
+
+
+
+
+
+
+  <tr>
+                                <td className="mdl-data-table__cell--non-numeric"><img src="" id="usericons"/></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> 
+                                
+                                 <button id="edit-options">
+                            <i className="material-icons">
+
+                               <svg className="edit_icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M0 0h24v24H0z" fill="none"/>
+                               <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                               </svg>
+
+                           </i>
+                   
+                        </button>
+
+                        <ul className="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+                            htmlFor="edit-options">
+                          <li className="mdl-menu__item">Some Action</li>
+                          <li className="mdl-menu__item">Another Action</li>
+                          <li disabled className="mdl-menu__item">Disabled Action</li>
+                          <li className="mdl-menu__item">Yet Another Action</li>
+                        </ul>
+                                
+                                
+                                
+                                </td>
+                        
+                            </tr>
+
+
+
+
+
+
+  <svg className="search_icon filtericons" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                </svg>
+                        <input className="searchform" type="search"  id="search" placeholder="Filter by name"/>

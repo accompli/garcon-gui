@@ -529,10 +529,11 @@ input::-moz-placeholder {
     text-align: left;
     color: #767e8A;
     vertical-align: middle;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     
 }
+
 .mdl-data-table th {
     text-align: left;
     color: #999;
@@ -547,9 +548,10 @@ input::-moz-placeholder {
     fill: #999;
 }
 
-#edit-options {
+.edit-options {
     background-color: #fff;
-    height:40px;
+    height:50px;
+    width: 50px;
     border-radius:50px;
     border: solid #fff;
 }

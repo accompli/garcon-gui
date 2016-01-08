@@ -3,7 +3,7 @@ import '../css/main.css';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { render } from 'react-dom'
-import { Router, Route, Link, IndexRoute, IndexRedirect, History } from 'react-router'
+import { Router, Route, Link, IndexRoute, IndexRedirect, History, Navigation } from 'react-router'
 import $ from 'jquery'
 import { createHistory, useBasename } from 'history'
 
@@ -16,6 +16,7 @@ import Organisations from './components/Organisations/organisations.js'
 import Header from './components/Layout/header.js'
 import AccountSetting from './components/Accountsetting/accountsetting.js'
 import SystemSetting from './components/Systemsetting/systemsetting.js'
+import RecentActivity from './components/Recentactivity/recentactivity.js'
 
 const history = useBasename(createHistory)({
   basename: '/breadcrumbs'
@@ -23,9 +24,11 @@ const history = useBasename(createHistory)({
 
 var App = React.createClass({
     
+    
     getInitialState: function(){
         
         if (localStorage.getItem('profile') === null){
+            
             return({
                 status:'Login'
             });
@@ -47,12 +50,6 @@ var App = React.createClass({
     }
     },
     
-//    onUpdate: function(){
-//            this.setState({
-//                status: 'Jinhua'
-//            });
-//        },
-    
     render : function() {
         const depth = this.props.routes.length;
             
@@ -64,19 +61,7 @@ var App = React.createClass({
                             photo={this.state.photo}/>
                 </div>
         
-         <ul className="breadcrumbs-list">
-                {this.props.routes.map((item, index) =>
-                  <li key={index}>
-                    <Link
-                      onlyActiveOnIndex={true}
-                      activeClassName="breadcrumb-active"
-                      to={item.path || ''} > 
-                      {item.component.title}
-                    </Link>
-                    {(index + 1) < depth && '\u2192'}
-                  </li>
-                )}
-              </ul>
+       
         
                 <main className="mdl-layout__content">
 
@@ -90,6 +75,13 @@ var App = React.createClass({
 });
 
 
+function requireAuth(){
+
+    if (localStorage.getItem('profile') === null){
+            this.context.history.pushState(null, '/login');
+        } 
+    }
+
 App.path = '/'
 App.title='Home'
 
@@ -97,14 +89,19 @@ ReactDOM.render(
         <Router>
             <Route path={App.path} name="App" component={App}>
             <IndexRoute name="Dashboard" component={Dashboard}/>
+            
             <Route name="Forgetpass" path={Forgetpass.path} component={Forgetpass}/>
             <Route name="Login" path={Login.path} component={Login}/>
-            <Route name="Usersettings" path={Usersettings.path} component={Usersettings} />
+            
+            <Route name="Usersettings" path={Usersettings.path} component={Usersettings} onEnter={requireAuth}/>
+            <Route name="Recent activity" path={RecentActivity.path} component={RecentActivity}/>
+            
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
             <Route name="Organisations" path={Organisations.path} component={Organisations} />
             <Route name="Account setting" path={AccountSetting.path} component={AccountSetting} />
-            <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />
             
+            <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />
+                
             </Route>
         </Router>,
         document.getElementById("content")

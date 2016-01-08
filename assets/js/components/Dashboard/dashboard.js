@@ -11,9 +11,13 @@ import { Router, Route, Link, History } from 'react-router'
 import GreenBox from '../Layout/greenbox.js'
 import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 
+ 
+
 var Dashboard = React.createClass({
     render : function(){
+        
         return (
+                
                 <div className="dashboard">
                     <GreenBox title={Dashboard.title}/>
                     <BreadcrumbsBox />

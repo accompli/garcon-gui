@@ -18,6 +18,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
+var _edituserJs = require('./edituser.js');
+
+var _edituserJs2 = _interopRequireDefault(_edituserJs);
+
 var UsersTable = _react2['default'].createClass({
     displayName: 'UsersTable',
 
@@ -76,15 +80,55 @@ var UsersList = _react2['default'].createClass({
     },
 
     render: function render() {
+
+        var countData = this.props.data.length;
+
         var userData = this.props.data.map(function (user, index) {
-            //                                   console.log(user)                
-            return _react2['default'].createElement(Users, { user: user, key: index });
+
+            return _react2['default'].createElement(Users, { user: user, key: index, countdata: index });
         });
 
         return _react2['default'].createElement(
-            'div',
-            { className: 'usersList' },
-            userData
+            'table',
+            { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp' },
+            _react2['default'].createElement(
+                'thead',
+                null,
+                _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                        'th',
+                        { className: 'mdl-data-table__cell--non-numeric' },
+                        'Photo'
+                    ),
+                    _react2['default'].createElement(
+                        'th',
+                        null,
+                        'Username'
+                    ),
+                    _react2['default'].createElement(
+                        'th',
+                        null,
+                        'E-mail'
+                    ),
+                    _react2['default'].createElement(
+                        'th',
+                        null,
+                        'Projects'
+                    ),
+                    _react2['default'].createElement(
+                        'th',
+                        null,
+                        'Edit'
+                    )
+                )
+            ),
+            _react2['default'].createElement(
+                'tbody',
+                null,
+                userData
+            )
         );
     }
 });
@@ -97,80 +141,31 @@ var Users = _react2['default'].createClass({
         return { __html: rawMarkup };
     },
 
-    showEdit: function showEdit() {
-        console.log("cliked");
-    },
-
     render: function render() {
         return _react2['default'].createElement(
-            'div',
+            'tr',
             null,
             _react2['default'].createElement(
-                'table',
-                { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp' },
-                _react2['default'].createElement(
-                    'thead',
-                    null,
-                    _react2['default'].createElement(
-                        'tr',
-                        null,
-                        _react2['default'].createElement(
-                            'th',
-                            { className: 'mdl-data-table__cell--non-numeric' },
-                            'Photo'
-                        ),
-                        _react2['default'].createElement(
-                            'th',
-                            null,
-                            'Username'
-                        ),
-                        _react2['default'].createElement(
-                            'th',
-                            null,
-                            'E-mail'
-                        ),
-                        _react2['default'].createElement(
-                            'th',
-                            null,
-                            'Projects'
-                        ),
-                        _react2['default'].createElement(
-                            'th',
-                            null,
-                            'Edit'
-                        )
-                    )
-                ),
-                _react2['default'].createElement(
-                    'tbody',
-                    null,
-                    _react2['default'].createElement(
-                        'tr',
-                        null,
-                        _react2['default'].createElement(
-                            'td',
-                            { className: 'mdl-data-table__cell--non-numeric' },
-                            _react2['default'].createElement('img', { src: this.props.user.photo, id: 'usericons' })
-                        ),
-                        _react2['default'].createElement(
-                            'td',
-                            null,
-                            this.props.user.username
-                        ),
-                        _react2['default'].createElement(
-                            'td',
-                            null,
-                            this.props.user.email
-                        ),
-                        _react2['default'].createElement(
-                            'td',
-                            null,
-                            this.props.user.projects
-                        ),
-                        _react2['default'].createElement('td', null)
-                    )
-                )
-            )
+                'td',
+                { className: 'mdl-data-table__cell--non-numeric ' },
+                _react2['default'].createElement('img', { src: this.props.user.photo, id: 'usericons' })
+            ),
+            _react2['default'].createElement(
+                'td',
+                null,
+                this.props.user.username
+            ),
+            _react2['default'].createElement(
+                'td',
+                null,
+                this.props.user.email
+            ),
+            _react2['default'].createElement(
+                'td',
+                null,
+                this.props.user.projects
+            ),
+            _react2['default'].createElement(_edituserJs2['default'], { editid: this.props.countdata })
         );
     }
 });

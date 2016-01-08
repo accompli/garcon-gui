@@ -56,6 +56,10 @@ var _componentsSystemsettingSystemsettingJs = require('./components/Systemsettin
 
 var _componentsSystemsettingSystemsettingJs2 = _interopRequireDefault(_componentsSystemsettingSystemsettingJs);
 
+var _componentsRecentactivityRecentactivityJs = require('./components/Recentactivity/recentactivity.js');
+
+var _componentsRecentactivityRecentactivityJs2 = _interopRequireDefault(_componentsRecentactivityRecentactivityJs);
+
 var history = (0, _history.useBasename)(_history.createHistory)({
     basename: '/breadcrumbs'
 });
@@ -66,6 +70,7 @@ var App = _react2['default'].createClass({
     getInitialState: function getInitialState() {
 
         if (localStorage.getItem('profile') === null) {
+
             return {
                 status: 'Login'
             };
@@ -86,12 +91,6 @@ var App = _react2['default'].createClass({
         }
     },
 
-    //    onUpdate: function(){
-    //            this.setState({
-    //                status: 'Jinhua'
-    //            });
-    //        },
-
     render: function render() {
         var depth = this.props.routes.length;
 
@@ -108,25 +107,6 @@ var App = _react2['default'].createClass({
                         photo: this.state.photo })
                 ),
                 _react2['default'].createElement(
-                    'ul',
-                    { className: 'breadcrumbs-list' },
-                    this.props.routes.map(function (item, index) {
-                        return _react2['default'].createElement(
-                            'li',
-                            { key: index },
-                            _react2['default'].createElement(
-                                _reactRouter.Link,
-                                {
-                                    onlyActiveOnIndex: true,
-                                    activeClassName: 'breadcrumb-active',
-                                    to: item.path || '' },
-                                item.component.title
-                            ),
-                            index + 1 < depth && '→'
-                        );
-                    })
-                ),
-                _react2['default'].createElement(
                     'main',
                     { className: 'mdl-layout__content' },
                     _react2['default'].cloneElement(this.props.children, { onUpdate: this.onUpdate })
@@ -135,6 +115,13 @@ var App = _react2['default'].createClass({
         );
     }
 });
+
+function requireAuth() {
+
+    if (localStorage.getItem('profile') === null) {
+        this.context.history.pushState(null, '/login');
+    }
+}
 
 App.path = '/';
 App.title = 'Home';
@@ -148,7 +135,8 @@ _reactDom2['default'].render(_react2['default'].createElement(
         _react2['default'].createElement(_reactRouter.IndexRoute, { name: 'Dashboard', component: _componentsDashboardDashboardJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Forgetpass', path: _componentsForgetpasswordForgetpassJs2['default'].path, component: _componentsForgetpasswordForgetpassJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Login', path: _componentsLoginLoginJs2['default'].path, component: _componentsLoginLoginJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingUsersettingsJs2['default'].path, component: _componentsUsersettingUsersettingsJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Usersettings', path: _componentsUsersettingUsersettingsJs2['default'].path, component: _componentsUsersettingUsersettingsJs2['default'], onEnter: requireAuth }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Recent activity', path: _componentsRecentactivityRecentactivityJs2['default'].path, component: _componentsRecentactivityRecentactivityJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Organisations', path: _componentsOrganisationsOrganisationsJs2['default'].path, component: _componentsOrganisationsOrganisationsJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] }),
