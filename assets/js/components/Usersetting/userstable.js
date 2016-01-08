@@ -34,10 +34,10 @@ var UsersTable= React.createClass({
     
     render : function (){
         return (
-                
                 <div className="list users">
-                
-                    <UsersList data={this.state.data} />            
+               
+                    <UsersList data={this.state.data} />   
+                    
                     <Link to="/newuser">
                         <button className = "mdl-button mdl-js-button add_user"
                                     type=""
@@ -47,9 +47,8 @@ var UsersTable= React.createClass({
                             </svg>
                         </button>
                     </Link>
+            
                 </div>
-                
-                
                 );
     }
 });
@@ -58,40 +57,18 @@ var UsersList = React.createClass({
     propTypes: {
         data: React.PropTypes.array.isRequired
     },
-    
+        
     render: function(){
+        
         var userData = this.props.data.map(function(user, index) {
-//                                   console.log(user)                 
+            
             return (
                     <Users user={user} key={index}>
                     </Users>
                     );
         });
-        
-        
-        return (
-                <div className="usersList">
-                    {userData}
-                </div>
-                );
-    }
-});
 
-
-var Users = React.createClass({
-    rawMarkup: function() {
-        var rawMarkup = marked(this.props.children.toString());
-        return { __html: rawMarkup };
-    },
-    
-    showEdit: function(){
-      console.log("cliked")  
-    },
-  
-    render: function(){
-        return (
-                <div>
-                
+        return ( 
                 <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                 <thead>               
                             <tr>
@@ -103,21 +80,57 @@ var Users = React.createClass({
                             </tr>
                 </thead>
                         <tbody>
-                        
-                            <tr>
-                                <td className="mdl-data-table__cell--non-numeric"><img src={this.props.user.photo} id="usericons"/></td>
-                                <td>{this.props.user.username}</td>
-                                <td>{this.props.user.email}</td>
-                                <td>{this.props.user.projects}</td>
-                                <td> 
-                                
-
-                                </td>
-                            </tr>
-
+                            {userData}
                         </tbody>     
                     </table>
-            </div>
+                );
+    }
+});
+
+
+var Users = React.createClass({
+    
+    rawMarkup: function() {
+        var rawMarkup = marked(this.props.children.toString());
+        return { __html: rawMarkup };
+    },
+    
+    showEdit: function(){
+      console.log("cliked")  
+    },
+  
+    render: function(){
+       
+        return (
+                <tr>
+                    <td className="mdl-data-table__cell--non-numeric"><img src={this.props.user.photo} id="usericons"/></td>
+                    <td>{this.props.user.username}</td>
+                    <td>{this.props.user.email}</td>
+                    <td>{this.props.user.projects}</td>
+                    <td> 
+
+                    <button id="edit-options" >
+                        <i className="material-icons">
+
+                           <svg className="edit_icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 0h24v24H0z" fill="none"/>
+                           <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                           </svg>
+
+                       </i>
+
+                    </button>
+
+                    <ul className="mdl-menu mdl-js-menu mdl-js-ripple-effect"
+                        htmlFor="edit-options">
+                      <li className="mdl-menu__item">Recent actions</li>
+                      <li className="mdl-menu__item">Edit onClick={this.showEdit}</li>
+                      <li className="mdl-menu__item">Delete</li>
+                    </ul>
+
+                    </td>
+
+                </tr>
         );
     }
 });

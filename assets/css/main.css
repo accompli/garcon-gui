@@ -528,6 +528,9 @@ input::-moz-placeholder {
 .mdl-data-table td {
     text-align: left;
     color: #767e8A;
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
 }
 .mdl-data-table th {
@@ -554,3 +557,4 @@ input::-moz-placeholder {
 .edit-btn {
     
 }
+

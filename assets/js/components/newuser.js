@@ -86,14 +86,12 @@ var NewUser = React.createClass({
         
         var newusername = this.refs.username.value;
         var newemail = this.refs.email.value;
-        var newprojects = this.refs.project.value;
         var newphoto = this.refs.photo.value;
         
-        if (newusername && newemail && newprojects && newphoto !== ""){
+        if (newusername && newemail !== ""){
             this.AddNewUser({
                 username: newusername,
                 email: newemail,
-                projects: newprojects,
                 photo: newphoto
             });
         }        
@@ -123,11 +121,6 @@ var NewUser = React.createClass({
                                         type="text"
                                         id="email"
                                         ref="photo"/>
-                                <p></p>
-                                Projects: <input  className="mdl-textfield__input"
-                                    type="number"
-                                    id="projects"
-                                    ref="project"/>
                                 <p></p>
                         
                                 <button className="mdl-button mdl-js-button"
