@@ -26,21 +26,51 @@ var _LayoutBreadcrumbsJs = require('../Layout/breadcrumbs.js');
 
 var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
+var _edituserboxJs = require('./edituserbox.js');
+
+var _edituserboxJs2 = _interopRequireDefault(_edituserboxJs);
+
 var EditUser = _react2['default'].createClass({
     displayName: 'EditUser',
 
+    getInitialState: function getInitialState() {
+        return { data: [] };
+    },
+
+    componentDidMount: function componentDidMount() {
+        this.loadUsers();
+    },
+
+    loadUsers: function loadUsers() {
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/users",
+            dataType: 'json',
+            success: (function (data) {
+                this.setState({
+                    data: data.userdata
+                });
+            }).bind(this),
+            error: (function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }).bind(this)
+        });
+    },
+
     render: function render() {
+        console.log(this.props.params.user);
+
         return _react2['default'].createElement(
             'div',
             { className: 'edituser' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditUser.title }),
-            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null)
+            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
+            _react2['default'].createElement(_edituserboxJs2['default'], { dataId: this.props.params.user, data: this.state.data })
         );
     }
 });
 
 EditUser.title = 'Edit user';
-EditUser.path = '/edituser/:editid';
+EditUser.path = '/edituser/:user';
 
 exports['default'] = EditUser;
 module.exports = exports['default'];

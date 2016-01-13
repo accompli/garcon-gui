@@ -19,7 +19,9 @@ var Usersettings = React.createClass({
                 <div className ="usersettings">
                         <GreenBox title={Usersettings.title} />
                         <BreadcrumbsBox />
-                        <UsersBox />
+                        
+                        <UsersBox />      
+                        
                 </div>
                 );
     }

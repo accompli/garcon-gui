@@ -18,6 +18,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _editJs = require('./edit.js');
 
 var _editJs2 = _interopRequireDefault(_editJs);
@@ -34,7 +38,7 @@ var UsersTable = _react2['default'].createClass({
     },
 
     loadUsers: function loadUsers() {
-        $.ajax({
+        _jquery2['default'].ajax({
             url: "http://garcon-server.jinhua.choffice.nl/users",
             dataType: 'json',
             success: (function (data) {
@@ -49,6 +53,7 @@ var UsersTable = _react2['default'].createClass({
     },
 
     render: function render() {
+
         return _react2['default'].createElement(
             'div',
             { className: 'list users' },
@@ -142,6 +147,7 @@ var Users = _react2['default'].createClass({
     },
 
     render: function render() {
+        //console.log(this.props.user.username + this.props.countdata)
         return _react2['default'].createElement(
             'tr',
             null,

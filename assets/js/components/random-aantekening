@@ -330,3 +330,16 @@ var UsersList = React.createClass({
                                 <path d="M0 0h24v24H0z" fill="none"/>
                                 </svg>
                         <input className="searchform" type="search"  id="search" placeholder="Filter by name"/>
+
+          <button id="demo-menu-top-left"
+        className="mdl-button mdl-js-button mdl-button--icon">
+  PRESS
+</button>
+
+<ul className="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+    htmlFor="demo-menu-top-left">
+  <li className="mdl-menu__item">Some Action</li>
+  <li className="mdl-menu__item">Another Action</li>
+  <li disabled className="mdl-menu__item">Disabled Action</li>
+  <li className="mdl-menu__item">Yet Another Action</li>
+</ul>    

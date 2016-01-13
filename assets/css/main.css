@@ -101,8 +101,8 @@ ul{
     border-radius: 0;
 }
 
-.mdl-menu__item{
-    
+.mdl-menu__item a:hover{
+        color: #24c58f;
 }
 
 .tabmenu_item a {

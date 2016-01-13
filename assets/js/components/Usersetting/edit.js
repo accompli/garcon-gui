@@ -5,23 +5,18 @@
  */
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
+import $ from 'jquery';
 
 
 var Edit = React.createClass({
     
-    showEdit: function(){
-
-    },
-    
     
     render: function(){
-        console.log(this.props)
-        
         return (
                 <td>
                 
                     <button className="edit-options"
-                            id={this.props.editid}>
+                            id={this.props.userid}>
                             <i className="material-icons">
 
                                <svg className="edit_icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -34,11 +29,13 @@ var Edit = React.createClass({
                         </button>
 
                         <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
-                            htmlFor={this.props.editid}>
+                            htmlFor={this.props.userid}>
                             <Link to="/RecentActivity"><li className="mdl-menu__item">Recent activity</li></Link>
-                            <li className="mdl-menu__item">Edit</li>
+                            <li className="mdl-menu__item"><Link to={`/edituser/${this.props.username}`}>Edit</Link></li>
                             <li className="mdl-menu__item">Delete</li>
                         </ul>
+                
+                
                 </td>
                 );
     }

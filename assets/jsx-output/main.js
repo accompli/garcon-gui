@@ -4,6 +4,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 require('../css/main.css');
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -13,10 +17,6 @@ var _reactDom = require('react-dom');
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouter = require('react-router');
-
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
 
 var _history = require('history');
 

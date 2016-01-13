@@ -9,14 +9,41 @@
 
 import GreenBox from '../Layout/greenbox.js'
 import BreadcrumbsBox from '../Layout/breadcrumbs.js'
+import EditUserBox from './edituserbox.js'
 
 var EditUser = React.createClass({
+    getInitialState: function() {
+        return {data: []};
+    },
+    
+    componentDidMount: function(){
+        this.loadUsers();
+    },
+    
+    loadUsers: function(){
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/users",
+            dataType: 'json',
+            success: function(data) {
+                        this.setState({
+                            data: data.userdata
+                        });
+                        
+            }.bind(this),
+            error:  function(xhr, status, err) {
+                    console.error(this.props.url, status, err.toString());
+                    }.bind(this)
+        });
+    },
     
     render: function(){
+        console.log(this.props.params.user)
+        
         return (
                     <div className="edituser">
                         <GreenBox title={EditUser.title} />
                         <BreadcrumbsBox />
+                        <EditUserBox dataId={this.props.params.user} data={this.state.data}/>
                     </div>
                 );
     }
@@ -26,7 +53,3 @@ EditUser.title = 'Edit user';
 EditUser.path = '/edituser/:user';
 
  export default EditUser
-
-http://localhost:8080/#/EditUser/${this.props.editid}?_k=dd5mla
-
-http://localhost:8080/#/EditUser/${this.props.editid}?_k=1kp17z

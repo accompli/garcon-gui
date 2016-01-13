@@ -6,7 +6,7 @@
 
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
-
+import $ from 'jquery';
 import Edit from './edit.js'
 
 var UsersTable= React.createClass({
@@ -35,6 +35,7 @@ var UsersTable= React.createClass({
     },
     
     render : function (){
+        
         return (
                 <div className="list users">
                
@@ -47,7 +48,9 @@ var UsersTable= React.createClass({
                             <svg className="add_icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                             </svg>
+                    
                         </button>
+                
                     </Link>
             
                 </div>
@@ -62,13 +65,16 @@ var UsersList = React.createClass({
         
     render: function(){
         
+        
         var countData = this.props.data.length;
         
         var userData = this.props.data.map(function(user, index) {
             
             return (
                     <Users user={user} key={index} countdata={index}>
+                    
                     </Users>
+                    
                     );
         });
         
@@ -82,11 +88,12 @@ var UsersList = React.createClass({
                                 <th>E-mail</th>
                                 <th>Projects</th>
                                 <th>Edit</th>
+                        
                             </tr>
+                    
                 </thead>
                         <tbody>
                             {userData}
-                    
                         </tbody>     
                     </table>
                 );
@@ -102,6 +109,7 @@ var Users = React.createClass({
     },
   
     render: function(){
+        //console.log(this.props.user.username + this.props.countdata)
         return (
                 <tr>
                     <td className="mdl-data-table__cell--non-numeric "><img src={this.props.user.photo} id="usericons"/></td>

@@ -17,21 +17,21 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var Edit = _react2['default'].createClass({
     displayName: 'Edit',
 
-    showEdit: function showEdit() {},
-
     render: function render() {
-        console.log(this.props);
-
         return _react2['default'].createElement(
             'td',
             null,
             _react2['default'].createElement(
                 'button',
                 { className: 'edit-options',
-                    id: this.props.editid },
+                    id: this.props.userid },
                 _react2['default'].createElement(
                     'i',
                     { className: 'material-icons' },
@@ -46,7 +46,7 @@ var Edit = _react2['default'].createClass({
             _react2['default'].createElement(
                 'ul',
                 { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
-                    htmlFor: this.props.editid },
+                    htmlFor: this.props.userid },
                 _react2['default'].createElement(
                     _reactRouter.Link,
                     { to: '/RecentActivity' },
@@ -59,7 +59,11 @@ var Edit = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'li',
                     { className: 'mdl-menu__item' },
-                    'Edit'
+                    _react2['default'].createElement(
+                        _reactRouter.Link,
+                        { to: '/edituser/' + this.props.username },
+                        'Edit'
+                    )
                 ),
                 _react2['default'].createElement(
                     'li',

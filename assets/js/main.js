@@ -1,10 +1,10 @@
 import '../css/main.css';
 
+import $ from 'jquery'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { render } from 'react-dom'
 import { Router, Route, Link, IndexRoute, IndexRedirect, History, Navigation } from 'react-router'
-import $ from 'jquery'
 import { createHistory, useBasename } from 'history'
 
 import Forgetpass from './components/Forgetpassword/forgetpass.js'
