@@ -65,7 +65,7 @@ var NewUser = React.createClass({
             success:
                     function(data){ 
                         if (data.status === "success"){
-                            console.log('new user added complete')
+                            console.log('new user added complete');
                         }
                         else if (data.status === "fail"){
                             console.log("failed");

@@ -6,34 +6,41 @@
 
 
 import React from 'react'
-import { Router, Route, Link } from 'react-router'
+import { Router, Route, Link, History, Navigation } from 'react-router'
 
 var EditUserBox = React.createClass({
     
-    editUser : function(){
-        console.log("Geklikt op edit knop");
-        
+    editUser : function(editdata){
         $.ajax({
             url: "http://garcon-server.jinhua.choffice.nl/editusers",
             dataType: 'json',
             type: 'POST',
             data: editdata,
-            succes:
+            success:
                     function(data){
                         if (data.status === "success"){
-                            console.log("Done with edit!");
+                            console.log('done with edit!');
+                            this.context.history.pushState(null, '/usersettings');
+                            location.reload();
                         }
-                        else {
+                        else if (data.status === "fail"){
                             console.log("Failed with edit...");
                         }
-                    },     
+                    }.bind(this),     
             error:
                     function(xhr, status, err, jqXHR){
                         console.error(this.props.url, status, err.toString());
                          alert( jqXHR);
                     }.bind(this)
         });
+                                   
     },
+    
+    contextTypes: {
+        history: React.PropTypes.object.isRequired,
+    },
+    
+    
     
     handleSubmit : function(e){
         e.preventDefault();
@@ -41,14 +48,16 @@ var EditUserBox = React.createClass({
         var oldUsername = this.refs.username.value;
         var oldEmail = this.refs.email.value;
         var oldPhoto = this.refs.photo.value;
+        var userId = this.refs.userid.value;
         
-        console.log(oldUsername +" "+ oldEmail);
+        console.log(oldUsername +" "+ oldEmail + userId);
         
         if (oldUsername && oldEmail !== ""){
             this.editUser({
                 username: oldUsername,
                 email: oldEmail,
-                photo: oldPhoto
+                photo: oldPhoto,
+                userid: userId
             });
         }        
     },
@@ -87,6 +96,11 @@ var EditUserBox = React.createClass({
                                         defaultValue={photo}
                                         placeholder={photo}/>
                                 <p></p>
+                        
+                                <input  type="hidden"
+                                        id="id"
+                                        ref="userid"
+                                        value={this.props.dataId} />
                         
                                 <button className="mdl-button mdl-js-button"
                                         type="submit"

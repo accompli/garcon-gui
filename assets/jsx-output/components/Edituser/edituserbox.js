@@ -21,26 +21,30 @@ var _reactRouter = require('react-router');
 var EditUserBox = _react2['default'].createClass({
     displayName: 'EditUserBox',
 
-    editUser: function editUser() {
-        console.log("Geklikt op edit knop");
-
+    editUser: function editUser(editdata) {
         $.ajax({
             url: "http://garcon-server.jinhua.choffice.nl/editusers",
             dataType: 'json',
             type: 'POST',
             data: editdata,
-            succes: function succes(data) {
+            success: (function (data) {
                 if (data.status === "success") {
-                    console.log("Done with edit!");
-                } else {
+                    console.log('done with edit!');
+                    this.context.history.pushState(null, '/usersettings');
+                    location.reload();
+                } else if (data.status === "fail") {
                     console.log("Failed with edit...");
                 }
-            },
+            }).bind(this),
             error: (function (xhr, status, err, jqXHR) {
                 console.error(this.props.url, status, err.toString());
                 alert(jqXHR);
             }).bind(this)
         });
+    },
+
+    contextTypes: {
+        history: _react2['default'].PropTypes.object.isRequired
     },
 
     handleSubmit: function handleSubmit(e) {
@@ -49,14 +53,16 @@ var EditUserBox = _react2['default'].createClass({
         var oldUsername = this.refs.username.value;
         var oldEmail = this.refs.email.value;
         var oldPhoto = this.refs.photo.value;
+        var userId = this.refs.userid.value;
 
-        console.log(oldUsername + " " + oldEmail);
+        console.log(oldUsername + " " + oldEmail + userId);
 
         if (oldUsername && oldEmail !== "") {
             this.editUser({
                 username: oldUsername,
                 email: oldEmail,
-                photo: oldPhoto
+                photo: oldPhoto,
+                userid: userId
             });
         }
     },
@@ -106,6 +112,10 @@ var EditUserBox = _react2['default'].createClass({
                                 defaultValue: photo,
                                 placeholder: photo }),
                             _react2['default'].createElement('p', null),
+                            _react2['default'].createElement('input', { type: 'hidden',
+                                id: 'id',
+                                ref: 'userid',
+                                value: this.props.dataId }),
                             _react2['default'].createElement(
                                 'button',
                                 { className: 'mdl-button mdl-js-button',
