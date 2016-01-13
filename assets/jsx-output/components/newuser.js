@@ -114,7 +114,7 @@ var NewUser = _react2['default'].createClass({
     render: function render() {
         return _react2['default'].createElement(
             'div',
-            { className: 'usersbox' },
+            { className: 'box' },
             _react2['default'].createElement(
                 'div',
                 { className: 'loginBox' },

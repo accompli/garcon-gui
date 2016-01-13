@@ -75,7 +75,7 @@ var EditUserBox = _react2['default'].createClass({
 
         return _react2['default'].createElement(
             'div',
-            { className: 'usersbox' },
+            { className: 'box' },
             _react2['default'].createElement(
                 'div',
                 { className: 'loginBox' },

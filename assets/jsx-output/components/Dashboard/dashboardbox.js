@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -15,26 +16,28 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _filterboxJs = require('./filterbox.js');
+var _reactDom = require('react-dom');
 
-var _filterboxJs2 = _interopRequireDefault(_filterboxJs);
+var _boxChangesJs = require('./box-changes.js');
 
-var _userstableJs = require('./userstable.js');
+var _boxChangesJs2 = _interopRequireDefault(_boxChangesJs);
 
-var _userstableJs2 = _interopRequireDefault(_userstableJs);
+var _boxProblemsJs = require('./box-problems.js');
 
-var UsersBox = _react2['default'].createClass({
-    displayName: 'UsersBox',
+var _boxProblemsJs2 = _interopRequireDefault(_boxProblemsJs);
+
+var DashboardBox = _react2['default'].createClass({
+    displayName: 'DashboardBox',
 
     render: function render() {
         return _react2['default'].createElement(
             'div',
             { className: 'box' },
-            _react2['default'].createElement(_filterboxJs2['default'], null),
-            _react2['default'].createElement(_userstableJs2['default'], null)
+            _react2['default'].createElement(_boxChangesJs2['default'], null),
+            _react2['default'].createElement(_boxProblemsJs2['default'], null)
         );
     }
 });
 
-exports['default'] = UsersBox;
+exports['default'] = DashboardBox;
 module.exports = exports['default'];

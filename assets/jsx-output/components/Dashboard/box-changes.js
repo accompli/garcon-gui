@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -15,26 +16,28 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _filterboxJs = require('./filterbox.js');
+var _reactDom = require('react-dom');
 
-var _filterboxJs2 = _interopRequireDefault(_filterboxJs);
+var _tableChanges = require('./table-changes');
 
-var _userstableJs = require('./userstable.js');
+var _tableChanges2 = _interopRequireDefault(_tableChanges);
 
-var _userstableJs2 = _interopRequireDefault(_userstableJs);
-
-var UsersBox = _react2['default'].createClass({
-    displayName: 'UsersBox',
+var Changes = _react2['default'].createClass({
+    displayName: 'Changes',
 
     render: function render() {
         return _react2['default'].createElement(
             'div',
-            { className: 'box' },
-            _react2['default'].createElement(_filterboxJs2['default'], null),
-            _react2['default'].createElement(_userstableJs2['default'], null)
+            { className: 'tablebox changes' },
+            _react2['default'].createElement(
+                'div',
+                { className: 'table-title' },
+                'Recent changes'
+            ),
+            _react2['default'].createElement(_tableChanges2['default'], null)
         );
     }
 });
 
-exports['default'] = UsersBox;
+exports['default'] = Changes;
 module.exports = exports['default'];

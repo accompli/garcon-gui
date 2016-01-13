@@ -422,7 +422,7 @@ input::-moz-placeholder {
   font-size: 16px;
 }
 
-.usersbox{
+.box{
     width: 60%;
     padding-top: 2%;
     left: 20%;
@@ -560,3 +560,23 @@ input::-moz-placeholder {
     
 }
 
+/*Dashboard*/
+.tablebox{
+    border: 1px solid red;
+}
+
+.changes {
+    float: left;
+}
+
+.problems {
+    float: right;
+}
+
+.table-title {
+    color: #767e8a;
+    font-weight: bold;
+    font-size: 25px;
+    border: solid 1px blue;
+    margin-bottom: 20px;
+}

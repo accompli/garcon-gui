@@ -7,7 +7,7 @@
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+    value: true
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -28,18 +28,21 @@ var _LayoutBreadcrumbsJs = require('../Layout/breadcrumbs.js');
 
 var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
+var _dashboardboxJs = require('./dashboardbox.js');
+
+var _dashboardboxJs2 = _interopRequireDefault(_dashboardboxJs);
+
 var Dashboard = _react2['default'].createClass({
-  displayName: 'Dashboard',
+    displayName: 'Dashboard',
 
-  render: function render() {
-
-    return _react2['default'].createElement(
-      'div',
-      { className: 'dashboard' },
-      _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Dashboard.title }),
-      _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null)
-    );
-  }
+    render: function render() {
+        return _react2['default'].createElement(
+            'div',
+            { className: 'dashboard' },
+            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Dashboard.title }),
+            _react2['default'].createElement(_dashboardboxJs2['default'], null)
+        );
+    }
 });
 
 Dashboard.title = 'Dashboard';

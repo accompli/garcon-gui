@@ -69,7 +69,7 @@ var EditUserBox = React.createClass({
         var photo = this.props.data[this.props.dataId].photo;
         
         return (
-                <div className = "usersbox">
+                <div className = "box">
                     <div className="loginBox">
                         <div className="edituserbox">
                             <div className="demo-card-square mdl-card mdl-shadow--2dp">

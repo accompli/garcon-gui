@@ -11,7 +11,7 @@ import UsersTable from './userstable.js'
 var UsersBox = React.createClass({
     render : function(){
         return (
-                <div className = "usersbox">
+                <div className = "box">
                 
                     <FilterBox />          
 

@@ -99,7 +99,7 @@ var NewUser = React.createClass({
     
     render : function(){
         return (
-                <div className = "usersbox">
+                <div className = "box">
                 
                     <div className="loginBox">
                         <div className="demo-card-square mdl-card mdl-shadow--2dp">
