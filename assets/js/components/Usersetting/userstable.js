@@ -35,7 +35,6 @@ var UsersTable= React.createClass({
     },
     
     render : function (){
-        
         return (
                 <div className="list users">
                

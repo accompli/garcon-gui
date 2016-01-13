@@ -12,23 +12,16 @@ import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 import EditUserBox from './edituserbox.js'
 
 var EditUser = React.createClass({
-    getInitialState: function() {
-        return {data: []};
-    },
-    
-    componentDidMount: function(){
-        this.loadUsers();
-    },
-    
     loadUsers: function(){
+        
         $.ajax({
+            
             url: "http://garcon-server.jinhua.choffice.nl/users",
             dataType: 'json',
             success: function(data) {
                         this.setState({
                             data: data.userdata
                         });
-                        
             }.bind(this),
             error:  function(xhr, status, err) {
                     console.error(this.props.url, status, err.toString());
@@ -36,20 +29,39 @@ var EditUser = React.createClass({
         });
     },
     
+    getInitialState: function() {
+        return {data: []};
+    },
+    
+    componentDidMount: function(){
+        this.loadUsers();
+//        setInterval(this.loadUsers.bind(this), 2000);
+    },
+    
     render: function(){
-        console.log(this.props.params.user)
+        if (this.state.data.length === 0){
+            return (
+                    <div className="loadingbox">
+                        Loading...
+                    </div>
+                    )
+        }
         
-        return (
-                    <div className="edituser">
-                        <GreenBox title={EditUser.title} />
-                        <BreadcrumbsBox />
-                        <EditUserBox dataId={this.props.params.user} data={this.state.data}/>
+        else{
+             return (
+                        <div className="edituser">
+                            <GreenBox title={EditUser.title} />
+                            <BreadcrumbsBox />
+                            <EditUserBox dataId={this.props.params.user} data={this.state.data}/>
+
                     </div>
                 );
+        }
     }
+    
 });
 
-EditUser.title = 'Edit user';
+EditUser.title = "Edit user";
 EditUser.path = '/edituser/:user';
 
  export default EditUser

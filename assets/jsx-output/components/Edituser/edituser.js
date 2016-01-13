@@ -33,16 +33,10 @@ var _edituserboxJs2 = _interopRequireDefault(_edituserboxJs);
 var EditUser = _react2['default'].createClass({
     displayName: 'EditUser',
 
-    getInitialState: function getInitialState() {
-        return { data: [] };
-    },
-
-    componentDidMount: function componentDidMount() {
-        this.loadUsers();
-    },
-
     loadUsers: function loadUsers() {
+
         $.ajax({
+
             url: "http://garcon-server.jinhua.choffice.nl/users",
             dataType: 'json',
             success: (function (data) {
@@ -56,20 +50,36 @@ var EditUser = _react2['default'].createClass({
         });
     },
 
-    render: function render() {
-        console.log(this.props.params.user);
+    getInitialState: function getInitialState() {
+        return { data: [] };
+    },
 
-        return _react2['default'].createElement(
-            'div',
-            { className: 'edituser' },
-            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditUser.title }),
-            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
-            _react2['default'].createElement(_edituserboxJs2['default'], { dataId: this.props.params.user, data: this.state.data })
-        );
+    componentDidMount: function componentDidMount() {
+        this.loadUsers();
+        //        setInterval(this.loadUsers.bind(this), 2000);
+    },
+
+    render: function render() {
+        if (this.state.data.length === 0) {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'loadingbox' },
+                'Loading...'
+            );
+        } else {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'edituser' },
+                _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditUser.title }),
+                _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
+                _react2['default'].createElement(_edituserboxJs2['default'], { dataId: this.props.params.user, data: this.state.data })
+            );
+        }
     }
+
 });
 
-EditUser.title = 'Edit user';
+EditUser.title = "Edit user";
 EditUser.path = '/edituser/:user';
 
 exports['default'] = EditUser;

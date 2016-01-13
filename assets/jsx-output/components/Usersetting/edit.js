@@ -61,7 +61,7 @@ var Edit = _react2['default'].createClass({
                     { className: 'mdl-menu__item' },
                     _react2['default'].createElement(
                         _reactRouter.Link,
-                        { to: '/edituser/' + this.props.username },
+                        { to: '/edituser/' + this.props.userid },
                         'Edit'
                     )
                 ),

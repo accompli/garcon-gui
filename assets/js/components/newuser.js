@@ -55,7 +55,7 @@ var BreadcrumbsList = React.createClass({
 
 var NewUser = React.createClass({
     
-    AddNewUser : function(newuser){
+    addNewUser : function(newuser){
         //console.log(newuser);
         $.ajax({
             url: "http://garcon-server.jinhua.choffice.nl/users",
@@ -89,7 +89,7 @@ var NewUser = React.createClass({
         var newphoto = this.refs.photo.value;
         
         if (newusername && newemail !== ""){
-            this.AddNewUser({
+            this.addNewUser({
                 username: newusername,
                 email: newemail,
                 photo: newphoto

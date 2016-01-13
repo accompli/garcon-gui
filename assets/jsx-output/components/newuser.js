@@ -73,7 +73,7 @@ var BreadcrumbsList = _react2['default'].createClass({
 var NewUser = _react2['default'].createClass({
     displayName: 'NewUser',
 
-    AddNewUser: function AddNewUser(newuser) {
+    addNewUser: function addNewUser(newuser) {
         //console.log(newuser);
         $.ajax({
             url: "http://garcon-server.jinhua.choffice.nl/users",
@@ -103,7 +103,7 @@ var NewUser = _react2['default'].createClass({
         var newphoto = this.refs.photo.value;
 
         if (newusername && newemail !== "") {
-            this.AddNewUser({
+            this.addNewUser({
                 username: newusername,
                 email: newemail,
                 photo: newphoto

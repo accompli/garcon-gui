@@ -53,7 +53,6 @@ var UsersTable = _react2['default'].createClass({
     },
 
     render: function render() {
-
         return _react2['default'].createElement(
             'div',
             { className: 'list users' },

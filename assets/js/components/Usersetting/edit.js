@@ -31,7 +31,7 @@ var Edit = React.createClass({
                         <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
                             htmlFor={this.props.userid}>
                             <Link to="/RecentActivity"><li className="mdl-menu__item">Recent activity</li></Link>
-                            <li className="mdl-menu__item"><Link to={`/edituser/${this.props.username}`}>Edit</Link></li>
+                            <li className="mdl-menu__item"><Link to={`/edituser/${this.props.userid}`}>Edit</Link></li>
                             <li className="mdl-menu__item">Delete</li>
                         </ul>
                 
