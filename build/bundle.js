@@ -35484,10 +35484,7 @@
 	var Edit = _react2['default'].createClass({
 	    displayName: 'Edit',
 
-	    showEdit: function showEdit() {},
-
 	    render: function render() {
-
 	        return _react2['default'].createElement('td', null, _react2['default'].createElement('button', { className: 'edit-options',
 	            id: this.props.userid }, _react2['default'].createElement('i', { className: 'material-icons' }, _react2['default'].createElement('svg', { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }), _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
 	            htmlFor: this.props.userid }, _react2['default'].createElement(_reactRouter.Link, { to: '/RecentActivity' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Recent activity')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/edituser/' + this.props.userid }, 'Edit')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Delete')));
@@ -35564,7 +35561,7 @@
 	var NewUser = _react2['default'].createClass({
 	    displayName: 'NewUser',
 
-	    AddNewUser: function AddNewUser(newuser) {
+	    addNewUser: function addNewUser(newuser) {
 	        //console.log(newuser);
 	        $.ajax({
 	            url: "http://garcon-server.jinhua.choffice.nl/users",
@@ -35594,7 +35591,7 @@
 	        var newphoto = this.refs.photo.value;
 
 	        if (newusername && newemail !== "") {
-	            this.AddNewUser({
+	            this.addNewUser({
 	                username: newusername,
 	                email: newemail,
 	                photo: newphoto
@@ -35996,12 +35993,42 @@
 	var EditUser = _react2['default'].createClass({
 	    displayName: 'EditUser',
 
+	    loadUsers: function loadUsers() {
+
+	        $.ajax({
+	            url: "http://garcon-server.jinhua.choffice.nl/users",
+	            dataType: 'json',
+	            success: (function (data) {
+	                this.setState({
+	                    data: data.userdata
+	                });
+	            }).bind(this),
+	            error: (function (xhr, status, err) {
+	                console.error(this.props.url, status, err.toString());
+	            }).bind(this)
+	        });
+	    },
+
+	    getInitialState: function getInitialState() {
+	        return { data: [] };
+	    },
+
+	    componentDidMount: function componentDidMount() {
+	        this.loadUsers();
+	        //        setInterval(this.loadUsers.bind(this), 2000);
+	    },
+
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'edituser' }, _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditUser.title }), _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null), _react2['default'].createElement(_edituserboxJs2['default'], null));
+	        if (this.state.data.length === 0) {
+	            return _react2['default'].createElement('div', { className: 'loadingbox' }, 'Loading...');
+	        } else {
+	            return _react2['default'].createElement('div', { className: 'edituser' }, _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditUser.title }), _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null), _react2['default'].createElement(_edituserboxJs2['default'], { dataId: this.props.params.user, data: this.state.data }));
+	        }
 	    }
+
 	});
 
-	EditUser.title = 'Edit user';
+	EditUser.title = "Edit user";
 	EditUser.path = '/edituser/:user';
 
 	exports['default'] = EditUser;
@@ -36040,8 +36067,71 @@
 	var EditUserBox = _react2['default'].createClass({
 	    displayName: 'EditUserBox',
 
+	    editUser: function editUser() {
+	        console.log("Geklikt op edit knop");
+
+	        $.ajax({
+	            url: "http://garcon-server.jinhua.choffice.nl/editusers",
+	            dataType: 'json',
+	            type: 'POST',
+	            data: editdata,
+	            succes: function succes(data) {
+	                if (data.status === "success") {
+	                    console.log("Done with edit!");
+	                } else {
+	                    console.log("Failed with edit...");
+	                }
+	            },
+	            error: (function (xhr, status, err, jqXHR) {
+	                console.error(this.props.url, status, err.toString());
+	                alert(jqXHR);
+	            }).bind(this)
+	        });
+	    },
+
+	    handleSubmit: function handleSubmit(e) {
+	        e.preventDefault();
+
+	        var oldUsername = this.refs.username.value;
+	        var oldEmail = this.refs.email.value;
+	        var oldPhoto = this.refs.photo.value;
+
+	        console.log(oldUsername + " " + oldEmail);
+
+	        if (oldUsername && oldEmail !== "") {
+	            this.editUser({
+	                username: oldUsername,
+	                email: oldEmail,
+	                photo: oldPhoto
+	            });
+	        }
+	    },
+
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'edituserbox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, 'Hallo')));
+
+	        var username = this.props.data[this.props.dataId].username;
+	        var email = this.props.data[this.props.dataId].email;
+	        var photo = this.props.data[this.props.dataId].photo;
+
+	        return _react2['default'].createElement('div', { className: 'usersbox' }, _react2['default'].createElement('div', { className: 'loginBox' }, _react2['default'].createElement('div', { className: 'edituserbox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, 'Username: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	            type: 'text',
+	            id: 'username',
+	            ref: 'username',
+	            defaultValue: username,
+	            placeholder: username }), _react2['default'].createElement('p', null), 'E-mail: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	            type: 'text',
+	            id: 'email',
+	            ref: 'email',
+	            defaultValue: email,
+	            placeholder: email }), _react2['default'].createElement('p', null), 'Photo source: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	            type: 'text',
+	            id: 'email',
+	            ref: 'photo',
+	            defaultValue: photo,
+	            placeholder: photo }), _react2['default'].createElement('p', null), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button',
+	            type: 'submit',
+	            onClick: this.handleSubmit,
+	            name: 'submit' }, 'Edit'))))));
 	    }
 	});
 

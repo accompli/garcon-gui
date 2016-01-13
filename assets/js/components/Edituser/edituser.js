@@ -15,7 +15,6 @@ var EditUser = React.createClass({
     loadUsers: function(){
         
         $.ajax({
-            
             url: "http://garcon-server.jinhua.choffice.nl/users",
             dataType: 'json',
             success: function(data) {

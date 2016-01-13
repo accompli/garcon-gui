@@ -36,7 +36,6 @@ var EditUser = _react2['default'].createClass({
     loadUsers: function loadUsers() {
 
         $.ajax({
-
             url: "http://garcon-server.jinhua.choffice.nl/users",
             dataType: 'json',
             success: (function (data) {
