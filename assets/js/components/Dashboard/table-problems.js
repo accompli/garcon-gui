@@ -14,7 +14,7 @@ var ProblemsTable = React.createClass({
                             <tr>
                                 <th className="mdl-data-table__cell--non-numeric">Project</th>
                                 <th>Application</th>
-                                <th>Status</th>
+                                <th><div className="status">Status</div></th>
                         
                             </tr>
                     

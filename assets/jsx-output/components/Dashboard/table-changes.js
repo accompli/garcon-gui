@@ -17,11 +17,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
 
+var _changesJs = require('./changes.js');
+
+var _changesJs2 = _interopRequireDefault(_changesJs);
+
 var ChangesTable = _react2['default'].createClass({
     displayName: 'ChangesTable',
 
     getInitialState: function getInitialState() {
-        return { changesData: [] };
+        return { data: [] };
     },
 
     componentDidMount: function componentDidMount() {
@@ -33,8 +37,9 @@ var ChangesTable = _react2['default'].createClass({
             url: "http://garcon-server.jinhua.choffice.nl/recentchanges",
             dataType: 'json',
             success: (function (data) {
+                console.log(data.dashboarddata);
                 this.setState({
-                    changesData: data.userdata
+                    data: data.dashboarddata
                 });
             }).bind(this),
             error: (function (xhr, status, err) {
@@ -44,6 +49,12 @@ var ChangesTable = _react2['default'].createClass({
     },
 
     render: function render() {
+
+        var changes = this.state.data.map(function (change, index) {
+
+            return _react2['default'].createElement(_changesJs2['default'], { row: change, key: index, countdata: index });
+        });
+
         return _react2['default'].createElement(
             'table',
             { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp dashboardtable' },
@@ -55,7 +66,7 @@ var ChangesTable = _react2['default'].createClass({
                     null,
                     _react2['default'].createElement(
                         'th',
-                        { className: 'mdl-data-table__cell--non-numeric' },
+                        null,
                         'Project'
                     ),
                     _react2['default'].createElement(
@@ -66,11 +77,19 @@ var ChangesTable = _react2['default'].createClass({
                     _react2['default'].createElement(
                         'th',
                         null,
-                        'Status'
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'status' },
+                            'Status'
+                        )
                     )
                 )
             ),
-            _react2['default'].createElement('tbody', null)
+            _react2['default'].createElement(
+                'tbody',
+                null,
+                changes
+            )
         );
     }
 });

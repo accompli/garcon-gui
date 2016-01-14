@@ -43,7 +43,11 @@ var ProblemsTable = _react2['default'].createClass({
                     _react2['default'].createElement(
                         'th',
                         null,
-                        'Status'
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'status' },
+                            'Status'
+                        )
                     )
                 )
             ),

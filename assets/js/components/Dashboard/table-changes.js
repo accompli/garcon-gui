@@ -6,9 +6,12 @@
 import React from 'react'
 import { render } from 'react-dom'
  
+ 
+import Changes from './changes.js'
+ 
 var ChangesTable = React.createClass({
      getInitialState: function() {
-        return {changesData: []};
+        return {data: []};
     },
     
     componentDidMount: function(){
@@ -20,31 +23,42 @@ var ChangesTable = React.createClass({
             url: "http://garcon-server.jinhua.choffice.nl/recentchanges",
             dataType: 'json',
             success: function(data) {
+                console.log(data.dashboarddata)
                         this.setState({
-                            changesData: data.userdata
+                            data: data.dashboarddata
                         })
-                        
             }.bind(this),
             error:  function(xhr, status, err) {
                     console.error(this.props.url, status, err.toString());
                     }.bind(this)
         });
     },
+
     
     render : function(){
+        
+        var changes = this.state.data.map(function(change, index) {
+            
+            return (
+                    <Changes row={change} key={index} countdata={index}>
+                    
+                    </Changes>
+                    
+                    );
+        })
+        
         return (
                 <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp dashboardtable">
                 <thead>               
                             <tr>
-                                <th className="mdl-data-table__cell--non-numeric">Project</th>
+                                <th>Project</th>
                                 <th>Application</th>
-                                <th>Status</th>
-                        
+                                <th><div className="status">Status</div></th>
                             </tr>
                     
                 </thead>
                         <tbody>
-                            
+                            {changes}
                         </tbody>     
                     </table>
                 )
