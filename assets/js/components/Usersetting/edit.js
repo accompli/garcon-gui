@@ -9,42 +9,7 @@ import $ from 'jquery';
 
 
 var Edit = React.createClass({
-    
-    deleteUser: function(deletedata){
-        $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/deleteuser",
-            dataType: 'json',
-            type: 'POST',
-            data: deletedata,
-            success:
-                    function(data){
-                        if (data.status === "success"){
-                            console.log('deleted!');
-                        }
-                        else if (data.status === "fail"){
-                            console.log("Failed with edit...");
-                        }
-                    }.bind(this),     
-            error:
-                    function(xhr, status, err, jqXHR){
-                        console.error(this.props.url, status, err.toString());
-                         alert( jqXHR);
-                    }.bind(this)
-        });
-    },
-    
-    handleOnClick : function(e){
-        e.preventDefault();
-        
-        var userId = this.props.userid;
-        
-        console.log(userId);
 
-        this.deleteUser({
-            userid: userId
-        });  
-    },
-    
     render: function(){
         return (
                 <td>
@@ -65,8 +30,10 @@ var Edit = React.createClass({
                         <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
                             htmlFor={this.props.userid}>
                             <Link to="/RecentActivity"><li className="mdl-menu__item">Recent activity</li></Link>
-                            <li className="mdl-menu__item"><Link to={`/edituser/${this.props.userid}`}>Edit</Link></li>
-                            <li className="mdl-menu__item" onClick={this.handleOnClick}>Delete</li>
+                            <li className="mdl-menu__item">
+                                <Link to={`/edituser/${this.props.userid}`}>Edit</Link>
+                            </li>
+                            <li className="mdl-menu__item" onClick={this.props.delete}>Delete</li>
                         </ul>
                 
                 

@@ -29,6 +29,10 @@ var _editJs2 = _interopRequireDefault(_editJs);
 var UsersTable = _react2['default'].createClass({
     displayName: 'UsersTable',
 
+    componentDidUpdate: function componentDidUpdate() {
+        componentHandler.upgradeDom();
+    },
+
     getInitialState: function getInitialState() {
         return { data: [] };
     },
@@ -52,11 +56,15 @@ var UsersTable = _react2['default'].createClass({
         });
     },
 
+    refreshUsers: function refreshUsers() {
+        this.loadUsers();
+    },
+
     render: function render() {
         return _react2['default'].createElement(
             'div',
             { className: 'list users' },
-            _react2['default'].createElement(UsersList, { data: this.state.data }),
+            _react2['default'].createElement(UsersList, { refreshUsersList: this.refreshUsers, data: this.state.data }),
             _react2['default'].createElement(
                 _reactRouter.Link,
                 { to: '/newuser' },
@@ -83,14 +91,18 @@ var UsersList = _react2['default'].createClass({
         data: _react2['default'].PropTypes.array.isRequired
     },
 
+    refreshList: function refreshList() {
+        this.props.refreshUsersList();
+    },
+
     render: function render() {
 
         var countData = this.props.data.length;
 
-        var userData = this.props.data.map(function (user, index) {
+        var userData = this.props.data.map((function (user, index) {
 
-            return _react2['default'].createElement(Users, { user: user, key: index, countdata: index });
-        });
+            return _react2['default'].createElement(Users, { refreshList: this.refreshList, user: user, key: index, countdata: index });
+        }).bind(this));
 
         return _react2['default'].createElement(
             'table',
@@ -140,13 +152,32 @@ var UsersList = _react2['default'].createClass({
 var Users = _react2['default'].createClass({
     displayName: 'Users',
 
+    deleteUser: function deleteUser() {
+
+        _jquery2['default'].ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/deleteuser",
+            dataType: 'json',
+            type: 'POST',
+            data: { userid: this.props.user.userid },
+            success: (function (data) {
+                this.props.refreshList();
+                if (data.status === "success") {} else if (data.status === "fail") {
+                    console.log("Failed with edit...");
+                }
+            }).bind(this),
+            error: (function (xhr, status, err, jqXHR) {
+                console.error(this.props.url, status, err.toString());
+                alert(jqXHR);
+            }).bind(this)
+        });
+    },
+
     rawMarkup: function rawMarkup() {
         var rawMarkup = marked(this.props.children.toString());
         return { __html: rawMarkup };
     },
 
     render: function render() {
-        //console.log(this.props.user.username + this.props.countdata)
         return _react2['default'].createElement(
             'tr',
             null,
@@ -170,7 +201,7 @@ var Users = _react2['default'].createClass({
                 null,
                 this.props.user.projects
             ),
-            _react2['default'].createElement(_editJs2['default'], { userid: this.props.countdata, username: this.props.user.username, email: this.props.user.email })
+            _react2['default'].createElement(_editJs2['default'], { 'delete': this.deleteUser, userid: this.props.countdata, username: this.props.user.username, email: this.props.user.email })
         );
     }
 });

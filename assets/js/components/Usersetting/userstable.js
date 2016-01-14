@@ -10,6 +10,11 @@ import $ from 'jquery';
 import Edit from './edit.js'
 
 var UsersTable= React.createClass({
+    
+    componentDidUpdate: function() {
+        componentHandler.upgradeDom();
+    },
+    
     getInitialState: function() {
         return {data: []};
     },
@@ -18,7 +23,7 @@ var UsersTable= React.createClass({
         this.loadUsers();
     },
     
-    loadUsers: function(){
+    loadUsers: function() {
         $.ajax({
             url: "http://garcon-server.jinhua.choffice.nl/users",
             dataType: 'json',
@@ -34,11 +39,16 @@ var UsersTable= React.createClass({
         });
     },
     
-    render : function (){
+    refreshUsers: function() {
+        this.loadUsers();
+    },
+    
+    
+    render: function (){
         return (
                 <div className="list users">
                
-                    <UsersList data={this.state.data} />   
+                    <UsersList refreshUsersList={this.refreshUsers} data={this.state.data} />   
                     
                     <Link to="/newuser">
                         <button className = "mdl-button mdl-js-button add_user"
@@ -61,6 +71,10 @@ var UsersList = React.createClass({
     propTypes: {
         data: React.PropTypes.array.isRequired
     },
+    
+    refreshList: function(){
+        this.props.refreshUsersList();
+    },
         
     render: function(){
         
@@ -69,13 +83,15 @@ var UsersList = React.createClass({
         
         var userData = this.props.data.map(function(user, index) {
             
+            
+            
             return (
-                    <Users user={user} key={index} countdata={index}>
+                    <Users refreshList={this.refreshList} user={user} key={index} countdata={index}>
                     
                     </Users>
                     
                     );
-        });
+        }.bind(this));
         
 
         return ( 
@@ -102,20 +118,47 @@ var UsersList = React.createClass({
 
 var Users = React.createClass({
     
+    
+deleteUser: function(){
+           
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/deleteuser",
+            dataType: 'json',
+            type: 'POST',
+            data: {userid: this.props.user.userid},
+            success:
+                    function(data){
+                        this.props.refreshList();
+                        if (data.status === "success"){
+                            
+                        }
+                        else if (data.status === "fail"){
+                            console.log("Failed with edit...");
+                        }
+                    }.bind(this),     
+            error:
+                    function(xhr, status, err, jqXHR){
+                        console.error(this.props.url, status, err.toString());
+                         alert( jqXHR);
+                    }.bind(this)
+        });
+    },
+    
+    
+    
     rawMarkup: function() {
         var rawMarkup = marked(this.props.children.toString());
         return { __html: rawMarkup };
     },
   
     render: function(){
-        //console.log(this.props.user.username + this.props.countdata)
         return (
                 <tr>
                     <td className="mdl-data-table__cell--non-numeric "><img src={this.props.user.photo} id="usericons"/></td>
                     <td>{this.props.user.username}</td>
                     <td>{this.props.user.email}</td>
                     <td>{this.props.user.projects}</td>
-                    <Edit userid={this.props.countdata} username={this.props.user.username} email={this.props.user.email}/>
+                    <Edit delete={this.deleteUser} userid={this.props.countdata} username={this.props.user.username} email={this.props.user.email}/>
                 </tr>
         );
     }

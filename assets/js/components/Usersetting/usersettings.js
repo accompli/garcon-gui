@@ -14,6 +14,7 @@ import UsersBox from './usersbox.js'
 import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 
 var Usersettings = React.createClass({
+
     render: function() {
         return (
                 <div className ="usersettings">

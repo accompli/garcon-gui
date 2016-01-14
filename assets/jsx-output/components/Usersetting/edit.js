@@ -24,38 +24,6 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var Edit = _react2['default'].createClass({
     displayName: 'Edit',
 
-    deleteUser: function deleteUser(deletedata) {
-        _jquery2['default'].ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/deleteuser",
-            dataType: 'json',
-            type: 'POST',
-            data: deletedata,
-            success: (function (data) {
-                if (data.status === "success") {
-                    console.log('deleted!');
-                } else if (data.status === "fail") {
-                    console.log("Failed with edit...");
-                }
-            }).bind(this),
-            error: (function (xhr, status, err, jqXHR) {
-                console.error(this.props.url, status, err.toString());
-                alert(jqXHR);
-            }).bind(this)
-        });
-    },
-
-    handleOnClick: function handleOnClick(e) {
-        e.preventDefault();
-
-        var userId = this.props.userid;
-
-        console.log(userId);
-
-        this.deleteUser({
-            userid: userId
-        });
-    },
-
     render: function render() {
         return _react2['default'].createElement(
             'td',
@@ -99,7 +67,7 @@ var Edit = _react2['default'].createClass({
                 ),
                 _react2['default'].createElement(
                     'li',
-                    { className: 'mdl-menu__item', onClick: this.handleOnClick },
+                    { className: 'mdl-menu__item', onClick: this.props['delete'] },
                     'Delete'
                 )
             )
