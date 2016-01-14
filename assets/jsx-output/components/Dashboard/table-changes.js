@@ -20,6 +20,29 @@ var _reactDom = require('react-dom');
 var ChangesTable = _react2['default'].createClass({
     displayName: 'ChangesTable',
 
+    getInitialState: function getInitialState() {
+        return { changesData: [] };
+    },
+
+    componentDidMount: function componentDidMount() {
+        this.loadRecentChanges();
+    },
+
+    loadRecentChanges: function loadRecentChanges() {
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/recentchanges",
+            dataType: 'json',
+            success: (function (data) {
+                this.setState({
+                    changesData: data.userdata
+                });
+            }).bind(this),
+            error: (function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }).bind(this)
+        });
+    },
+
     render: function render() {
         return _react2['default'].createElement(
             'table',
@@ -47,11 +70,7 @@ var ChangesTable = _react2['default'].createClass({
                     )
                 )
             ),
-            _react2['default'].createElement(
-                'tbody',
-                null,
-                'data'
-            )
+            _react2['default'].createElement('tbody', null)
         );
     }
 });

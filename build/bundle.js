@@ -173,35 +173,35 @@
 
 	var _componentsDashboardDashboardJs2 = _interopRequireDefault(_componentsDashboardDashboardJs);
 
-	var _componentsUsersettingUsersettingsJs = __webpack_require__(230);
+	var _componentsUsersettingUsersettingsJs = __webpack_require__(235);
 
 	var _componentsUsersettingUsersettingsJs2 = _interopRequireDefault(_componentsUsersettingUsersettingsJs);
 
-	var _componentsNewuserJs = __webpack_require__(235);
+	var _componentsNewuserJs = __webpack_require__(240);
 
 	var _componentsNewuserJs2 = _interopRequireDefault(_componentsNewuserJs);
 
-	var _componentsOrganisationsOrganisationsJs = __webpack_require__(236);
+	var _componentsOrganisationsOrganisationsJs = __webpack_require__(241);
 
 	var _componentsOrganisationsOrganisationsJs2 = _interopRequireDefault(_componentsOrganisationsOrganisationsJs);
 
-	var _componentsLayoutHeaderJs = __webpack_require__(237);
+	var _componentsLayoutHeaderJs = __webpack_require__(242);
 
 	var _componentsLayoutHeaderJs2 = _interopRequireDefault(_componentsLayoutHeaderJs);
 
-	var _componentsAccountsettingAccountsettingJs = __webpack_require__(238);
+	var _componentsAccountsettingAccountsettingJs = __webpack_require__(243);
 
 	var _componentsAccountsettingAccountsettingJs2 = _interopRequireDefault(_componentsAccountsettingAccountsettingJs);
 
-	var _componentsSystemsettingSystemsettingJs = __webpack_require__(240);
+	var _componentsSystemsettingSystemsettingJs = __webpack_require__(245);
 
 	var _componentsSystemsettingSystemsettingJs2 = _interopRequireDefault(_componentsSystemsettingSystemsettingJs);
 
-	var _componentsRecentactivityRecentactivityJs = __webpack_require__(242);
+	var _componentsRecentactivityRecentactivityJs = __webpack_require__(247);
 
 	var _componentsRecentactivityRecentactivityJs2 = _interopRequireDefault(_componentsRecentactivityRecentactivityJs);
 
-	var _componentsEdituserEdituserJs = __webpack_require__(243);
+	var _componentsEdituserEdituserJs = __webpack_require__(248);
 
 	var _componentsEdituserEdituserJs2 = _interopRequireDefault(_componentsEdituserEdituserJs);
 
@@ -293,7 +293,7 @@
 
 
 	// module
-	exports.push([module.id, "/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : Oct 27, 2015, 10:24:38 AM\n    Author     : jinhua\n*/\n\n\nhtml, body {\n    height: 100%;\n    background-color: #f7f7f8;\n    color: #999;\n    font-family: Lato;\n    \n}\n\nbody input {\n    font-family: Lato;\n}\n\n.mdl-card__title-text {\n    font-size: 36px;\n}\n\na {\n    color: #24c58f;\n    font-size: 16px;\n}\n\nol {\n    list-style-type: none;\n}\n\nli {\n    display: inline-block;\n}\n\nul{\n    line-height: 0;\n}\n\n/*HEADER*/\n.mdl-layout__header-row {\n    padding: 0 0 0 0;\n}\n\n.garconlogo {\n    max-width: 150px;\n    margin: 0 0 0 20px;\n    vertical-align: middle;\n}\n\n.garconlogo img {\n    width: 100%;\n}\n\n.no_login_header {\n    background-color: #FFFFFF;\n}\n\n.mdl-layout__header-row {\n    height: 90px;\n    position: relative;\n}\n\n/*NAVIGATION*/\n.navigation a {\n    color: #767e8a;\n    display: table-cell;\n    vertical-align: middle;\n    text-decoration: none;\n    font-family: Lato;\n    font-size: 16px;\n    text-transform: uppercase;\n    height: 90px;\n    padding-right: 30px;\n}\n\n.navigation {\n    color: red;\n}\n\n.menu {\n    padding: 0px 30px 0px;\n}\n\n.menu a {\n   padding: 0 10px 0 10px;\n   border-bottom: 6px solid #fff;\n}\n\n.menu a:hover {\n   color: #24c58f;\n   border-bottom: 6px solid #E5E5E5;\n}\n\n.mdl-menu__outline {\n    border-radius: 0;\n}\n\n.mdl-menu__item a:hover{\n        color: #24c58f;\n}\n\n.tabmenu_item a {\n    height: 0px;\n}\n\n.tabmenu_item a:hover {\n    color: #24c58f;\n}\n\n.login_button {\n    background-color: #fff;\n    border-left:#EBEBEB solid 1px;\n}\n\n.login_button a:hover {\n    color: #24c58f;\n}\n\n\n#icon_login {\n    padding: 0 10px 0 35px;\n    fill: #C6C9C9;\n    height: 30%;\n}\n\n.login_txt {\n    padding-right: 35px;\n}\n\n#arrow_dropdown {\n    fill: #C6C9C9;\n}\n\n.profilepic {\n\n}\n\n/*BACKGROUND*/\n\n.mdl-layout__content {\n    width: 100%;\n    height: 100%;\n}\n\n#bot {\n    width: 100%;\n    overflow: hidden;\n    background-color: #f7f7f8;\n    margin: 0px;\n    position: absolute;\n}\n\n.deployment_txt {\n    width: 250px;\n    color: white;\n    font-size: 32px;\n    z-index: 2;\n    position: absolute;\n    margin-top: 750px;\n    margin-left: 30px;\n    font-family: Ubuntu;\n    font-weight: bold;\n    letter-spacing: 3px;\n    line-height: 30px;\n    text-transform: uppercase;\n}\n\n.top { \n    width: 0; \n    height: 0; \n    border-top: 1000px solid #24c58f; \n    border-right: 2000px solid transparent;\n    z-index: 1;\n}\n\n\n/*LOGIN*/\n .white_block {\n     position: absolute;\n     left: 50%;\n     transform: translate(-50%, 0%);\n     padding-top: 50px;\n     max-width: 560px;\n     width: 100%;\n }\n \n @media (min-width: 320px) {\n     \n     .white_block {\n         padding-top: 150px;\n     }\n}\n\n.demo-card-square.mdl-card {\n    width: 100%;\n    max-width: 560px;\n    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n}\n\n .mdl-card__supporting-text {\n     \n }\n\n .mdl-cardbox {\n     padding:40px;\n }\n\n .mdl-card__title {\n     \n }\n \n .head {\n     font-size: 36px;\n     margin-bottom: 30px;\n     color: #24c58f;\n     font-family: Ubuntu;\n     font-weight: bold;\n }\n \n .mdl-textfield {\n     width: 100%;\n }\n \n .mdl-textfield__label {\n     font-size: 16px;\n     color: #999;\n     font-family: Lato;\n     width: 100%;\n     white-space: normal;\n }\n \n .mdl-textfield__input {\n     padding-bottom: 5px;\n     \n }\n \n .form_icon {\n     float: right;\n     fill: #C6C9C9;\n }\n \n .mdl-checkbox__input {\n\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__box-outline {\n     border: none;\n }\n \n .mdl-checkbox__box-outline {\n     border: 2px solid #C6C9C9;\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {\n    background: #24c58f url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K\") repeat scroll 0% 0%;\n}\n\n .mdl-checkbox__label {\n    font-size: 16px;\n    color: #999;\n    font-family: Lato;\n    line-height: 0;\n }\n \n .forget_pwd {\n    padding: 50px 0 30px 0;\n    font-family: Lato;\n }\n \n .forget_pwd a:hover {\n    color: #0BAC76;\n }\n \n .forget_pwd span {\n     transform: translateY(-25%);\n }\n \n .mdl-button {\n     background-color: #24c58f;\n     color: #fff;\n     height: 50px;\n     font-family: Lato;\n     font-size: 18px;\n     border-radius: 4px;\n     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n }\n \n .mdl-button:hover {\n    background-color: #0BAC76;\n }\n \n .login {\n     float: right;\n     transform: translateY(-25%);\n     width: 130px;\n }\n \n .errormsg-box {\n     color: #24c58f;\n }\n \n hr {\n    width: 200%;\n    position: relative;\n    margin-left: -50%;\n    background-color: #fff;\n    border-color: #EFECEC\n }\n\n .circle {\n    width:30px;\n    height:30px;\n    border-radius:250px;\n    border: solid #EFECEC 1px;\n    font-family: Lato;\n    font-size:12px;\n    color:#ccc;\n    line-height:30px;\n    text-align:center;\n    background-color: #fff;\n    position: absolute;\n    z-index: 2;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n}\n\n.extern_login {\n    padding-top: 20px;\n }\n \n.ext_login_button {\n    background-color: #fff ;\n    font-size: 16px;\n    font-family: Lato;\n    font-weight: bold;\n    padding: 10px 30px 10px 20px;\n    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);\n    border:none;\n    border-radius: 3px;\n    width: 100%;\n    max-width: 220px;\n    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;\n}\n\n.ext_login_button:hover {\n    background-color: #E6E6E6;\n}\n\n.icon-ext {\n    margin-right: 10px;\n    width: 20px;\n    height: 20px;\n}\n\n.github {\n    color: #3d76c3;\n    fill: #3d76c3;\n    \n}\n.google {\n    color: #dc4e41;\n    fill: #dc4e41;\n    float: right;\n}\n\n.externLoginBox{\n    padding-top: 30px;\n}\n\n/*GREEN BLOCK*/\n.block_text {\n    font-family: Ubuntu;\n    font-weight: bold;\n    font-size: 32px;\n    text-transform: uppercase;\n    color: #fff;\n    position: absolute;\n    top: 50%;\n    left: 20%;\n}\n\n.block {\n    width: 100%;\n    position: relative;\n}\n\n.green {\n    height: 200px;\n    background-color: #24c58f;\n}\n\n.white {\n    height: 50px;\n    background-color: #fff;\n}\n\n/*BREADCRUMBS MENU*/\n.breadcrumbs {\n    position: absolute;\n    left: 20%;\n    padding-top: 15px;\n\n\n}\n\n.breadcrumbs a {\n    text-decoration: none;\n    color: #767e8a;\n    \n}\n\n/*USERS*/\ninput::-moz-placeholder {\n  color: #767e8a;\n  font-size: 16px;\n}\n\n.usersbox{\n    width: 60%;\n    padding-top: 2%;\n    left: 20%;\n    position: relative;\n}\n\n.add_user {\n    border-radius: 50%;\n    height: 56px;\n    float: right;\n    margin-right: -150px;\n    width: 56px;\n    min-width: 56px;\n    box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.24);\n}\n\n.filterbox {\n    width: 100%;\n}\n\n.filter {\n    border: 1px gainsboro solid;\n    border-radius: 5px;\n    height: 48px;\n}\n\n.search {\n    float: left;\n}\n\n.searchbox {\n/*    border: 1px red solid;*/\n    transform: translateY(50%);\n    margin-left: 20px;\n}\n\n.sort {\n    float: right;\n}\n\n.add_icon {\n    fill: #fff;\n    vertical-align: middle;\n}\n\n.search_icon {\n}\n\n.dropdown_icon{\n    padding-top: 7px;\n}\n\n.dropup_icon{\n    position: absolute;\n}\n\n.filtericons {\n    fill: #767e8a;\n}\n\n.searchform {\n    background-color: transparent;\n    color: #767e8a;\n    width: 80%;\n    border: none;\n    margin-left: 10px;\n}\n\n.sortbox {\n    border-radius: 5px;\n    font-size: 16px;\n    border: 1px gainsboro solid;\n    \n}\n\n.sortbox_text {\n/*    border: 1px blue solid;*/\n    transform: translateY(60%);\n    font-size: 16px;\n    margin-left: 20px;\n    \n}\n\n.sort_arrows {\n    float: right;\n    transform: translateY(-15%);\n    padding-left: 30px;\n}\n\n.list {\n    padding-top: 70px;\n}\n\n.users {\n    position: relative;\n}\n\n.mdl-data-table {\n    font-size: 15px;\n    width: 100%;\n    position: relative;\n}\n.mdl-data-table td {\n    text-align: left;\n    color: #767e8A;\n    vertical-align: middle;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    \n}\n\n.mdl-data-table th {\n    text-align: left;\n    color: #999;\n    \n}\n\n#usericons {\n    height: 30px;\n}\n\n.edit_icon {\n    fill: #999;\n}\n\n.edit-options {\n    background-color: #fff;\n    height:50px;\n    width: 50px;\n    border-radius:50px;\n    border: solid #fff;\n}\n\n.edit-btn {\n    \n}\n\n", ""]);
+	exports.push([module.id, "/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : Oct 27, 2015, 10:24:38 AM\n    Author     : jinhua\n*/\n\n\nhtml, body {\n    height: 100%;\n    background-color: #f7f7f8;\n    color: #999;\n    font-family: Lato;\n    \n}\n\nbody input {\n    font-family: Lato;\n}\n\n.mdl-card__title-text {\n    font-size: 36px;\n}\n\na {\n    color: #24c58f;\n    font-size: 16px;\n}\n\nol {\n    list-style-type: none;\n}\n\nli {\n    display: inline-block;\n}\n\nul{\n    line-height: 0;\n}\n\n/*HEADER*/\n.mdl-layout__header-row {\n    padding: 0 0 0 0;\n}\n\n.garconlogo {\n    max-width: 150px;\n    margin: 0 0 0 20px;\n    vertical-align: middle;\n}\n\n.garconlogo img {\n    width: 100%;\n}\n\n.no_login_header {\n    background-color: #FFFFFF;\n}\n\n.mdl-layout__header-row {\n    height: 90px;\n    position: relative;\n}\n\n/*NAVIGATION*/\n.navigation a {\n    color: #767e8a;\n    display: table-cell;\n    vertical-align: middle;\n    text-decoration: none;\n    font-family: Lato;\n    font-size: 16px;\n    text-transform: uppercase;\n    height: 90px;\n    padding-right: 30px;\n}\n\n.navigation {\n    color: red;\n}\n\n.menu {\n    padding: 0px 30px 0px;\n}\n\n.menu a {\n   padding: 0 10px 0 10px;\n   border-bottom: 6px solid #fff;\n}\n\n.menu a:hover {\n   color: #24c58f;\n   border-bottom: 6px solid #E5E5E5;\n}\n\n.mdl-menu__outline {\n    border-radius: 0;\n}\n\n.mdl-menu__item a:hover{\n        color: #24c58f;\n}\n\n.tabmenu_item a {\n    height: 0px;\n}\n\n.tabmenu_item a:hover {\n    color: #24c58f;\n}\n\n.login_button {\n    background-color: #fff;\n    border-left:#EBEBEB solid 1px;\n}\n\n.login_button a:hover {\n    color: #24c58f;\n}\n\n\n#icon_login {\n    padding: 0 10px 0 35px;\n    fill: #C6C9C9;\n    height: 30%;\n}\n\n.login_txt {\n    padding-right: 35px;\n}\n\n#arrow_dropdown {\n    fill: #C6C9C9;\n}\n\n.profilepic {\n\n}\n\n/*BACKGROUND*/\n\n.mdl-layout__content {\n    width: 100%;\n    height: 100%;\n}\n\n#bot {\n    width: 100%;\n    overflow: hidden;\n    background-color: #f7f7f8;\n    margin: 0px;\n    position: absolute;\n}\n\n.deployment_txt {\n    width: 250px;\n    color: white;\n    font-size: 32px;\n    z-index: 2;\n    position: absolute;\n    margin-top: 750px;\n    margin-left: 30px;\n    font-family: Ubuntu;\n    font-weight: bold;\n    letter-spacing: 3px;\n    line-height: 30px;\n    text-transform: uppercase;\n}\n\n.top { \n    width: 0; \n    height: 0; \n    border-top: 1000px solid #24c58f; \n    border-right: 2000px solid transparent;\n    z-index: 1;\n}\n\n\n/*LOGIN*/\n .white_block {\n     position: absolute;\n     left: 50%;\n     transform: translate(-50%, 0%);\n     padding-top: 50px;\n     max-width: 560px;\n     width: 100%;\n }\n \n @media (min-width: 320px) {\n     \n     .white_block {\n         padding-top: 150px;\n     }\n}\n\n.demo-card-square.mdl-card {\n    width: 100%;\n    max-width: 560px;\n    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n}\n\n .mdl-card__supporting-text {\n     \n }\n\n .mdl-cardbox {\n     padding:40px;\n }\n\n .mdl-card__title {\n     \n }\n \n .head {\n     font-size: 36px;\n     margin-bottom: 30px;\n     color: #24c58f;\n     font-family: Ubuntu;\n     font-weight: bold;\n }\n \n .mdl-textfield {\n     width: 100%;\n }\n \n .mdl-textfield__label {\n     font-size: 16px;\n     color: #999;\n     font-family: Lato;\n     width: 100%;\n     white-space: normal;\n }\n \n .mdl-textfield__input {\n     padding-bottom: 5px;\n     \n }\n \n .form_icon {\n     float: right;\n     fill: #C6C9C9;\n }\n \n .mdl-checkbox__input {\n\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__box-outline {\n     border: none;\n }\n \n .mdl-checkbox__box-outline {\n     border: 2px solid #C6C9C9;\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {\n    background: #24c58f url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K\") repeat scroll 0% 0%;\n}\n\n .mdl-checkbox__label {\n    font-size: 16px;\n    color: #999;\n    font-family: Lato;\n    line-height: 0;\n }\n \n .forget_pwd {\n    padding: 50px 0 30px 0;\n    font-family: Lato;\n }\n \n .forget_pwd a:hover {\n    color: #0BAC76;\n }\n \n .forget_pwd span {\n     transform: translateY(-25%);\n }\n \n .mdl-button {\n     background-color: #24c58f;\n     color: #fff;\n     height: 50px;\n     font-family: Lato;\n     font-size: 18px;\n     border-radius: 4px;\n     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n }\n \n .mdl-button:hover {\n    background-color: #0BAC76;\n }\n \n .login {\n     float: right;\n     transform: translateY(-25%);\n     width: 130px;\n }\n \n .errormsg-box {\n     color: #24c58f;\n }\n \n hr {\n    width: 200%;\n    position: relative;\n    margin-left: -50%;\n    background-color: #fff;\n    border-color: #EFECEC\n }\n\n .circle {\n    width:30px;\n    height:30px;\n    border-radius:250px;\n    border: solid #EFECEC 1px;\n    font-family: Lato;\n    font-size:12px;\n    color:#ccc;\n    line-height:30px;\n    text-align:center;\n    background-color: #fff;\n    position: absolute;\n    z-index: 2;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n}\n\n.extern_login {\n    padding-top: 20px;\n }\n \n.ext_login_button {\n    background-color: #fff ;\n    font-size: 16px;\n    font-family: Lato;\n    font-weight: bold;\n    padding: 10px 30px 10px 20px;\n    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);\n    border:none;\n    border-radius: 3px;\n    width: 100%;\n    max-width: 220px;\n    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;\n}\n\n.ext_login_button:hover {\n    background-color: #E6E6E6;\n}\n\n.icon-ext {\n    margin-right: 10px;\n    width: 20px;\n    height: 20px;\n}\n\n.github {\n    color: #3d76c3;\n    fill: #3d76c3;\n    \n}\n.google {\n    color: #dc4e41;\n    fill: #dc4e41;\n    float: right;\n}\n\n.externLoginBox{\n    padding-top: 30px;\n}\n\n/*GREEN BLOCK*/\n.block_text {\n    font-family: Ubuntu;\n    font-weight: bold;\n    font-size: 32px;\n    text-transform: uppercase;\n    color: #fff;\n    position: absolute;\n    top: 50%;\n    left: 20%;\n}\n\n.block {\n    width: 100%;\n    position: relative;\n}\n\n.green {\n    height: 250px;\n    background-color: #24c58f;\n}\n\n.white {\n    height: 50px;\n    background-color: #fff;\n}\n\n/*BREADCRUMBS MENU*/\n.breadcrumbs {\n    position: absolute;\n    left: 20%;\n    padding-top: 15px;\n\n\n}\n\n.breadcrumbs a {\n    text-decoration: none;\n    color: #767e8a;\n    \n}\n\n/*USERS*/\ninput::-moz-placeholder {\n  color: #767e8a;\n  font-size: 16px;\n}\n\n.box{\n    width: 60%;\n    padding-top: 2%;\n    left: 20%;\n    position: relative;\n}\n\n.add_user {\n    border-radius: 50%;\n    height: 56px;\n    float: right;\n    margin-right: -150px;\n    width: 56px;\n    min-width: 56px;\n    box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.24);\n}\n\n.filterbox {\n    width: 100%;\n}\n\n.filter {\n    border: 1px gainsboro solid;\n    border-radius: 5px;\n    height: 48px;\n}\n\n.search {\n    float: left;\n}\n\n.searchbox {\n/*    border: 1px red solid;*/\n    transform: translateY(50%);\n    margin-left: 20px;\n}\n\n.sort {\n    float: right;\n}\n\n.add_icon {\n    fill: #fff;\n    vertical-align: middle;\n}\n\n.search_icon {\n}\n\n.dropdown_icon{\n    padding-top: 7px;\n}\n\n.dropup_icon{\n    position: absolute;\n}\n\n.filtericons {\n    fill: #767e8a;\n}\n\n.searchform {\n    background-color: transparent;\n    color: #767e8a;\n    width: 80%;\n    border: none;\n    margin-left: 10px;\n}\n\n.sortbox {\n    border-radius: 5px;\n    font-size: 16px;\n    border: 1px gainsboro solid;\n    \n}\n\n.sortbox_text {\n/*    border: 1px blue solid;*/\n    transform: translateY(60%);\n    font-size: 16px;\n    margin-left: 20px;\n    \n}\n\n.sort_arrows {\n    float: right;\n    transform: translateY(-15%);\n    padding-left: 30px;\n}\n\n.list {\n    padding-top: 70px;\n}\n\n.users {\n    position: relative;\n}\n\n.mdl-data-table {\n    font-size: 15px;\n    width: 100%;\n    position: relative;\n}\n.mdl-data-table td {\n    text-align: left;\n    color: #767e8A;\n    vertical-align: middle;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    \n}\n\n.mdl-data-table th {\n    text-align: left;\n    color: #999;\n    \n}\n\n#usericons {\n    height: 30px;\n}\n\n.edit_icon {\n    fill: #999;\n}\n\n.edit-options {\n    background-color: #fff;\n    height:50px;\n    width: 50px;\n    border-radius:50px;\n    border: solid #fff;\n}\n\n.edit-btn {\n    \n}\n\n/*Dashboard*/\n.tablebox{\n    border: 1px solid red;\n    width: 48%;\n}\n\n.changes {\n    float: left;\n}\n\n.problems {\n    float: right;\n}\n\n.table-title {\n    color: #767e8a;\n    font-weight: bold;\n    font-size: 25px;\n    border: solid 1px blue;\n    margin-bottom: 20px;\n}\n\n.dashboardtable {\n}", ""]);
 
 	// exports
 
@@ -35071,11 +35071,11 @@
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	    value: true
 	});
 
 	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { 'default': obj };
+	    return obj && obj.__esModule ? obj : { 'default': obj };
 	}
 
 	var _react = __webpack_require__(8);
@@ -35094,13 +35094,16 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
+	var _dashboardboxJs = __webpack_require__(230);
+
+	var _dashboardboxJs2 = _interopRequireDefault(_dashboardboxJs);
+
 	var Dashboard = _react2['default'].createClass({
-	  displayName: 'Dashboard',
+	    displayName: 'Dashboard',
 
-	  render: function render() {
-
-	    return _react2['default'].createElement('div', { className: 'dashboard' }, _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Dashboard.title }), _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null));
-	  }
+	    render: function render() {
+	        return _react2['default'].createElement('div', { className: 'dashboard' }, _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Dashboard.title }), _react2['default'].createElement(_dashboardboxJs2['default'], null));
+	    }
 	});
 
 	Dashboard.title = 'Dashboard';
@@ -35222,6 +35225,248 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(165);
+
+	var _boxChangesJs = __webpack_require__(231);
+
+	var _boxChangesJs2 = _interopRequireDefault(_boxChangesJs);
+
+	var _boxProblemsJs = __webpack_require__(233);
+
+	var _boxProblemsJs2 = _interopRequireDefault(_boxProblemsJs);
+
+	var DashboardBox = _react2['default'].createClass({
+	    displayName: 'DashboardBox',
+
+	    render: function render() {
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement(_boxChangesJs2['default'], null), _react2['default'].createElement(_boxProblemsJs2['default'], null));
+	    }
+	});
+
+	exports['default'] = DashboardBox;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "dashboardbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(165);
+
+	var _tableChanges = __webpack_require__(232);
+
+	var _tableChanges2 = _interopRequireDefault(_tableChanges);
+
+	var Changes = _react2['default'].createClass({
+	    displayName: 'Changes',
+
+	    render: function render() {
+	        return _react2['default'].createElement('div', { className: 'tablebox changes' }, _react2['default'].createElement('div', { className: 'table-title' }, 'Recent changes'), _react2['default'].createElement(_tableChanges2['default'], null));
+	    }
+	});
+
+	exports['default'] = Changes;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "box-changes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(165);
+
+	var ChangesTable = _react2['default'].createClass({
+	    displayName: 'ChangesTable',
+
+	    getInitialState: function getInitialState() {
+	        return { changesData: [] };
+	    },
+
+	    componentDidMount: function componentDidMount() {
+	        this.loadRecentChanges();
+	    },
+
+	    loadRecentChanges: function loadRecentChanges() {
+	        $.ajax({
+	            url: "http://garcon-server.jinhua.choffice.nl/recentchanges",
+	            dataType: 'json',
+	            success: (function (data) {
+	                this.setState({
+	                    changesData: data.userdata
+	                });
+	            }).bind(this),
+	            error: (function (xhr, status, err) {
+	                console.error(this.props.url, status, err.toString());
+	            }).bind(this)
+	        });
+	    },
+
+	    render: function render() {
+	        return _react2['default'].createElement('table', { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp dashboardtable' }, _react2['default'].createElement('thead', null, _react2['default'].createElement('tr', null, _react2['default'].createElement('th', { className: 'mdl-data-table__cell--non-numeric' }, 'Project'), _react2['default'].createElement('th', null, 'Application'), _react2['default'].createElement('th', null, 'Status'))), _react2['default'].createElement('tbody', null));
+	    }
+	});
+
+	exports['default'] = ChangesTable;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "table-changes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(165);
+
+	var _tableProblems = __webpack_require__(234);
+
+	var _tableProblems2 = _interopRequireDefault(_tableProblems);
+
+	var Problems = _react2['default'].createClass({
+	    displayName: 'Problems',
+
+	    render: function render() {
+	        return _react2['default'].createElement('div', { className: 'tablebox problems' }, _react2['default'].createElement('div', { className: 'table-title' }, 'Problems'), _react2['default'].createElement(_tableProblems2['default'], null));
+	    }
+	});
+
+	exports['default'] = Problems;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "box-problems.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(165);
+
+	var ProblemsTable = _react2['default'].createClass({
+	    displayName: 'ProblemsTable',
+
+	    render: function render() {
+	        return _react2['default'].createElement('table', { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp dashboardtable' }, _react2['default'].createElement('thead', null, _react2['default'].createElement('tr', null, _react2['default'].createElement('th', { className: 'mdl-data-table__cell--non-numeric' }, 'Project'), _react2['default'].createElement('th', null, 'Application'), _react2['default'].createElement('th', null, 'Status'))), _react2['default'].createElement('tbody', null));
+	    }
+	});
+
+	exports['default'] = ProblemsTable;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "table-problems.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	var _reactRouter = __webpack_require__(166);
 
 	var _history = __webpack_require__(217);
@@ -35234,7 +35479,7 @@
 
 	var _LayoutGreenboxJs2 = _interopRequireDefault(_LayoutGreenboxJs);
 
-	var _usersboxJs = __webpack_require__(231);
+	var _usersboxJs = __webpack_require__(236);
 
 	var _usersboxJs2 = _interopRequireDefault(_usersboxJs);
 
@@ -35259,7 +35504,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "usersettings.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 231 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35283,11 +35528,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _filterboxJs = __webpack_require__(232);
+	var _filterboxJs = __webpack_require__(237);
 
 	var _filterboxJs2 = _interopRequireDefault(_filterboxJs);
 
-	var _userstableJs = __webpack_require__(233);
+	var _userstableJs = __webpack_require__(238);
 
 	var _userstableJs2 = _interopRequireDefault(_userstableJs);
 
@@ -35295,7 +35540,7 @@
 	    displayName: 'UsersBox',
 
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'usersbox' }, _react2['default'].createElement(_filterboxJs2['default'], null), _react2['default'].createElement(_userstableJs2['default'], null));
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement(_filterboxJs2['default'], null), _react2['default'].createElement(_userstableJs2['default'], null));
 	    }
 	});
 
@@ -35305,7 +35550,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "usersbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 232 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35343,7 +35588,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filterbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 233 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35374,7 +35619,7 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _editJs = __webpack_require__(234);
+	var _editJs = __webpack_require__(239);
 
 	var _editJs2 = _interopRequireDefault(_editJs);
 
@@ -35451,7 +35696,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "userstable.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 234 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35484,10 +35729,14 @@
 	var Edit = _react2['default'].createClass({
 	    displayName: 'Edit',
 
+	    deleteUser: function deleteUser() {
+	        console.log("Clicked!");
+	    },
+
 	    render: function render() {
 	        return _react2['default'].createElement('td', null, _react2['default'].createElement('button', { className: 'edit-options',
 	            id: this.props.userid }, _react2['default'].createElement('i', { className: 'material-icons' }, _react2['default'].createElement('svg', { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }), _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
-	            htmlFor: this.props.userid }, _react2['default'].createElement(_reactRouter.Link, { to: '/RecentActivity' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Recent activity')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/edituser/' + this.props.userid }, 'Edit')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Delete')));
+	            htmlFor: this.props.userid }, _react2['default'].createElement(_reactRouter.Link, { to: '/RecentActivity' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Recent activity')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/edituser/' + this.props.userid }, 'Edit')), _react2['default'].createElement('li', { className: 'mdl-menu__item', onSubmit: this.deleteUser() }, 'Delete')));
 	    }
 	});
 
@@ -35497,7 +35746,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "edit.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 235 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35588,28 +35837,23 @@
 
 	        var newusername = this.refs.username.value;
 	        var newemail = this.refs.email.value;
-	        var newphoto = this.refs.photo.value;
 
 	        if (newusername && newemail !== "") {
 	            this.addNewUser({
 	                username: newusername,
-	                email: newemail,
-	                photo: newphoto
+	                email: newemail
 	            });
 	        }
 	    },
 
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'usersbox' }, _react2['default'].createElement('div', { className: 'loginBox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, _react2['default'].createElement(_reactRouter.Link, { to: '/usersettings' }, ' Terug-btn '), _react2['default'].createElement('h5', null, 'Add new user '), 'Username: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement('div', { className: 'loginBox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, _react2['default'].createElement(_reactRouter.Link, { to: '/usersettings' }, ' Terug-btn '), _react2['default'].createElement('h5', null, 'Add new user '), 'Username: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
 	            type: 'text',
 	            id: 'username',
 	            ref: 'username' }), _react2['default'].createElement('p', null), 'E-mail: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
 	            type: 'text',
 	            id: 'email',
-	            ref: 'email' }), _react2['default'].createElement('p', null), 'Photo: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
-	            type: 'text',
-	            id: 'email',
-	            ref: 'photo' }), _react2['default'].createElement('p', null), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button',
+	            ref: 'email' }), _react2['default'].createElement('p', null), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button',
 	            type: 'submit',
 	            onClick: this.handleSubmit,
 	            name: 'submit' }, 'Add user')))));
@@ -35625,7 +35869,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "newuser.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 236 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35679,7 +35923,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "organisations.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 237 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35735,7 +35979,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "header.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 238 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35760,7 +36004,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _myprofileJs = __webpack_require__(239);
+	var _myprofileJs = __webpack_require__(244);
 
 	var _myprofileJs2 = _interopRequireDefault(_myprofileJs);
 
@@ -35789,7 +36033,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "accountsetting.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 239 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35828,7 +36072,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "myprofile.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 240 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35861,7 +36105,7 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-	var _systemsettingboxJs = __webpack_require__(241);
+	var _systemsettingboxJs = __webpack_require__(246);
 
 	var _systemsettingboxJs2 = _interopRequireDefault(_systemsettingboxJs);
 
@@ -35882,7 +36126,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "systemsetting.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 241 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35899,7 +36143,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "systemsettingbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 242 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35951,7 +36195,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "recentactivity.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 243 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35986,7 +36230,7 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-	var _edituserboxJs = __webpack_require__(244);
+	var _edituserboxJs = __webpack_require__(249);
 
 	var _edituserboxJs2 = _interopRequireDefault(_edituserboxJs);
 
@@ -36037,7 +36281,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "edituser.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 244 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36067,26 +36311,30 @@
 	var EditUserBox = _react2['default'].createClass({
 	    displayName: 'EditUserBox',
 
-	    editUser: function editUser() {
-	        console.log("Geklikt op edit knop");
-
+	    editUser: function editUser(editdata) {
 	        $.ajax({
 	            url: "http://garcon-server.jinhua.choffice.nl/editusers",
 	            dataType: 'json',
 	            type: 'POST',
 	            data: editdata,
-	            succes: function succes(data) {
+	            success: (function (data) {
 	                if (data.status === "success") {
-	                    console.log("Done with edit!");
-	                } else {
+	                    console.log('done with edit!');
+	                    this.context.history.pushState(null, '/usersettings');
+	                    location.reload();
+	                } else if (data.status === "fail") {
 	                    console.log("Failed with edit...");
 	                }
-	            },
+	            }).bind(this),
 	            error: (function (xhr, status, err, jqXHR) {
 	                console.error(this.props.url, status, err.toString());
 	                alert(jqXHR);
 	            }).bind(this)
 	        });
+	    },
+
+	    contextTypes: {
+	        history: _react2['default'].PropTypes.object.isRequired
 	    },
 
 	    handleSubmit: function handleSubmit(e) {
@@ -36095,14 +36343,16 @@
 	        var oldUsername = this.refs.username.value;
 	        var oldEmail = this.refs.email.value;
 	        var oldPhoto = this.refs.photo.value;
+	        var userId = this.refs.userid.value;
 
-	        console.log(oldUsername + " " + oldEmail);
+	        console.log(oldUsername + " " + oldEmail + userId);
 
 	        if (oldUsername && oldEmail !== "") {
 	            this.editUser({
 	                username: oldUsername,
 	                email: oldEmail,
-	                photo: oldPhoto
+	                photo: oldPhoto,
+	                userid: userId
 	            });
 	        }
 	    },
@@ -36113,7 +36363,7 @@
 	        var email = this.props.data[this.props.dataId].email;
 	        var photo = this.props.data[this.props.dataId].photo;
 
-	        return _react2['default'].createElement('div', { className: 'usersbox' }, _react2['default'].createElement('div', { className: 'loginBox' }, _react2['default'].createElement('div', { className: 'edituserbox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, 'Username: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement('div', { className: 'loginBox' }, _react2['default'].createElement('div', { className: 'edituserbox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, 'Username: ', _react2['default'].createElement('input', { className: 'mdl-textfield__input',
 	            type: 'text',
 	            id: 'username',
 	            ref: 'username',
@@ -36128,7 +36378,10 @@
 	            id: 'email',
 	            ref: 'photo',
 	            defaultValue: photo,
-	            placeholder: photo }), _react2['default'].createElement('p', null), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button',
+	            placeholder: photo }), _react2['default'].createElement('p', null), _react2['default'].createElement('input', { type: 'hidden',
+	            id: 'id',
+	            ref: 'userid',
+	            value: this.props.dataId }), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button',
 	            type: 'submit',
 	            onClick: this.handleSubmit,
 	            name: 'submit' }, 'Edit'))))));

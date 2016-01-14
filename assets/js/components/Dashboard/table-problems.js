@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- import React from 'react'
- import { render } from 'react-dom'
+import React from 'react'
+import { render } from 'react-dom'
  
 var ProblemsTable = React.createClass({
     render : function(){
         return (
-                <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp dashboardtable">
                 <thead>               
                             <tr>
                                 <th className="mdl-data-table__cell--non-numeric">Project</th>
@@ -20,7 +20,7 @@ var ProblemsTable = React.createClass({
                     
                 </thead>
                         <tbody>
-                        data
+                        
                         </tbody>     
                     </table>
                 )

@@ -23,7 +23,7 @@ var ProblemsTable = _react2['default'].createClass({
     render: function render() {
         return _react2['default'].createElement(
             'table',
-            { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp' },
+            { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp dashboardtable' },
             _react2['default'].createElement(
                 'thead',
                 null,
@@ -47,11 +47,7 @@ var ProblemsTable = _react2['default'].createClass({
                     )
                 )
             ),
-            _react2['default'].createElement(
-                'tbody',
-                null,
-                'data'
-            )
+            _react2['default'].createElement('tbody', null)
         );
     }
 });

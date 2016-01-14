@@ -392,7 +392,7 @@ ul{
 }
 
 .green {
-    height: 200px;
+    height: 250px;
     background-color: #24c58f;
 }
 
@@ -563,6 +563,7 @@ input::-moz-placeholder {
 /*Dashboard*/
 .tablebox{
     border: 1px solid red;
+    width: 48%;
 }
 
 .changes {
@@ -579,4 +580,7 @@ input::-moz-placeholder {
     font-size: 25px;
     border: solid 1px blue;
     margin-bottom: 20px;
+}
+
+.dashboardtable {
 }
