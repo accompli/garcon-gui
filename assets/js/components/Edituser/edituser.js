@@ -52,7 +52,6 @@ var EditUser = React.createClass({
                             <GreenBox title={EditUser.title} />
                             <BreadcrumbsBox />
                             <EditUserBox dataId={this.props.params.user} data={this.state.data}/>
-
                     </div>
                 );
         }

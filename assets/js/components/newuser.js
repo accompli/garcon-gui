@@ -86,13 +86,11 @@ var NewUser = React.createClass({
         
         var newusername = this.refs.username.value;
         var newemail = this.refs.email.value;
-        var newphoto = this.refs.photo.value;
         
         if (newusername && newemail !== ""){
             this.addNewUser({
                 username: newusername,
-                email: newemail,
-                photo: newphoto
+                email: newemail
             });
         }        
     },
@@ -117,11 +115,7 @@ var NewUser = React.createClass({
                                     id="email"
                                     ref="email"/>
                                 <p></p>
-                                Photo: <input  className="mdl-textfield__input"
-                                        type="text"
-                                        id="email"
-                                        ref="photo"/>
-                                <p></p>
+                                
                         
                                 <button className="mdl-button mdl-js-button"
                                         type="submit"
