@@ -563,15 +563,15 @@ input::-moz-placeholder {
 /*Dashboard*/
 .tablebox{
     border: 1px solid red;
-    width: 48%;
+/*    width: 48%;*/
 }
 
 .changes {
-    float: left;
+/*    float: left;*/
 }
 
 .problems {
-    float: right;
+/*    float: right;*/
 }
 
 .table-title {
@@ -583,7 +583,7 @@ input::-moz-placeholder {
 }
 
 .dashboardtable {
-    white-space: normal;
+/*    white-space: normal;*/
 }
 
 .status {
@@ -591,9 +591,11 @@ input::-moz-placeholder {
 }
 
 .error {
-
+    color: #EF4248;
+    fill: #EF4248;
 }
 
 .available {
-
+    color: #24c58f;
+    fill:  #24c58f;
 }
