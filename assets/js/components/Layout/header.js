@@ -66,7 +66,7 @@ var Header = React.createClass({
 
                 <div className="navigation menu">
                     <Link to="/">Dashboard</Link>
-                    <Link to="/organisations">Organisations</Link>
+                    <Link to="/organisation">Organisations</Link>
 
                     <a id="settings">Settings
                         <span>

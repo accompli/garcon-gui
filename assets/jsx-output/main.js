@@ -40,9 +40,9 @@ var _componentsNewuserJs = require('./components/newuser.js');
 
 var _componentsNewuserJs2 = _interopRequireDefault(_componentsNewuserJs);
 
-var _componentsOrganisationsOrganisationsJs = require('./components/Organisations/organisations.js');
+var _componentsOrganisationOrganisationJs = require('./components/Organisation/organisation.js');
 
-var _componentsOrganisationsOrganisationsJs2 = _interopRequireDefault(_componentsOrganisationsOrganisationsJs);
+var _componentsOrganisationOrganisationJs2 = _interopRequireDefault(_componentsOrganisationOrganisationJs);
 
 var _componentsLayoutHeaderJs = require('./components/Layout/header.js');
 
@@ -143,7 +143,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
         _react2['default'].createElement(_reactRouter.Route, { name: 'Recent activity', path: _componentsRecentactivityRecentactivityJs2['default'].path, component: _componentsRecentactivityRecentactivityJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Edit user', path: _componentsEdituserEdituserJs2['default'].path, component: _componentsEdituserEdituserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
-        _react2['default'].createElement(_reactRouter.Route, { name: 'Organisations', path: _componentsOrganisationsOrganisationsJs2['default'].path, component: _componentsOrganisationsOrganisationsJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Organisation', path: _componentsOrganisationOrganisationJs2['default'].path, component: _componentsOrganisationOrganisationJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'System setting', path: _componentsSystemsettingSystemsettingJs2['default'].path, component: _componentsSystemsettingSystemsettingJs2['default'] })
     )

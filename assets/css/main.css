@@ -605,3 +605,57 @@ input::-moz-placeholder {
     color: #24c58f;
     fill:  #24c58f;
 }
+
+/*Organisations*/
+
+.cards {
+    margin-bottom: 2%;
+}
+
+.status_bar {
+    position: relative;
+    background-color: pink;
+    width: auto;
+    height: 5px;
+}
+
+.orglogo {
+    width: 150px;
+/*    border: 1px solid black;*/
+    margin-bottom: 50px;
+}
+
+.card_data {
+/*    border: 1px solid red;*/
+    text-align: center;
+}
+
+.card_title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #767e8a;
+/*    border: 1px solid blue;*/
+}
+
+.card_updatedate {
+/*    border: 1px solid blue;*/
+    color: #C6C9C9;
+    margin: 10px 0 50px 0;
+}
+
+.card_button {
+/*    border: 1px solid greenyellow;*/
+    margin-bottom: 50px
+}
+.detailinfo {
+/*    border: solid 1px blue;*/
+    padding: 20px;
+}
+
+.card_projects {
+    float: left;
+}
+
+.card_project_status {
+    float: right;
+}

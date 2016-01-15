@@ -93,7 +93,7 @@ var Header = _react2['default'].createClass({
                     ),
                     _react2['default'].createElement(
                         _reactRouter.Link,
-                        { to: '/organisations' },
+                        { to: '/organisation' },
                         'Organisations'
                     ),
                     _react2['default'].createElement(

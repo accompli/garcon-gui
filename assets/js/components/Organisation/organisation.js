@@ -12,12 +12,13 @@ import { Router, Route, Link, History } from 'react-router'
 
 import GreenBox from '../Layout/greenbox.js'
 import BreadcrumbsBox from '../Layout/breadcrumbs.js'
+import OrganisationBox from './organisationbox.js'
 
-var Organisations = React.createClass({
+var Organisation = React.createClass({
     render : function(){
         return (
-                <div className="dashboard">
-                    <GreenBox title={Organisations.title}/>
+                <div className="organisation">
+                    <GreenBox title={Organisation.title}/>
                     <BreadcrumbsBox />
                     <OrganisationBox />
                 </div>
@@ -25,8 +26,8 @@ var Organisations = React.createClass({
     }
 });
 
-Organisations.title = 'Organisations'
-Organisations.path = '/organisations'
+Organisation.title = 'Organisations'
+Organisation.path = '/organisation'
 
 
-export default Organisations;
+export default Organisation;

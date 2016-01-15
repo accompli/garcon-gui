@@ -32,22 +32,22 @@ var _organisationboxJs = require('./organisationbox.js');
 
 var _organisationboxJs2 = _interopRequireDefault(_organisationboxJs);
 
-var Organisations = _react2['default'].createClass({
-    displayName: 'Organisations',
+var Organisation = _react2['default'].createClass({
+    displayName: 'Organisation',
 
     render: function render() {
         return _react2['default'].createElement(
             'div',
-            { className: 'dashboard' },
-            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Organisations.title }),
+            { className: 'organisation' },
+            _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Organisation.title }),
             _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
             _react2['default'].createElement(_organisationboxJs2['default'], null)
         );
     }
 });
 
-Organisations.title = 'Organisations';
-Organisations.path = '/organisations';
+Organisation.title = 'Organisations';
+Organisation.path = '/organisation';
 
-exports['default'] = Organisations;
+exports['default'] = Organisation;
 module.exports = exports['default'];

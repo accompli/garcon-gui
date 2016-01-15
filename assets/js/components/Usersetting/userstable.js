@@ -111,8 +111,7 @@ var UsersList = React.createClass({
 
 
 var Users = React.createClass({
-    
-    
+
 deleteUser: function(){
            
         $.ajax({

@@ -12,7 +12,7 @@ import Login from './components/Login/login.js'
 import Dashboard from './components/Dashboard/dashboard.js'
 import Usersettings from './components/Usersetting/usersettings.js'
 import Newuser from './components/newuser.js'
-import Organisations from './components/Organisations/organisations.js'
+import Organisation from './components/Organisation/organisation.js'
 import Header from './components/Layout/header.js'
 import AccountSetting from './components/Accountsetting/accountsetting.js'
 import SystemSetting from './components/Systemsetting/systemsetting.js'
@@ -99,7 +99,7 @@ ReactDOM.render(
             <Route name="Edit user" path={EditUser.path} component={EditUser} /> 
             
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
-            <Route name="Organisations" path={Organisations.path} component={Organisations} />
+            <Route name="Organisation" path={Organisation.path} component={Organisation} />
             <Route name="Account setting" path={AccountSetting.path} component={AccountSetting} />
             
             <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />
