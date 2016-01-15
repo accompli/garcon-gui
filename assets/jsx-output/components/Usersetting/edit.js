@@ -29,46 +29,50 @@ var Edit = _react2['default'].createClass({
             'td',
             null,
             _react2['default'].createElement(
-                'button',
-                { className: 'edit-options',
-                    id: this.props.userid },
+                'div',
+                { className: 'status' },
                 _react2['default'].createElement(
-                    'i',
-                    { className: 'material-icons' },
+                    'button',
+                    { className: 'edit-options',
+                        id: this.props.userid },
                     _react2['default'].createElement(
-                        'svg',
-                        { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
-                        _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
-                        _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })
+                        'i',
+                        { className: 'material-icons' },
+                        _react2['default'].createElement(
+                            'svg',
+                            { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                            _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+                            _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })
+                        )
                     )
-                )
-            ),
-            _react2['default'].createElement(
-                'ul',
-                { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
-                    htmlFor: this.props.userid },
+                ),
                 _react2['default'].createElement(
-                    _reactRouter.Link,
-                    { to: '/RecentActivity' },
+                    'ul',
+                    { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
+                        htmlFor: this.props.userid },
+                    _react2['default'].createElement(
+                        _reactRouter.Link,
+                        { to: '/RecentActivity' },
+                        _react2['default'].createElement(
+                            'li',
+                            { className: 'mdl-menu__item' },
+                            'Recent activity'
+                        )
+                    ),
                     _react2['default'].createElement(
                         'li',
                         { className: 'mdl-menu__item' },
-                        'Recent activity'
-                    )
-                ),
-                _react2['default'].createElement(
-                    'li',
-                    { className: 'mdl-menu__item' },
+                        _react2['default'].createElement(
+                            _reactRouter.Link,
+                            { to: '/edituser/' + this.props.userid },
+                            'Edit'
+                        )
+                    ),
                     _react2['default'].createElement(
-                        _reactRouter.Link,
-                        { to: '/edituser/' + this.props.userid },
-                        'Edit'
+                        'li',
+                        { className: 'mdl-menu__item', onClick: this.props['delete'] },
+                        'Delete'
                     )
-                ),
-                _react2['default'].createElement(
-                    'li',
-                    { className: 'mdl-menu__item', onClick: this.props['delete'] },
-                    'Delete'
                 )
             )
         );

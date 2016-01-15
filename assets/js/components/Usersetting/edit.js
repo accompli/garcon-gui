@@ -12,8 +12,8 @@ var Edit = React.createClass({
 
     render: function(){
         return (
-                <td>
-                
+                <td >
+                <div className="status">
                     <button className="edit-options"
                             id={this.props.userid}>
                             <i className="material-icons">
@@ -35,7 +35,7 @@ var Edit = React.createClass({
                             </li>
                             <li className="mdl-menu__item" onClick={this.props.delete}>Delete</li>
                         </ul>
-                
+                </div>
                 
                 </td>
                 );

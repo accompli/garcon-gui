@@ -100,7 +100,6 @@ var UsersList = _react2['default'].createClass({
         var countData = this.props.data.length;
 
         var userData = this.props.data.map((function (user, index) {
-
             return _react2['default'].createElement(Users, { refreshList: this.refreshList, user: user, key: index, countdata: index });
         }).bind(this));
 
@@ -131,12 +130,20 @@ var UsersList = _react2['default'].createClass({
                     _react2['default'].createElement(
                         'th',
                         null,
-                        'Projects'
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'status' },
+                            'Projects'
+                        )
                     ),
                     _react2['default'].createElement(
                         'th',
                         null,
-                        'Edit'
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'edit' },
+                            'Edit'
+                        )
                     )
                 )
             ),
@@ -199,7 +206,11 @@ var Users = _react2['default'].createClass({
             _react2['default'].createElement(
                 'td',
                 null,
-                this.props.user.projects
+                _react2['default'].createElement(
+                    'div',
+                    { className: 'status' },
+                    this.props.user.projects
+                )
             ),
             _react2['default'].createElement(_editJs2['default'], { 'delete': this.deleteUser, userid: this.props.countdata, username: this.props.user.username, email: this.props.user.email })
         );

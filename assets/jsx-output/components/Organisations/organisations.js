@@ -36,7 +36,8 @@ var Organisations = _react2['default'].createClass({
             'div',
             { className: 'dashboard' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Organisations.title }),
-            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null)
+            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
+            _react2['default'].createElement(OrganisationBox, null)
         );
     }
 });

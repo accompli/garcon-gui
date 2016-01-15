@@ -18,23 +18,84 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
 
-var _boxChangesJs = require('./box-changes.js');
+var _changesChangesTableListJs = require('./changes/changes-table-list.js');
 
-var _boxChangesJs2 = _interopRequireDefault(_boxChangesJs);
+var _changesChangesTableListJs2 = _interopRequireDefault(_changesChangesTableListJs);
 
-var _boxProblemsJs = require('./box-problems.js');
+var _problemsProblemsTableListJs = require('./problems/problems-table-list.js');
 
-var _boxProblemsJs2 = _interopRequireDefault(_boxProblemsJs);
+var _problemsProblemsTableListJs2 = _interopRequireDefault(_problemsProblemsTableListJs);
+
+var _changesChangesJs = require('./changes/changes.js');
+
+var _changesChangesJs2 = _interopRequireDefault(_changesChangesJs);
+
+var _problemsProblemsJs = require('./problems/problems.js');
+
+var _problemsProblemsJs2 = _interopRequireDefault(_problemsProblemsJs);
 
 var DashboardBox = _react2['default'].createClass({
     displayName: 'DashboardBox',
 
+    getInitialState: function getInitialState() {
+        return { data: [] };
+    },
+
+    componentDidMount: function componentDidMount() {
+        this.loadDashboardData();
+    },
+
+    loadDashboardData: function loadDashboardData() {
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/dashboardinfo",
+            dataType: 'json',
+            success: (function (data) {
+                this.setState({
+                    data: data.dashboarddata
+                });
+            }).bind(this),
+            error: (function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }).bind(this)
+        });
+    },
+
     render: function render() {
+
+        var changes = this.state.data.map(function (dashboarddata, index) {
+            return _react2['default'].createElement(_changesChangesJs2['default'], { data: dashboarddata, key: index, countData: index });
+        });
+
+        var problems = this.state.data.map(function (dashboarddata, index) {
+
+            if (dashboarddata.status === "Error") {
+                return _react2['default'].createElement(_problemsProblemsJs2['default'], { data: dashboarddata, key: index });
+            }
+        });
+
         return _react2['default'].createElement(
             'div',
             { className: 'box' },
-            _react2['default'].createElement(_boxChangesJs2['default'], null),
-            _react2['default'].createElement(_boxProblemsJs2['default'], null)
+            _react2['default'].createElement(
+                'div',
+                { className: 'tablebox changes' },
+                _react2['default'].createElement(
+                    'div',
+                    { className: 'table-title' },
+                    'Recent changes'
+                ),
+                _react2['default'].createElement(_changesChangesTableListJs2['default'], { changesDiv: changes })
+            ),
+            _react2['default'].createElement(
+                'div',
+                { className: 'tablebox problems' },
+                _react2['default'].createElement(
+                    'div',
+                    { className: 'table-title' },
+                    'Problems'
+                ),
+                _react2['default'].createElement(_problemsProblemsTableListJs2['default'], { problemsDiv: problems })
+            )
         );
     }
 });

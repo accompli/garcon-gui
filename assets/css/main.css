@@ -383,7 +383,7 @@ ul{
     color: #fff;
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 10%;
 }
 
 .block {
@@ -404,7 +404,7 @@ ul{
 /*BREADCRUMBS MENU*/
 .breadcrumbs {
     position: absolute;
-    left: 20%;
+    left: 10%;
     padding-top: 15px;
 
 
@@ -423,9 +423,9 @@ input::-moz-placeholder {
 }
 
 .box{
-    width: 60%;
+    width: 80%;
     padding-top: 2%;
-    left: 20%;
+    left: 10%;
     position: relative;
 }
 
@@ -544,6 +544,10 @@ input::-moz-placeholder {
     height: 30px;
 }
 
+.edit {
+    text-align: right;
+}
+
 .edit_icon {
     fill: #999;
 }
@@ -562,28 +566,30 @@ input::-moz-placeholder {
 
 /*Dashboard*/
 .tablebox{
-    border: 1px solid red;
-/*    width: 48%;*/
+/*    border: 1px solid red;*/
+    width: 49%;
+    padding-top: 3%;
+    
 }
 
 .changes {
-/*    float: left;*/
+    float: left;
 }
 
 .problems {
-/*    float: right;*/
+    float: right;
 }
 
 .table-title {
     color: #767e8a;
     font-weight: bold;
-    font-size: 25px;
-    border: solid 1px blue;
+    font-size: 30px;
+/*    border: solid 1px blue;*/
     margin-bottom: 20px;
 }
 
 .dashboardtable {
-/*    white-space: normal;*/
+    white-space: normal;
 }
 
 .status {

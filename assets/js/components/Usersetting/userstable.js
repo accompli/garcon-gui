@@ -78,18 +78,12 @@ var UsersList = React.createClass({
         
     render: function(){
         
-        
         var countData = this.props.data.length;
         
         var userData = this.props.data.map(function(user, index) {
-            
-            
-            
             return (
                     <Users refreshList={this.refreshList} user={user} key={index} countdata={index}>
-                    
                     </Users>
-                    
                     );
         }.bind(this));
         
@@ -101,8 +95,8 @@ var UsersList = React.createClass({
                                 <th className="mdl-data-table__cell--non-numeric">Photo</th>
                                 <th>Username</th>
                                 <th>E-mail</th>
-                                <th>Projects</th>
-                                <th>Edit</th>
+                                <th><div className="status">Projects</div></th>
+                                <th><div className="edit">Edit</div></th>
                         
                             </tr>
                     
@@ -157,7 +151,7 @@ deleteUser: function(){
                     <td className="mdl-data-table__cell--non-numeric "><img src={this.props.user.photo} id="usericons"/></td>
                     <td>{this.props.user.username}</td>
                     <td>{this.props.user.email}</td>
-                    <td>{this.props.user.projects}</td>
+                    <td><div className="status">{this.props.user.projects}</div></td>
                     <Edit delete={this.deleteUser} userid={this.props.countdata} username={this.props.user.username} email={this.props.user.email}/>
                 </tr>
         );

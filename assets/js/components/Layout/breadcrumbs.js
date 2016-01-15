@@ -21,7 +21,7 @@ var BreadcrumbsList = React.createClass({
     render : function () {
         return (
                 <div className ="breadcrumbs">
-                
+                    
                 </div>
                     );
         }

@@ -17,33 +17,30 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
 
-var _changesJs = require('./changes.js');
-
-var _changesJs2 = _interopRequireDefault(_changesJs);
-
 var _problemsJs = require('./problems.js');
 
 var _problemsJs2 = _interopRequireDefault(_problemsJs);
 
-var Table = _react2['default'].createClass({
-    displayName: 'Table',
+var ProblemsTable = _react2['default'].createClass({
+    displayName: 'ProblemsTable',
 
     getInitialState: function getInitialState() {
         return { data: [] };
     },
 
     componentDidMount: function componentDidMount() {
-        this.loadDashboardData();
+        this.loadProblems();
     },
 
-    loadDashboardData: function loadDashboardData() {
+    loadProblems: function loadProblems() {
+        console.log('hi');
         $.ajax({
             url: "http://garcon-server.jinhua.choffice.nl/dashboardinfo",
             dataType: 'json',
             success: (function (data) {
-                console.log(data.dashboarddata);
+                console.log(data.problems);
                 this.setState({
-                    data: data.dashboarddata
+                    data: data.problems
                 });
             }).bind(this),
             error: (function (xhr, status, err) {
@@ -53,13 +50,9 @@ var Table = _react2['default'].createClass({
     },
 
     render: function render() {
-        var datas = this.state.data.map(function (dashboard, index) {
 
-            if (dashboard.status === "error") {
-                return _react2['default'].createElement(_problemsJs2['default'], { row: dashboard, key: index, countdata: index });
-            } else {
-                return _react2['default'].createElement(_changesJs2['default'], { row: dashboard, key: index, countdata: index });
-            }
+        var problems = this.state.data.map(function (problem, index) {
+            return _react2['default'].createElement(_problemsJs2['default'], { row: problem, key: index, countdata: index });
         });
 
         return _react2['default'].createElement(
@@ -95,11 +88,11 @@ var Table = _react2['default'].createClass({
             _react2['default'].createElement(
                 'tbody',
                 null,
-                datas
+                problems
             )
         );
     }
 });
 
-exports['default'] = Table;
+exports['default'] = ProblemsTable;
 module.exports = exports['default'];

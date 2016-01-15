@@ -21,24 +21,20 @@ var _changesJs = require('./changes.js');
 
 var _changesJs2 = _interopRequireDefault(_changesJs);
 
-var _problemsJs = require('./problems.js');
-
-var _problemsJs2 = _interopRequireDefault(_problemsJs);
-
-var Table = _react2['default'].createClass({
-    displayName: 'Table',
+var ChangesTable = _react2['default'].createClass({
+    displayName: 'ChangesTable',
 
     getInitialState: function getInitialState() {
         return { data: [] };
     },
 
     componentDidMount: function componentDidMount() {
-        this.loadDashboardData();
+        this.loadRecentChanges();
     },
 
-    loadDashboardData: function loadDashboardData() {
+    loadRecentChanges: function loadRecentChanges() {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/dashboardinfo",
+            url: "http://garcon-server.jinhua.choffice.nl/dashoardinfo",
             dataType: 'json',
             success: (function (data) {
                 console.log(data.dashboarddata);
@@ -53,13 +49,10 @@ var Table = _react2['default'].createClass({
     },
 
     render: function render() {
-        var datas = this.state.data.map(function (dashboard, index) {
 
-            if (dashboard.status === "error") {
-                return _react2['default'].createElement(_problemsJs2['default'], { row: dashboard, key: index, countdata: index });
-            } else {
-                return _react2['default'].createElement(_changesJs2['default'], { row: dashboard, key: index, countdata: index });
-            }
+        var changes = this.state.data.map(function (change, index) {
+
+            return _react2['default'].createElement(_changesJs2['default'], { row: change, key: index, countdata: index });
         });
 
         return _react2['default'].createElement(
@@ -95,11 +88,11 @@ var Table = _react2['default'].createClass({
             _react2['default'].createElement(
                 'tbody',
                 null,
-                datas
+                changes
             )
         );
     }
 });
 
-exports['default'] = Table;
+exports['default'] = ChangesTable;
 module.exports = exports['default'];

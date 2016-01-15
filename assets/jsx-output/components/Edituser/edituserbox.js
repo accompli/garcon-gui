@@ -31,7 +31,6 @@ var EditUserBox = _react2['default'].createClass({
                 if (data.status === "success") {
                     console.log('done with edit!');
                     this.context.history.pushState(null, '/usersettings');
-                    location.reload();
                 } else if (data.status === "fail") {
                     console.log("Failed with edit...");
                 }

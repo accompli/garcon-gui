@@ -19,6 +19,7 @@ var Organisations = React.createClass({
                 <div className="dashboard">
                     <GreenBox title={Organisations.title}/>
                     <BreadcrumbsBox />
+                    <OrganisationBox />
                 </div>
                 );
     }
