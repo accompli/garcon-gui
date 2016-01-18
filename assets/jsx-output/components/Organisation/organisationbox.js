@@ -32,12 +32,15 @@ var OrganisationBox = _react2['default'].createClass({
     },
 
     getInitialState: function getInitialState() {
-        return { data: [] };
+        return {
+            data: []
+            //            projectdata: []
+        };
     },
 
     componentDidMount: function componentDidMount() {
         this.loadOrganisationData();
-        componentHandler.upgradeDom();
+        //        this.loadProjectData();
     },
 
     loadOrganisationData: function loadOrganisationData() {
@@ -55,15 +58,11 @@ var OrganisationBox = _react2['default'].createClass({
         });
     },
 
-    stopPropagation: function stopPropagation(e) {
-        e.stopPropagation();
-        e.nativeEvent.stopImmediatePropagation();
-    },
-
     render: function render() {
         return _react2['default'].createElement(
             'div',
             { className: 'box' },
+            _react2['default'].createElement(_organisationcardsJs2['default'], { data: this.state.data }),
             _react2['default'].createElement(
                 'button',
                 { className: 'mdl-button mdl-js-button add_user',
@@ -107,8 +106,7 @@ var OrganisationBox = _react2['default'].createClass({
                         )
                     )
                 )
-            ),
-            _react2['default'].createElement(_organisationcardsJs2['default'], { data: this.state.data })
+            )
         );
     }
 });

@@ -17,12 +17,15 @@ var OrganisationBox = React.createClass({
     },
     
     getInitialState: function() {
-        return {data: []};
+        return {
+            data: []
+//            projectdata: []
+        };
     },
     
     componentDidMount: function(){
         this.loadOrganisationData();
-                componentHandler.upgradeDom();
+//        this.loadProjectData();
     },
     
     loadOrganisationData: function(){
@@ -32,7 +35,7 @@ var OrganisationBox = React.createClass({
             success: function(data) {
                         this.setState({
                             data: data.organisationdata
-                        })
+                        });
             }.bind(this),
             error:  function(xhr, status, err) {
                     console.error(this.props.url, status, err.toString());
@@ -40,14 +43,12 @@ var OrganisationBox = React.createClass({
         });
     },
 
-    stopPropagation: function(e){
-        e.stopPropagation();
-        e.nativeEvent.stopImmediatePropagation();
-    },
-
     render : function(){
         return (
                 <div className="box">
+                    
+                    <OrganisationCards data={this.state.data} /> 
+                                    
                     <button className = "mdl-button mdl-js-button add_user"
                                     type=""
                                     name="submit"
@@ -80,7 +81,6 @@ var OrganisationBox = React.createClass({
                         </div>
                     </ul>
             
-                    <OrganisationCards data={this.state.data} /> 
                 </div>
         );
     }

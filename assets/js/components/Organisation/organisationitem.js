@@ -8,9 +8,12 @@
   import { render } from 'react-dom'
   import { Router, Route, Link, History } from 'react-router'
   
+  import ProjectButton from './organisation-project-btn.js'
+  
 var OrganisationItem = React.createClass({
-    
+
     render: function(){
+
         return (
                 <div className="mdl-card mdl-shadow--2dp cards ">
                 
@@ -21,7 +24,7 @@ var OrganisationItem = React.createClass({
                                     id={this.props.org.organisationid}>
                                     <i className="material-icons">
 
-                                       <svg className="edit_icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                       <svg className="edit_icon card" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                        <path d="M0 0h24v24H0z" fill="none"/>
                                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
                                        </svg>
@@ -30,8 +33,8 @@ var OrganisationItem = React.createClass({
 
                                 </button>
 
-                                <ul className="mdl-menu mdl-js-menu mdl-js-ripple-effect "
-                                    htmlFor={this.props.organisationid}>
+                                <ul className="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                    htmlFor={this.props.org.organisationid}>
                                     <li className="mdl-menu__item">
                                         Edit
                                     </li>
@@ -50,11 +53,8 @@ var OrganisationItem = React.createClass({
                                 {this.props.org.orgdate}
                             </div>
 
-                            <button className="mdl-button mdl-js-button card_button"
-                                type="submit"
-                                onClick={this.handleSubmit}
-                                name="submit">View projects
-                            </button>
+                            <ProjectButton projectdata={this.props.projectdata} orgid={this.props.org.organisationid} orgname={this.props.org.orgname}/>
+                            
                         </div>
 
                         <div className="mdl-card__actions mdl-card--border detailinfo">
@@ -73,4 +73,5 @@ var OrganisationItem = React.createClass({
     }
 });
 
- export default OrganisationItem
+
+ export default OrganisationItem 

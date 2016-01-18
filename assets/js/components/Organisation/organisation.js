@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 
-
-
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link, History } from 'react-router'
@@ -15,6 +13,7 @@ import BreadcrumbsBox from '../Layout/breadcrumbs.js'
 import OrganisationBox from './organisationbox.js'
 
 var Organisation = React.createClass({
+    
     render : function(){
         return (
                 <div className="organisation">
