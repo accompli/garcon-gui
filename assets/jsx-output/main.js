@@ -64,12 +64,20 @@ var _componentsEdituserEdituserJs = require('./components/Edituser/edituser.js')
 
 var _componentsEdituserEdituserJs2 = _interopRequireDefault(_componentsEdituserEdituserJs);
 
+var _componentsProjectProjectJs = require('./components/Project/project.js');
+
+var _componentsProjectProjectJs2 = _interopRequireDefault(_componentsProjectProjectJs);
+
 var history = (0, _history.useBasename)(_history.createHistory)({
     basename: '/breadcrumbs'
 });
 
 var App = _react2['default'].createClass({
     displayName: 'App',
+
+    componentDidUpdate: function componentDidUpdate() {
+        componentHandler.upgradeDom();
+    },
 
     getInitialState: function getInitialState() {
 
@@ -144,6 +152,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
         _react2['default'].createElement(_reactRouter.Route, { name: 'Edit user', path: _componentsEdituserEdituserJs2['default'].path, component: _componentsEdituserEdituserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Organisation', path: _componentsOrganisationOrganisationJs2['default'].path, component: _componentsOrganisationOrganisationJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Project', path: _componentsProjectProjectJs2['default'].path, component: _componentsProjectProjectJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'System setting', path: _componentsSystemsettingSystemsettingJs2['default'].path, component: _componentsSystemsettingSystemsettingJs2['default'] })
     )

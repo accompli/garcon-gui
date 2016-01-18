@@ -20,10 +20,15 @@ var _reactDom = require('react-dom');
 
 var _reactRouter = require('react-router');
 
+var _organisationProjectBtnJs = require('./organisation-project-btn.js');
+
+var _organisationProjectBtnJs2 = _interopRequireDefault(_organisationProjectBtnJs);
+
 var OrganisationItem = _react2['default'].createClass({
     displayName: 'OrganisationItem',
 
     render: function render() {
+
         return _react2['default'].createElement(
             'div',
             { className: 'mdl-card mdl-shadow--2dp cards ' },
@@ -40,7 +45,7 @@ var OrganisationItem = _react2['default'].createClass({
                         { className: 'material-icons' },
                         _react2['default'].createElement(
                             'svg',
-                            { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                            { className: 'edit_icon card', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
                             _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
                             _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })
                         )
@@ -48,8 +53,8 @@ var OrganisationItem = _react2['default'].createClass({
                 ),
                 _react2['default'].createElement(
                     'ul',
-                    { className: 'mdl-menu mdl-js-menu mdl-js-ripple-effect ',
-                        htmlFor: this.props.organisationid },
+                    { className: 'mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect',
+                        htmlFor: this.props.org.organisationid },
                     _react2['default'].createElement(
                         'li',
                         { className: 'mdl-menu__item' },
@@ -76,14 +81,7 @@ var OrganisationItem = _react2['default'].createClass({
                     { className: 'card_updatedate' },
                     this.props.org.orgdate
                 ),
-                _react2['default'].createElement(
-                    'button',
-                    { className: 'mdl-button mdl-js-button card_button',
-                        type: 'submit',
-                        onClick: this.handleSubmit,
-                        name: 'submit' },
-                    'View projects'
-                )
+                _react2['default'].createElement(_organisationProjectBtnJs2['default'], { projectdata: this.props.projectdata, orgid: this.props.org.organisationid, orgname: this.props.org.orgname })
             ),
             _react2['default'].createElement(
                 'div',

@@ -88,8 +88,8 @@ var EditUserBox = React.createClass({
                                     defaultValue={email}
                                     placeholder={email}/>
                                 <p></p>
-                                Photo source: <input  className="mdl-textfield__input"
-                                        type="text"
+                                        <input  className="mdl-textfield__input"
+                                        type="hidden"
                                         id="email"
                                         ref="photo"
                                         defaultValue={photo}

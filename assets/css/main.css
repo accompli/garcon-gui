@@ -191,16 +191,16 @@ ul{
  }
  
  @media (min-width: 320px) {
-     
-     .white_block {
-         padding-top: 150px;
-     }
+    .white_block {
+        padding-top: 150px;
+    }
 }
 
 .demo-card-square.mdl-card {
     width: 100%;
     max-width: 560px;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    
 }
 
  .mdl-card__supporting-text {
@@ -211,9 +211,7 @@ ul{
      padding:40px;
  }
 
- .mdl-card__title {
-     
- }
+
  
  .head {
      font-size: 36px;
@@ -548,7 +546,7 @@ input::-moz-placeholder {
     text-align: right;
 }
 
-.edit_icon {
+.edit_icon{
     fill: #999;
 }
 
@@ -607,9 +605,15 @@ input::-moz-placeholder {
 }
 
 /*Organisations*/
+.cardslist {
+    
+}
 
 .cards {
     margin-bottom: 2%;
+    border-radius: 0px;
+    border: 1px solid green;
+    width: 350px;
 }
 
 .status_bar {
@@ -621,12 +625,12 @@ input::-moz-placeholder {
 
 .orglogo {
     width: 150px;
-/*    border: 1px solid black;*/
+    border: 1px solid black;
     margin-bottom: 50px;
 }
 
 .card_data {
-/*    border: 1px solid red;*/
+    border: 1px solid red;
     text-align: center;
 }
 
@@ -634,21 +638,29 @@ input::-moz-placeholder {
     font-size: 20px;
     font-weight: bold;
     color: #767e8a;
-/*    border: 1px solid blue;*/
+    border: 1px solid blue;
 }
 
 .card_updatedate {
-/*    border: 1px solid blue;*/
+    border: 1px solid blue;
     color: #C6C9C9;
     margin: 10px 0 50px 0;
 }
 
 .card_button {
-/*    border: 1px solid greenyellow;*/
-    margin-bottom: 50px
+    border: 1px solid greenyellow;
+    margin-bottom: 50px;
+}
+
+.edit-cards {
+
+}
+
+.card {
+    fill: #C6C9C9;
 }
 .detailinfo {
-/*    border: solid 1px blue;*/
+    border: solid 1px blue;
     padding: 20px;
 }
 

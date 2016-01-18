@@ -18,6 +18,7 @@ import AccountSetting from './components/Accountsetting/accountsetting.js'
 import SystemSetting from './components/Systemsetting/systemsetting.js'
 import RecentActivity from './components/Recentactivity/recentactivity.js'
 import EditUser from './components/Edituser/edituser.js'
+import Project from './components/Project/project.js'
 
 const history = useBasename(createHistory)({
   basename: '/breadcrumbs'
@@ -25,6 +26,9 @@ const history = useBasename(createHistory)({
 
 var App = React.createClass({
     
+    componentDidUpdate: function() {
+        componentHandler.upgradeDom();
+    },
     
     getInitialState: function(){
         
@@ -100,10 +104,10 @@ ReactDOM.render(
             
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
             <Route name="Organisation" path={Organisation.path} component={Organisation} />
+                <Route name="Project" path={Project.path} component={Project} />
             <Route name="Account setting" path={AccountSetting.path} component={AccountSetting} />
             
             <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />
-                
             </Route>
         </Router>,
         document.getElementById("content")
