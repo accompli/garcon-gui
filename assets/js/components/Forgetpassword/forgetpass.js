@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+ import React from 'react'
+ import { render } from 'react-dom'
+ import { Router, Route, Link } from 'react-router'
 
-import Background from '../Layout/background-deployment-text.js'
+ import Background from '../Layout/background-deployment-text.js'
 
 var Forgetpass = React.createClass({
     getInitialState: function(){
@@ -26,7 +26,7 @@ var Forgetpass = React.createClass({
         
         //Submit to the server
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/email",
+            url: this.props.ajaxUrl+"/email",
             dataType: 'json',
             type: 'POST',
             data: email,

@@ -4,78 +4,91 @@
  * and open the template in the editor.
  */
 
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
     value: true
 });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var ProjectTable = _react2["default"].createClass({
-    displayName: "ProjectTable",
+var _projectitemJs = require('./projectitem.js');
+
+var _projectitemJs2 = _interopRequireDefault(_projectitemJs);
+
+var ProjectTable = _react2['default'].createClass({
+    displayName: 'ProjectTable',
 
     render: function render() {
-        return _react2["default"].createElement(
-            "div",
-            { className: "projecttable" },
-            _react2["default"].createElement(
-                "table",
-                { className: "mdl-data-table mdl-js-data-table mdl-shadow--2dp" },
-                _react2["default"].createElement(
-                    "thead",
+
+        var projectData = this.props.data.map((function (project, index) {
+            return _react2['default'].createElement(_projectitemJs2['default'], { project: project, key: index });
+        }).bind(this));
+
+        return _react2['default'].createElement(
+            'div',
+            { className: 'projecttable' },
+            _react2['default'].createElement(
+                'table',
+                { className: 'mdl-data-table mdl-js-data-table mdl-shadow--2dp' },
+                _react2['default'].createElement(
+                    'thead',
                     null,
-                    _react2["default"].createElement(
-                        "tr",
+                    _react2['default'].createElement(
+                        'tr',
                         null,
-                        _react2["default"].createElement(
-                            "th",
-                            { className: "mdl-data-table__cell--non-numeric" },
-                            "Project"
+                        _react2['default'].createElement(
+                            'th',
+                            { className: 'mdl-data-table__cell--non-numeric' },
+                            'Project'
                         ),
-                        _react2["default"].createElement(
-                            "th",
+                        _react2['default'].createElement(
+                            'th',
                             null,
-                            "Edited"
+                            'Edited'
                         ),
-                        _react2["default"].createElement(
-                            "th",
+                        _react2['default'].createElement(
+                            'th',
                             null,
-                            _react2["default"].createElement(
-                                "div",
-                                { className: "status" },
-                                "Applications"
+                            _react2['default'].createElement(
+                                'div',
+                                { className: 'status' },
+                                'Applications'
                             )
                         ),
-                        _react2["default"].createElement(
-                            "th",
+                        _react2['default'].createElement(
+                            'th',
                             null,
-                            _react2["default"].createElement(
-                                "div",
-                                { className: "status" },
-                                "Status"
+                            _react2['default'].createElement(
+                                'div',
+                                { className: 'status' },
+                                'Status'
                             )
                         ),
-                        _react2["default"].createElement(
-                            "th",
+                        _react2['default'].createElement(
+                            'th',
                             null,
-                            _react2["default"].createElement(
-                                "div",
-                                { className: "edit" },
-                                "Edit"
+                            _react2['default'].createElement(
+                                'div',
+                                { className: 'edit' },
+                                'Edit'
                             )
                         )
                     )
                 ),
-                _react2["default"].createElement("tbody", null)
+                _react2['default'].createElement(
+                    'tbody',
+                    null,
+                    projectData
+                )
             )
         );
     }
 });
 
-exports["default"] = ProjectTable;
-module.exports = exports["default"];
+exports['default'] = ProjectTable;
+module.exports = exports['default'];

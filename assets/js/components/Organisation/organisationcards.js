@@ -11,46 +11,23 @@
   
 var OrganisationCards = React.createClass({
     
+    reload: function(){
+        this.props.reload();
+    },
+    
     componentDidUpdate: function() {
         componentHandler.upgradeDom();
-    },
-    
-    getInitialState: function() {
-        return {
-            projectdata: []
-        };
-    },
-    
-    componentDidMount: function(){
-        this.loadProjectData();
-//        this.loadProjectData();
-    },
-
-    loadProjectData: function(){
-        $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/projects",
-            dataType: 'json',
-            success: function(data) {
-                        this.setState({
-                            projectdata: data.projectdata
-                        });
-            }.bind(this),
-            
-            error:  function(xhr, status, err) {
-                    console.error(this.props.url, status, err.toString());
-                    }.bind(this)
-        });
     },
     
     propTypes: {
         data: React.PropTypes.array.isRequired
     },
-      
+    
     render: function(){
         
         var organisationData = this.props.data.map(function(organisation, index) {
             return (
-                    <OrganisationItem org={organisation} key={index} projectdata={this.state.projectdata} >
+                    <OrganisationItem org={organisation} key={index} reload={this.reload} serverUrl={this.props.serverUrl}>
                     </OrganisationItem>
                     );
         }.bind(this));

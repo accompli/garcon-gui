@@ -20,9 +20,6 @@ import RecentActivity from './components/Recentactivity/recentactivity.js'
 import EditUser from './components/Edituser/edituser.js'
 import Project from './components/Project/project.js'
 
-const history = useBasename(createHistory)({
-  basename: '/breadcrumbs'
-})
 
 var App = React.createClass({
     
@@ -32,27 +29,28 @@ var App = React.createClass({
     
     getInitialState: function(){
         
-        if (localStorage.getItem('profile') === null){
+        if (localStorage.getItem('profile') === null) {
             
             return({
                 status:'Login'
             });
         }
-        else{
-        var profileArrayObject = JSON.parse(localStorage.getItem('profile'));
-        //var firstName = profile.firstname;
-        
-        //FOR LOOP KAN WEG! gebruik bij usersboard
-        for (var i=0; i<profileArrayObject.length; i++){
-            var profileObject = profileArrayObject[i];
-            console.log("Name: " + profileObject.firstname);
-            }    
+        else {
+            
+            var profileArrayObject = JSON.parse(localStorage.getItem('profile'));
+            //var firstName = profile.firstname;
 
-        return ({
-            status: profileObject.firstname+" "+ profileObject.lastname,
-            photo: profileObject.profilepic
-        });
-    }
+            //FOR LOOP KAN WEG! gebruik bij usersboard
+            for (var i=0; i<profileArrayObject.length; i++) {
+                
+                    var profileObject = profileArrayObject[i];
+                }    
+
+            return ({
+                status: profileObject.firstname+" "+ profileObject.lastname,
+                photo: profileObject.profilepic
+            });
+        }
     },
     
     render : function() {
@@ -66,11 +64,10 @@ var App = React.createClass({
                             photo={this.state.photo}/>
                 </div>
         
-       
         
                 <main className="mdl-layout__content">
 
-                        {React.cloneElement(this.props.children, {onUpdate: this.onUpdate})}
+                        {React.cloneElement(this.props.children, {ajaxUrl: "http://garcon-server.jinhua.choffice.nl"})}
 
                 </main>
             </div>
@@ -110,7 +107,7 @@ ReactDOM.render(
             <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />
             </Route>
         </Router>,
-        document.getElementById("content")
+    document.getElementById("content")
                 );
         
         

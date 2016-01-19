@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-import React from 'react'
-import $ from 'jquery'
-import { render } from 'react-dom'
-import { Router, Route, Link, History, Navigation } from 'react-router'
+ import React from 'react'
+ import $ from 'jquery'
+ import { render } from 'react-dom'
+ import { Router, Route, Link, History, Navigation } from 'react-router'
 
-import Background from '../Layout/background-deployment-text.js'
-import LoginBox from './loginbox.js'
+ import Background from '../Layout/background-deployment-text.js'
+ import LoginBox from './loginbox.js'
 
 var Login= React.createClass({ 
     render : function(){
@@ -19,7 +19,7 @@ var Login= React.createClass({
                 <Background />
                 <div className="white_block">
                     <div className="loginbox">
-                        <LoginBox />
+                        <LoginBox serverUrl={this.props.ajaxUrl}/>
                     </div>
                 </div>
                 </div>

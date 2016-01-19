@@ -38,7 +38,10 @@ var DashboardBox = _react2['default'].createClass({
     displayName: 'DashboardBox',
 
     getInitialState: function getInitialState() {
-        return { data: [] };
+        return {
+            changesdata: [],
+            problemsdata: []
+        };
     },
 
     componentDidMount: function componentDidMount() {
@@ -47,11 +50,12 @@ var DashboardBox = _react2['default'].createClass({
 
     loadDashboardData: function loadDashboardData() {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/dashboardinfo",
+            url: this.props.serverUrl + "/dashboardinfo",
             dataType: 'json',
             success: (function (data) {
                 this.setState({
-                    data: data.dashboarddata
+                    changesdata: data.dashboardchanges,
+                    problemsdata: data.dashboardproblems
                 });
             }).bind(this),
             error: (function (xhr, status, err) {
@@ -62,15 +66,13 @@ var DashboardBox = _react2['default'].createClass({
 
     render: function render() {
 
-        var changes = this.state.data.map(function (dashboarddata, index) {
-            return _react2['default'].createElement(_changesChangesJs2['default'], { data: dashboarddata, key: index, countData: index });
+        var changes = this.state.changesdata.map(function (changes, index) {
+            return _react2['default'].createElement(_changesChangesJs2['default'], { data: changes, key: index, countData: index });
         });
 
-        var problems = this.state.data.map(function (dashboarddata, index) {
+        var problems = this.state.problemsdata.map(function (problems, index) {
 
-            if (dashboarddata.status === "Error") {
-                return _react2['default'].createElement(_problemsProblemsJs2['default'], { data: dashboarddata, key: index });
-            }
+            return _react2['default'].createElement(_problemsProblemsJs2['default'], { data: problems, key: index });
         });
 
         return _react2['default'].createElement(

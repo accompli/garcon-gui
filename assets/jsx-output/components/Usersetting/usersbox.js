@@ -31,7 +31,7 @@ var UsersBox = _react2['default'].createClass({
             'div',
             { className: 'box' },
             _react2['default'].createElement(_filterboxJs2['default'], null),
-            _react2['default'].createElement(_userstableJs2['default'], null)
+            _react2['default'].createElement(_userstableJs2['default'], { serverUrl: this.props.serverUrl })
         );
     }
 });

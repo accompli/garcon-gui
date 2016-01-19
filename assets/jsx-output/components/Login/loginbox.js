@@ -27,7 +27,7 @@ var LoginBox = _react2['default'].createClass({
 
     update: function update(token) {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/profile",
+            url: this.props.serverUrl + "/profile",
             dataType: 'json',
             type: 'GET',
             data: token,

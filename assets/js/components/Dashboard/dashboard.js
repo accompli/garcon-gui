@@ -18,7 +18,7 @@ var Dashboard = React.createClass({
         return (
                 <div className="dashboard">
                     <GreenBox title={Dashboard.title}/>
-                    <DashboardBox />
+                    <DashboardBox serverUrl={this.props.ajaxUrl}/>
                 </div>
                 );
 }

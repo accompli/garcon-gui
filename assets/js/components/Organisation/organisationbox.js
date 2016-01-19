@@ -25,12 +25,11 @@ var OrganisationBox = React.createClass({
     
     componentDidMount: function(){
         this.loadOrganisationData();
-//        this.loadProjectData();
     },
     
     loadOrganisationData: function(){
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/organisation",
+            url: this.props.serverUrl+"/organisation",
             dataType: 'json',
             success: function(data) {
                         this.setState({
@@ -42,12 +41,16 @@ var OrganisationBox = React.createClass({
                     }.bind(this)
         });
     },
+    
+    reload: function(){
+        this.loadOrganisationData();
+    },
 
     render : function(){
         return (
                 <div className="box">
                     
-                    <OrganisationCards data={this.state.data} /> 
+                    <OrganisationCards data={this.state.data} reload={this.reload} serverUrl={this.props.serverUrl} /> 
                                     
                     <button className = "mdl-button mdl-js-button add_user"
                                     type=""

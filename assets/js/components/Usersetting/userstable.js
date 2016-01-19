@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
 import $ from 'jquery';
@@ -25,7 +24,7 @@ var UsersTable= React.createClass({
     
     loadUsers: function() {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/users",
+            url: this.props.serverUrl+"/users",
             dataType: 'json',
             success: function(data) {
                         this.setState({
@@ -48,7 +47,7 @@ var UsersTable= React.createClass({
         return (
                 <div className="list users">
                
-                    <UsersList refreshUsersList={this.refreshUsers} data={this.state.data} />   
+                    <UsersList refreshUsersList={this.refreshUsers} data={this.state.data} serverUrl={this.props.serverUrl}/>   
                     
                     <Link to="/newuser">
                         <button className = "mdl-button mdl-js-button add_user"
@@ -82,7 +81,7 @@ var UsersList = React.createClass({
         
         var userData = this.props.data.map(function(user, index) {
             return (
-                    <Users refreshList={this.refreshList} user={user} key={index} countdata={index}>
+                    <Users refreshList={this.refreshList} user={user} key={index} countdata={index} serverUrl={this.props.serverUrl}>
                     </Users>
                     );
         }.bind(this));
@@ -112,10 +111,10 @@ var UsersList = React.createClass({
 
 var Users = React.createClass({
 
-deleteUser: function(){
+    deleteUser: function(){
            
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/deleteuser",
+            url: this.props.serverUrl+"/deleteuser",
             dataType: 'json',
             type: 'POST',
             data: {userid: this.props.user.userid},
@@ -136,7 +135,6 @@ deleteUser: function(){
                     }.bind(this)
         });
     },
-    
     
     
     rawMarkup: function() {

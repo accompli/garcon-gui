@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-import React from 'react'
-import { Router, Route, Link, History, Navigation } from 'react-router'
+ import React from 'react'
+ import { Router, Route, Link, History, Navigation } from 'react-router'
 
 var Header = React.createClass({
     

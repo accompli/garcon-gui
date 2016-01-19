@@ -25,35 +25,12 @@ var _organisationitemJs2 = _interopRequireDefault(_organisationitemJs);
 var OrganisationCards = _react2['default'].createClass({
     displayName: 'OrganisationCards',
 
+    reload: function reload() {
+        this.props.reload();
+    },
+
     componentDidUpdate: function componentDidUpdate() {
         componentHandler.upgradeDom();
-    },
-
-    getInitialState: function getInitialState() {
-        return {
-            projectdata: []
-        };
-    },
-
-    componentDidMount: function componentDidMount() {
-        this.loadProjectData();
-        //        this.loadProjectData();
-    },
-
-    loadProjectData: function loadProjectData() {
-        $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/projects",
-            dataType: 'json',
-            success: (function (data) {
-                this.setState({
-                    projectdata: data.projectdata
-                });
-            }).bind(this),
-
-            error: (function (xhr, status, err) {
-                console.error(this.props.url, status, err.toString());
-            }).bind(this)
-        });
     },
 
     propTypes: {
@@ -63,7 +40,7 @@ var OrganisationCards = _react2['default'].createClass({
     render: function render() {
 
         var organisationData = this.props.data.map((function (organisation, index) {
-            return _react2['default'].createElement(_organisationitemJs2['default'], { org: organisation, key: index, projectdata: this.state.projectdata });
+            return _react2['default'].createElement(_organisationitemJs2['default'], { org: organisation, key: index, reload: this.reload, serverUrl: this.props.serverUrl });
         }).bind(this));
 
         //        var projectData = this.state.projectdata.map(function(project, index) {

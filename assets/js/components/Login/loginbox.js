@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-import React from 'react'
-import { Router, Route, Link, History, Navigation } from 'react-router'
+ import React from 'react'
+ import { Router, Route, Link, History, Navigation } from 'react-router'
 
-import ExternLoginBox from './extern-loginbox.js'
+ import ExternLoginBox from './extern-loginbox.js'
 
 var LoginBox = React.createClass({
     
     update: function(token){
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/profile",
+            url: this.props.serverUrl+"/profile",
             dataType: 'json',
             type: 'GET',
             data: token,

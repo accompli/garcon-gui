@@ -42,7 +42,7 @@ var Forgetpass = _react2['default'].createClass({
 
         //Submit to the server
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/email",
+            url: this.props.ajaxUrl + "/email",
             dataType: 'json',
             type: 'POST',
             data: email,

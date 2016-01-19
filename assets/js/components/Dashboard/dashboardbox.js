@@ -14,7 +14,10 @@ import Problems from './problems/problems.js'
 
 var DashboardBox = React.createClass({
     getInitialState: function() {
-        return {data: []};
+        return {
+            changesdata: [],
+            problemsdata: []
+        };
     },
     
     componentDidMount: function(){
@@ -23,12 +26,13 @@ var DashboardBox = React.createClass({
     
     loadDashboardData: function(){
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/dashboardinfo",
+            url: this.props.serverUrl+"/dashboardinfo",
             dataType: 'json',
             success: function(data) {
                         this.setState({
-                            data: data.dashboarddata
-                        })
+                            changesdata: data.dashboardchanges,
+                            problemsdata: data.dashboardproblems
+                        });
             }.bind(this),
             error:  function(xhr, status, err) {
                     console.error(this.props.url, status, err.toString());
@@ -38,23 +42,21 @@ var DashboardBox = React.createClass({
     
     render : function(){
         
-        var changes = this.state.data.map(function(dashboarddata, index) {
+        var changes = this.state.changesdata.map(function(changes, index) {
             return (
-                    <Changes data={dashboarddata} key={index} countData={index}>
+                    <Changes data={changes} key={index} countData={index}>
                     </Changes>
             );
             
         }); 
 
         
-        var problems = this.state.data.map(function(dashboarddata, index) {
+        var problems = this.state.problemsdata.map(function(problems, index) {
             
-            if(dashboarddata.status === "Error") {
                 return (
-                        <Problems data={dashboarddata} key={index}>
+                        <Problems data={problems} key={index}>
                         </Problems>
                 );
-            }
         });
                             
         return (

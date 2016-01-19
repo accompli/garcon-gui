@@ -40,12 +40,11 @@ var OrganisationBox = _react2['default'].createClass({
 
     componentDidMount: function componentDidMount() {
         this.loadOrganisationData();
-        //        this.loadProjectData();
     },
 
     loadOrganisationData: function loadOrganisationData() {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/organisation",
+            url: this.props.serverUrl + "/organisation",
             dataType: 'json',
             success: (function (data) {
                 this.setState({
@@ -58,11 +57,15 @@ var OrganisationBox = _react2['default'].createClass({
         });
     },
 
+    reload: function reload() {
+        this.loadOrganisationData();
+    },
+
     render: function render() {
         return _react2['default'].createElement(
             'div',
             { className: 'box' },
-            _react2['default'].createElement(_organisationcardsJs2['default'], { data: this.state.data }),
+            _react2['default'].createElement(_organisationcardsJs2['default'], { data: this.state.data, reload: this.reload, serverUrl: this.props.serverUrl }),
             _react2['default'].createElement(
                 'button',
                 { className: 'mdl-button mdl-js-button add_user',

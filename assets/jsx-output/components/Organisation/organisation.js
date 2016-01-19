@@ -36,12 +36,13 @@ var Organisation = _react2['default'].createClass({
     displayName: 'Organisation',
 
     render: function render() {
+        console.log(this.props.route);
         return _react2['default'].createElement(
             'div',
             { className: 'organisation' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Organisation.title }),
             _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
-            _react2['default'].createElement(_organisationboxJs2['default'], null)
+            _react2['default'].createElement(_organisationboxJs2['default'], { serverUrl: this.props.ajaxUrl })
         );
     }
 });

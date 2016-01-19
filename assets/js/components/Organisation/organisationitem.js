@@ -9,11 +9,50 @@
   import { Router, Route, Link, History } from 'react-router'
   
   import ProjectButton from './organisation-project-btn.js'
-  
+          
 var OrganisationItem = React.createClass({
-
+    
+    deleteOrganisation: function(){
+        $.ajax({
+            url: this.props.serverUrl +"/deleteorg",
+            dataType: 'json',
+            data: {orgid: this.props.org.organisationid},
+            success:
+                    function(data){
+                        if (data.status === "success"){
+                            this.props.reload();
+                        }
+                        else if (data.status === "fail"){
+                            console.log("Failed with delete...");
+                        }
+                    }.bind(this),     
+            error:
+                    function(xhr, status, err, jqXHR){
+                        console.error(this.props.url, status, err.toString());
+                         alert( jqXHR);
+                    }.bind(this)
+        });
+    },
+    
     render: function(){
-
+    
+    var organisationLogo = function(){
+        if (this.props.org.orgphoto == ""){
+            return (
+                    <div className="orglogo">
+                         niks
+                    </div>
+                    )    
+        }
+        else {
+            return (
+                    <div className="orglogo">
+                        <img src={this.props.org.orgphoto} />
+                    </div>
+            )
+        }
+    }
+    
         return (
                 <div className="mdl-card mdl-shadow--2dp cards ">
                 
@@ -38,13 +77,14 @@ var OrganisationItem = React.createClass({
                                     <li className="mdl-menu__item">
                                         Edit
                                     </li>
-                                    <li className="mdl-menu__item"> Delete</li>
+                                    <li className="mdl-menu__item" onClick={this.deleteOrganisation}> Delete</li>
                                 </ul>
                         </div>
 
                         <div className="card_data">
-                            <img className="orglogo" src={this.props.org.orgphoto} />
-
+                        
+                            {organisationLogo}
+                    
                             <div className="card_title">
                                 {this.props.org.orgname}
                             </div>
@@ -53,14 +93,14 @@ var OrganisationItem = React.createClass({
                                 {this.props.org.orgdate}
                             </div>
 
-                            <ProjectButton projectdata={this.props.projectdata} orgid={this.props.org.organisationid} orgname={this.props.org.orgname}/>
+                            <ProjectButton orgid={this.props.org.organisationid} orgname={this.props.org.orgname}/>
                             
-                        </div>
+                        </div> 
 
                         <div className="mdl-card__actions mdl-card--border detailinfo">
 
                             <div className="card_projects">
-                                Aantal projecten
+                                {this.props.org.orgprojects}
                             </div>
 
                             <div className="card_project_status">

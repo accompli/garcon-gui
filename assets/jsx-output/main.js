@@ -68,10 +68,6 @@ var _componentsProjectProjectJs = require('./components/Project/project.js');
 
 var _componentsProjectProjectJs2 = _interopRequireDefault(_componentsProjectProjectJs);
 
-var history = (0, _history.useBasename)(_history.createHistory)({
-    basename: '/breadcrumbs'
-});
-
 var App = _react2['default'].createClass({
     displayName: 'App',
 
@@ -87,13 +83,14 @@ var App = _react2['default'].createClass({
                 status: 'Login'
             };
         } else {
+
             var profileArrayObject = JSON.parse(localStorage.getItem('profile'));
             //var firstName = profile.firstname;
 
             //FOR LOOP KAN WEG! gebruik bij usersboard
             for (var i = 0; i < profileArrayObject.length; i++) {
+
                 var profileObject = profileArrayObject[i];
-                console.log("Name: " + profileObject.firstname);
             }
 
             return {
@@ -121,7 +118,7 @@ var App = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'main',
                     { className: 'mdl-layout__content' },
-                    _react2['default'].cloneElement(this.props.children, { onUpdate: this.onUpdate })
+                    _react2['default'].cloneElement(this.props.children, { ajaxUrl: "http://garcon-server.jinhua.choffice.nl" })
                 )
             )
         );

@@ -408,3 +408,59 @@ if (this.state.data.length === 0){
         "photo": "http:\/\/www.gravatar.com\/avatar\/89bbb3e2202a809c482e0589ba7bb7fb?d=mm"
     }
 ]
+
+
+
+
+   $jsonfile = 'users.json';
+    
+    $userid = $request->get('userid');
+    
+    $file = json_decode(file_get_contents('users.json'), true);
+
+    foreach ($file as $key => $value)
+    {
+        if (array_key_exists("userid", $value) && $value['userid'] == $userid) {
+            unset($file[$key]);
+        }
+    }
+    
+    $file = array_values($file);
+    
+    $jsondata = json_encode($file, JSON_PRETTY_PRINT);
+    
+    if ($result = file_put_contents($jsonfile, $jsondata)){
+    return new JsonResponse(
+                array(
+                "status" => "success"
+                    )
+                );
+    }
+    else {
+        return new JsonResponse(
+            array(
+                "status" => "fail"
+                )
+        );
+    }
+
+
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Router, Route, Link, IndexRoute, IndexRedirect, History, Navigation } from 'react-router'
+import { createHistory, useBasename } from 'history'
+
+import Forgetpass from './components/Forgetpassword/forgetpass.js'
+import Login from './components/Login/login.js'
+import Dashboard from './components/Dashboard/dashboard.js'
+import Usersettings from './components/Usersetting/usersettings.js'
+import Newuser from './components/newuser.js'
+import Organisation from './components/Organisation/organisation.js'
+import Header from './components/Layout/header.js'
+import AccountSetting from './components/Accountsetting/accountsetting.js'
+import SystemSetting from './components/Systemsetting/systemsetting.js'
+import RecentActivity from './components/Recentactivity/recentactivity.js'
+import EditUser from './components/Edituser/edituser.js'
+import Project from './components/Project/project.js'

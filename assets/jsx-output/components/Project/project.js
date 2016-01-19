@@ -34,12 +34,13 @@ var Project = _react2['default'].createClass({
     displayName: 'Project',
 
     render: function render() {
+
         return _react2['default'].createElement(
             'div',
             { className: 'project' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: this.props.params.orgname }),
             _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
-            _react2['default'].createElement(_projectboxJs2['default'], { orgid: this.props.params.orgid })
+            _react2['default'].createElement(_projectboxJs2['default'], { orgid: this.props.params.orgid, serverUrl: this.props.ajaxUrl })
         );
     }
 });

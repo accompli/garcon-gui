@@ -46,7 +46,7 @@ var Login = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'div',
                     { className: 'loginbox' },
-                    _react2['default'].createElement(_loginboxJs2['default'], null)
+                    _react2['default'].createElement(_loginboxJs2['default'], { serverUrl: this.props.ajaxUrl })
                 )
             )
         );

@@ -27,7 +27,42 @@ var _organisationProjectBtnJs2 = _interopRequireDefault(_organisationProjectBtnJ
 var OrganisationItem = _react2['default'].createClass({
     displayName: 'OrganisationItem',
 
+    deleteOrganisation: function deleteOrganisation() {
+        $.ajax({
+            url: this.props.serverUrl + "/deleteorg",
+            dataType: 'json',
+            data: { orgid: this.props.org.organisationid },
+            success: (function (data) {
+                if (data.status === "success") {
+                    this.props.reload();
+                } else if (data.status === "fail") {
+                    console.log("Failed with delete...");
+                }
+            }).bind(this),
+            error: (function (xhr, status, err, jqXHR) {
+                console.error(this.props.url, status, err.toString());
+                alert(jqXHR);
+            }).bind(this)
+        });
+    },
+
     render: function render() {
+
+        var organisationLogo = function organisationLogo() {
+            if (this.props.org.orgphoto == "") {
+                return _react2['default'].createElement(
+                    'div',
+                    { className: 'orglogo' },
+                    'niks'
+                );
+            } else {
+                return _react2['default'].createElement(
+                    'div',
+                    { className: 'orglogo' },
+                    _react2['default'].createElement('img', { src: this.props.org.orgphoto })
+                );
+            }
+        };
 
         return _react2['default'].createElement(
             'div',
@@ -62,7 +97,7 @@ var OrganisationItem = _react2['default'].createClass({
                     ),
                     _react2['default'].createElement(
                         'li',
-                        { className: 'mdl-menu__item' },
+                        { className: 'mdl-menu__item', onClick: this.deleteOrganisation },
                         ' Delete'
                     )
                 )
@@ -70,7 +105,7 @@ var OrganisationItem = _react2['default'].createClass({
             _react2['default'].createElement(
                 'div',
                 { className: 'card_data' },
-                _react2['default'].createElement('img', { className: 'orglogo', src: this.props.org.orgphoto }),
+                organisationLogo,
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_title' },
@@ -81,7 +116,7 @@ var OrganisationItem = _react2['default'].createClass({
                     { className: 'card_updatedate' },
                     this.props.org.orgdate
                 ),
-                _react2['default'].createElement(_organisationProjectBtnJs2['default'], { projectdata: this.props.projectdata, orgid: this.props.org.organisationid, orgname: this.props.org.orgname })
+                _react2['default'].createElement(_organisationProjectBtnJs2['default'], { orgid: this.props.org.organisationid, orgname: this.props.org.orgname })
             ),
             _react2['default'].createElement(
                 'div',
@@ -89,7 +124,7 @@ var OrganisationItem = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_projects' },
-                    'Aantal projecten'
+                    this.props.org.orgprojects
                 ),
                 _react2['default'].createElement(
                     'div',

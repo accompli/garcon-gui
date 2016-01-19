@@ -40,7 +40,7 @@ var Dashboard = _react2['default'].createClass({
             'div',
             { className: 'dashboard' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Dashboard.title }),
-            _react2['default'].createElement(_dashboardboxJs2['default'], null)
+            _react2['default'].createElement(_dashboardboxJs2['default'], { serverUrl: this.props.ajaxUrl })
         );
     }
 });

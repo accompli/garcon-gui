@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -43,7 +42,7 @@ var UsersTable = _react2['default'].createClass({
 
     loadUsers: function loadUsers() {
         _jquery2['default'].ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/users",
+            url: this.props.serverUrl + "/users",
             dataType: 'json',
             success: (function (data) {
                 this.setState({
@@ -64,7 +63,7 @@ var UsersTable = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { className: 'list users' },
-            _react2['default'].createElement(UsersList, { refreshUsersList: this.refreshUsers, data: this.state.data }),
+            _react2['default'].createElement(UsersList, { refreshUsersList: this.refreshUsers, data: this.state.data, serverUrl: this.props.serverUrl }),
             _react2['default'].createElement(
                 _reactRouter.Link,
                 { to: '/newuser' },
@@ -100,7 +99,7 @@ var UsersList = _react2['default'].createClass({
         var countData = this.props.data.length;
 
         var userData = this.props.data.map((function (user, index) {
-            return _react2['default'].createElement(Users, { refreshList: this.refreshList, user: user, key: index, countdata: index });
+            return _react2['default'].createElement(Users, { refreshList: this.refreshList, user: user, key: index, countdata: index, serverUrl: this.props.serverUrl });
         }).bind(this));
 
         return _react2['default'].createElement(
@@ -162,7 +161,7 @@ var Users = _react2['default'].createClass({
     deleteUser: function deleteUser() {
 
         _jquery2['default'].ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/deleteuser",
+            url: this.props.serverUrl + "/deleteuser",
             dataType: 'json',
             type: 'POST',
             data: { userid: this.props.user.userid },

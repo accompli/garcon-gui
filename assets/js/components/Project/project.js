@@ -12,12 +12,14 @@
  import ProjectBox from './projectbox.js'
 
 var Project = React.createClass({
+    
     render : function(){
+        
         return (
                 <div className="project">
                     <GreenBox title={this.props.params.orgname}/>
                     <BreadcrumbsBox />
-                    <ProjectBox orgid={this.props.params.orgid}/>
+                    <ProjectBox orgid={this.props.params.orgid} serverUrl={this.props.ajaxUrl}/>
                     
                 </div>
                 );

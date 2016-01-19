@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
- import React from 'react'
- 
+import React from 'react'
+
+
+
 var BreadcrumbsBox = React.createClass({
     render : function() {
         return (
@@ -19,11 +21,12 @@ var BreadcrumbsBox = React.createClass({
 var BreadcrumbsList = React.createClass({
     
     render : function () {
+            
         return (
                 <div className ="breadcrumbs">
-                    
+                   
                 </div>
-                    );
+                );
         }
 });
 

@@ -21,7 +21,7 @@ var Usersettings = React.createClass({
                         <GreenBox title={Usersettings.title} />
                         <BreadcrumbsBox />
                         
-                        <UsersBox />      
+                        <UsersBox serverUrl={this.props.ajaxUrl}/>      
                         
                 </div>
                 );

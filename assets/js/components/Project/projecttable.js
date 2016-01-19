@@ -5,9 +5,20 @@
  */
 
  import React from 'react'
-
+ 
+ import Projects from './projectitem.js'
+ 
 var ProjectTable = React.createClass({
+
     render: function (){
+        
+        var projectData = this.props.data.map(function(project, index) {
+                return (
+                        <Projects project={project} key={index}>
+                        </Projects>
+                        );
+        }.bind(this));
+    
         return (
                 <div className="projecttable">
                     <table className="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
@@ -23,7 +34,7 @@ var ProjectTable = React.createClass({
                         </thead>
                 
                         <tbody>
-                           
+                            {projectData}
                         </tbody>     
                     </table>
                 </div>

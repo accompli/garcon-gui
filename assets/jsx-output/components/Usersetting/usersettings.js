@@ -45,7 +45,7 @@ var Usersettings = _react2['default'].createClass({
             { className: 'usersettings' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: Usersettings.title }),
             _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
-            _react2['default'].createElement(_usersboxJs2['default'], null)
+            _react2['default'].createElement(_usersboxJs2['default'], { serverUrl: this.props.ajaxUrl })
         );
     }
 });

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import React from 'react'
+ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link, History } from 'react-router'
 
@@ -15,11 +15,12 @@ import OrganisationBox from './organisationbox.js'
 var Organisation = React.createClass({
     
     render : function(){
+        console.log(this.props.route)
         return (
                 <div className="organisation">
                     <GreenBox title={Organisation.title}/>
                     <BreadcrumbsBox />
-                    <OrganisationBox />
+                    <OrganisationBox serverUrl={this.props.ajaxUrl} />
                 </div>
                 );
     }
