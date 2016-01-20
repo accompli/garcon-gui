@@ -81,7 +81,7 @@ var EditOrganisation = _react2['default'].createClass({
                 { className: 'editorganisation' },
                 _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditOrganisation.title }),
                 _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
-                _react2['default'].createElement(_editorganisationboxJs2['default'], { orgId: this.props.params.orgid, data: this.state.data, countdata: this.props.params.countdata })
+                _react2['default'].createElement(_editorganisationboxJs2['default'], { serverUrl: this.props.ajaxUrl, orgId: this.props.params.orgid, data: this.state.data, countdata: this.props.params.countdata })
             );
         }
     }

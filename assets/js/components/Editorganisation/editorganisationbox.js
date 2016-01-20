@@ -12,7 +12,7 @@ var EditOrganisationBox = React.createClass({
     
     editOrganisation : function(organisationdata){
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/editorganisations",
+            url: this.props.serverUrl+"/editorganisations",
             dataType: 'json',
             type: 'POST',
             data: organisationdata,

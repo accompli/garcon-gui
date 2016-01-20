@@ -56,7 +56,7 @@ var EditOrganisation = React.createClass({
                         <div className="editorganisation">
                             <GreenBox title={EditOrganisation.title} />
                             <BreadcrumbsBox />
-                            <EditOrganisationBox orgId={this.props.params.orgid} data={this.state.data} countdata={this.props.params.countdata}/>
+                            <EditOrganisationBox serverUrl={this.props.ajaxUrl} orgId={this.props.params.orgid} data={this.state.data} countdata={this.props.params.countdata}/>
                             </div>
                 );
         }

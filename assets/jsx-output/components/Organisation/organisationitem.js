@@ -27,6 +27,32 @@ var _organisationProjectBtnJs2 = _interopRequireDefault(_organisationProjectBtnJ
 var OrganisationItem = _react2['default'].createClass({
     displayName: 'OrganisationItem',
 
+    countProjects: function countProjects(data) {
+        $.ajax({
+            url: this.props.serverUrl + "/projects",
+            dataType: 'json',
+            data: data,
+            success: (function (data) {
+                this.setState({
+                    project: data.projectdata
+                });
+            }).bind(this),
+            error: (function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }).bind(this)
+        });
+    },
+
+    getInitialState: function getInitialState() {
+        return {
+            project: []
+        };
+    },
+
+    componentDidMount: function componentDidMount() {
+        this.countProjects({ orgid: this.props.org.organisationid });
+    },
+
     deleteOrganisation: function deleteOrganisation() {
         $.ajax({
             url: this.props.serverUrl + "/deleteorg",
@@ -47,7 +73,7 @@ var OrganisationItem = _react2['default'].createClass({
     },
 
     render: function render() {
-
+        console.log(this.state.project);
         return _react2['default'].createElement(
             'div',
             { className: 'mdl-card mdl-shadow--2dp cards ' },
@@ -116,8 +142,8 @@ var OrganisationItem = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_projects' },
-                    'Aantal projecten:    ',
-                    this.props.org.orgprojects
+                    'Aantal projecten: ',
+                    this.state.project.length
                 ),
                 _react2['default'].createElement(
                     'div',

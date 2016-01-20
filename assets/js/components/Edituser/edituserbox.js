@@ -12,7 +12,7 @@ var EditUserBox = React.createClass({
     
     editUser : function(editdata){
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/editusers",
+            url: this.props.serverUrl +"/editusers",
             dataType: 'json',
             type: 'POST',
             data: editdata,

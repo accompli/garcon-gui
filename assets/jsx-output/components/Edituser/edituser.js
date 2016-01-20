@@ -71,7 +71,7 @@ var EditUser = _react2['default'].createClass({
                 { className: 'edituser' },
                 _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: EditUser.title }),
                 _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
-                _react2['default'].createElement(_edituserboxJs2['default'], { dataId: this.props.params.user, data: this.state.data })
+                _react2['default'].createElement(_edituserboxJs2['default'], { dataId: this.props.params.user, data: this.state.data, serverUrl: this.props.ajaxUrl })
             );
         }
     }

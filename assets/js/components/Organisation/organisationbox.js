@@ -19,7 +19,6 @@ var OrganisationBox = React.createClass({
     getInitialState: function() {
         return {
             data: []
-//            projectdata: []
         };
     },
     
@@ -42,11 +41,57 @@ var OrganisationBox = React.createClass({
         });
     },
     
+    
     reload: function(){
         this.loadOrganisationData();
     },
-
+    
+    stopPropagation: function(e){
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+    },
+    
+    handleSubmit: function(e){
+        e.preventDefault();
+        
+        var name = this.refs.orgname.value;
+        var logo = this.refs.orglogo.value;
+        
+        if (name !== ""){
+            this.addNewOrganisation({
+                name: name,
+                logo: logo
+            });
+        }      
+    },
+    
+    addNewOrganisation: function(newuser){
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/addorganisation",
+            dataType: 'json',
+            type: 'POST',
+            data: newuser,
+            success:
+                    function(data){ 
+                        if (data.status === "success"){
+                            this.loadOrganisationData();
+                            console.log('new user added complete');
+                        }
+                        else if (data.status === "fail"){
+                            console.log("failed");
+                        }
+                    }.bind(this),
+                    
+            error:
+                    function(xhr, status, err, jqXHR){
+                        console.error(this.props.url, status, err.toString());
+                         alert( jqXHR);
+                    }.bind(this)
+        });
+    },
+    
     render : function(){
+
         return (
                 <div className="box">
                     
@@ -65,22 +110,30 @@ var OrganisationBox = React.createClass({
                     <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
                         htmlFor="neworganisation">
                                 
-                        <div className="demo-card-square mdl-card">
+                        <div onClick={this.stopPropagation} className="mdl-card add_organisation">
                             <div className="mdl-card__title mdl-card--expand">
                                 <h5> New organisation </h5>
                             </div>
                     
                             <div className="mdl-card__supporting-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Aenan convallis.
+                                Organisation name <input className="mdl-textfield__input"
+                                    type="text"
+                                    id="name"
+                                    ref="orgname"/>
+                                <p></p>
+                                Organisation logo url: <input  className="mdl-textfield__input"
+                                    type="text"
+                                    id="logo"
+                                    ref="orglogo"/>
+                                <p></p>
                             </div>
-                    
-                            <div className="mdl-card__actions mdl-card--border">
-                                <a className="mdl-button mdl-js-button mdl-js-ripple-effect">
-                                    Add organisation
-                                </a>
-                            </div>
-                 
+
+                    <button className="mdl-button mdl-js-button"
+                        type="submit"
+                        onClick={this.handleSubmit}
+                        name="submit">Add Organisation
+                    </button>      
+
                         </div>
                     </ul>
             

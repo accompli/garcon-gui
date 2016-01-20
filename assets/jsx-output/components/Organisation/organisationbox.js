@@ -34,7 +34,6 @@ var OrganisationBox = _react2['default'].createClass({
     getInitialState: function getInitialState() {
         return {
             data: []
-            //            projectdata: []
         };
     },
 
@@ -61,7 +60,49 @@ var OrganisationBox = _react2['default'].createClass({
         this.loadOrganisationData();
     },
 
+    stopPropagation: function stopPropagation(e) {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+    },
+
+    handleSubmit: function handleSubmit(e) {
+        e.preventDefault();
+
+        var name = this.refs.orgname.value;
+        var logo = this.refs.orglogo.value;
+
+        if (name !== "") {
+            this.addNewOrganisation({
+                name: name,
+                logo: logo
+            });
+        }
+    },
+
+    addNewOrganisation: function addNewOrganisation(newuser) {
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/addorganisation",
+            dataType: 'json',
+            type: 'POST',
+            data: newuser,
+            success: (function (data) {
+                if (data.status === "success") {
+                    this.loadOrganisationData();
+                    console.log('new user added complete');
+                } else if (data.status === "fail") {
+                    console.log("failed");
+                }
+            }).bind(this),
+
+            error: (function (xhr, status, err, jqXHR) {
+                console.error(this.props.url, status, err.toString());
+                alert(jqXHR);
+            }).bind(this)
+        });
+    },
+
     render: function render() {
+
         return _react2['default'].createElement(
             'div',
             { className: 'box' },
@@ -84,7 +125,7 @@ var OrganisationBox = _react2['default'].createClass({
                     htmlFor: 'neworganisation' },
                 _react2['default'].createElement(
                     'div',
-                    { className: 'demo-card-square mdl-card' },
+                    { onClick: this.stopPropagation, className: 'mdl-card add_organisation' },
                     _react2['default'].createElement(
                         'div',
                         { className: 'mdl-card__title mdl-card--expand' },
@@ -97,16 +138,26 @@ var OrganisationBox = _react2['default'].createClass({
                     _react2['default'].createElement(
                         'div',
                         { className: 'mdl-card__supporting-text' },
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
+                        'Organisation name ',
+                        _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+                            type: 'text',
+                            id: 'name',
+                            ref: 'orgname' }),
+                        _react2['default'].createElement('p', null),
+                        'Organisation logo url: ',
+                        _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+                            type: 'text',
+                            id: 'logo',
+                            ref: 'orglogo' }),
+                        _react2['default'].createElement('p', null)
                     ),
                     _react2['default'].createElement(
-                        'div',
-                        { className: 'mdl-card__actions mdl-card--border' },
-                        _react2['default'].createElement(
-                            'a',
-                            { className: 'mdl-button mdl-js-button mdl-js-ripple-effect' },
-                            'Add organisation'
-                        )
+                        'button',
+                        { className: 'mdl-button mdl-js-button',
+                            type: 'submit',
+                            onClick: this.handleSubmit,
+                            name: 'submit' },
+                        'Add Organisation'
                     )
                 )
             )

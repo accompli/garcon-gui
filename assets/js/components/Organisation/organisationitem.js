@@ -12,6 +12,33 @@
           
 var OrganisationItem = React.createClass({
     
+    countProjects: function(data){
+        $.ajax({
+            url: this.props.serverUrl+"/projects",
+            dataType: 'json',
+            data: data,
+            success: function(data) {
+                        this.setState({
+                            project: data.projectdata
+                        });
+            }.bind(this),
+            error:  function(xhr, status, err) {
+                    console.error(this.props.url, status, err.toString());
+                    }.bind(this)
+        });
+    },
+    
+    getInitialState: function() {
+         return {
+             project: []
+         };
+     },
+
+     componentDidMount: function(){
+         this.countProjects({orgid: this.props.org.organisationid});
+
+     },
+    
     deleteOrganisation: function(){
         $.ajax({
             url: this.props.serverUrl +"/deleteorg",
@@ -35,7 +62,7 @@ var OrganisationItem = React.createClass({
     },
     
     render: function(){
-    
+    console.log(this.state.project)
         return (
                 <div className="mdl-card mdl-shadow--2dp cards ">
                 
@@ -85,7 +112,7 @@ var OrganisationItem = React.createClass({
                         <div className="mdl-card__actions mdl-card--border detailinfo">
 
                             <div className="card_projects">
-                            Aantal projecten:    {this.props.org.orgprojects}
+                            Aantal projecten: {this.state.project.length}
                             </div>
 
                             <div className="card_project_status">

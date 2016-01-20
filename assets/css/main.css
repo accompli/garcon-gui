@@ -618,7 +618,7 @@ input::-moz-placeholder {
 
 .cards {
     margin-bottom: 2%;
-    border-radius: 0px;
+    border-radius: 2dp;
     width: 320px;
     display: inline-block;
     vertical-align: top;
@@ -679,4 +679,8 @@ input::-moz-placeholder {
 
 .card_project_status {
     float: right;
+}
+
+.add_organisation{
+    width: 400px;
 }

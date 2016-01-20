@@ -51,7 +51,7 @@ var EditUser = React.createClass({
                         <div className="edituser">
                             <GreenBox title={EditUser.title} />
                             <BreadcrumbsBox />
-                            <EditUserBox dataId={this.props.params.user} data={this.state.data}/>
+                            <EditUserBox dataId={this.props.params.user} data={this.state.data} serverUrl={this.props.ajaxUrl}/>
                     </div>
                 );
         }
