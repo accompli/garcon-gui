@@ -21,9 +21,9 @@ var _reactRouter = require('react-router');
 var EditOrganisationBox = _react2['default'].createClass({
     displayName: 'EditOrganisationBox',
 
-    editOrganisation: function editOrganisation(orgnisationdata) {
+    editOrganisation: function editOrganisation(organisationdata) {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/editorganisation",
+            url: "http://garcon-server.jinhua.choffice.nl/editorganisations",
             dataType: 'json',
             type: 'POST',
             data: organisationdata,
@@ -49,9 +49,9 @@ var EditOrganisationBox = _react2['default'].createClass({
     handleSubmit: function handleSubmit(e) {
         e.preventDefault();
 
-        var oldName = this.refs.orgname.value;
-        var oldLogo = this.refs.orglogo.value;
-        var orgId = this.refs.orgid.value;
+        var oldName = this.refs.name.value;
+        var oldLogo = this.refs.logo.value;
+        var orgId = this.refs.id.value;
 
         if (oldName !== "") {
             this.editOrganisation({
@@ -102,7 +102,7 @@ var EditOrganisationBox = _react2['default'].createClass({
                             _react2['default'].createElement('input', { type: 'hidden',
                                 id: 'id',
                                 ref: 'id',
-                                value: this.props.orgid }),
+                                value: this.props.countdata }),
                             _react2['default'].createElement(
                                 'button',
                                 { className: 'mdl-button mdl-js-button',

@@ -10,9 +10,9 @@ import { Router, Route, Link, History, Navigation } from 'react-router'
 
 var EditOrganisationBox = React.createClass({
     
-    editOrganisation : function(orgnisationdata){
+    editOrganisation : function(organisationdata){
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/editorganisation",
+            url: "http://garcon-server.jinhua.choffice.nl/editorganisations",
             dataType: 'json',
             type: 'POST',
             data: organisationdata,
@@ -42,9 +42,9 @@ var EditOrganisationBox = React.createClass({
     handleSubmit : function(e){
         e.preventDefault();
         
-        var oldName = this.refs.orgname.value;
-        var oldLogo = this.refs.orglogo.value;
-        var orgId = this.refs.orgid.value;
+        var oldName = this.refs.name.value;
+        var oldLogo = this.refs.logo.value;
+        var orgId = this.refs.id.value;
         
         if (oldName !== ""){
             this.editOrganisation({
@@ -86,7 +86,7 @@ var EditOrganisationBox = React.createClass({
                                 <input  type="hidden"
                                         id="id"
                                         ref="id"
-                                        value={this.props.orgid} />
+                                        value={this.props.countdata} />
                         
                                 <button className="mdl-button mdl-js-button"
                                         type="submit"
@@ -105,3 +105,4 @@ var EditOrganisationBox = React.createClass({
 
 
  export default EditOrganisationBox
+
