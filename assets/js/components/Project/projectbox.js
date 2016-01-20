@@ -37,7 +37,30 @@ var ProjectBox = React.createClass({
         });
     },
     
-    addNewProject: function(){
+    addNewProject: function(newproject){
+
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/addproject",
+            dataType: 'json',
+            type: 'POST',
+            data: newproject,
+            success:
+                    function(data){ 
+                        if (data.status === "success"){
+                            this.loadProjects();
+                        }
+                        else if (data.status === "fail"){
+                            console.log("failed");
+                        }
+                    }.bind(this),
+                    
+            error:
+                    function(xhr, status, err, jqXHR){
+                        console.error(this.props.url, status, err.toString());
+                         alert( jqXHR);
+                    }.bind(this)
+        });
+        
         
     },
     
@@ -90,7 +113,7 @@ var ProjectBox = React.createClass({
                                 Project name <input className="mdl-textfield__input"
                                     type="text"
                                     id="name"
-                                    ref="orgname"/>
+                                    ref="projectname"/>
                                 <p></p>
                             </div>
 
