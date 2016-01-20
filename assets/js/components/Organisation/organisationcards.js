@@ -27,7 +27,7 @@ var OrganisationCards = React.createClass({
         
         var organisationData = this.props.data.map(function(organisation, index) {
             return (
-                    <OrganisationItem org={organisation} key={index} reload={this.reload} serverUrl={this.props.serverUrl}>
+                    <OrganisationItem org={organisation} key={index} countdata={index} reload={this.reload} serverUrl={this.props.serverUrl}>
                     </OrganisationItem>
                     );
         }.bind(this));

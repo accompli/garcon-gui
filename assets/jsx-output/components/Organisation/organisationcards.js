@@ -40,7 +40,7 @@ var OrganisationCards = _react2['default'].createClass({
     render: function render() {
 
         var organisationData = this.props.data.map((function (organisation, index) {
-            return _react2['default'].createElement(_organisationitemJs2['default'], { org: organisation, key: index, reload: this.reload, serverUrl: this.props.serverUrl });
+            return _react2['default'].createElement(_organisationitemJs2['default'], { org: organisation, key: index, countdata: index, reload: this.reload, serverUrl: this.props.serverUrl });
         }).bind(this));
 
         //        var projectData = this.state.projectdata.map(function(project, index) {

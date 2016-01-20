@@ -19,7 +19,7 @@ import SystemSetting from './components/Systemsetting/systemsetting.js'
 import RecentActivity from './components/Recentactivity/recentactivity.js'
 import EditUser from './components/Edituser/edituser.js'
 import Project from './components/Project/project.js'
-
+import EditOrganisation from './components/Editorganisation/editorganisation.js'
 
 var App = React.createClass({
     
@@ -102,6 +102,7 @@ ReactDOM.render(
             <Route name="Create user" path={Newuser.path} component={Newuser}/>
             <Route name="Organisation" path={Organisation.path} component={Organisation} />
                 <Route name="Project" path={Project.path} component={Project} />
+                <Route name="Edit organisation" path={EditOrganisation.path} component={EditOrganisation} /> 
             <Route name="Account setting" path={AccountSetting.path} component={AccountSetting} />
             
             <Route name="System setting" path={SystemSetting.path} component={SystemSetting} />

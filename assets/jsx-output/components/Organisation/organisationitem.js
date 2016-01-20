@@ -48,22 +48,6 @@ var OrganisationItem = _react2['default'].createClass({
 
     render: function render() {
 
-        var organisationLogo = function organisationLogo() {
-            if (this.props.org.orgphoto == "") {
-                return _react2['default'].createElement(
-                    'div',
-                    { className: 'orglogo' },
-                    'niks'
-                );
-            } else {
-                return _react2['default'].createElement(
-                    'div',
-                    { className: 'orglogo' },
-                    _react2['default'].createElement('img', { src: this.props.org.orgphoto })
-                );
-            }
-        };
-
         return _react2['default'].createElement(
             'div',
             { className: 'mdl-card mdl-shadow--2dp cards ' },
@@ -93,7 +77,11 @@ var OrganisationItem = _react2['default'].createClass({
                     _react2['default'].createElement(
                         'li',
                         { className: 'mdl-menu__item' },
-                        'Edit'
+                        _react2['default'].createElement(
+                            _reactRouter.Link,
+                            { to: '/editorganisation/' + this.props.org.organisationid + '/' + this.props.countdata },
+                            'Edit'
+                        )
                     ),
                     _react2['default'].createElement(
                         'li',
@@ -105,7 +93,11 @@ var OrganisationItem = _react2['default'].createClass({
             _react2['default'].createElement(
                 'div',
                 { className: 'card_data' },
-                organisationLogo,
+                _react2['default'].createElement(
+                    'div',
+                    { className: 'orglogo' },
+                    _react2['default'].createElement('img', { src: this.props.org.orgphoto })
+                ),
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_title' },
@@ -124,6 +116,7 @@ var OrganisationItem = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_projects' },
+                    'Aantal projecten:    ',
                     this.props.org.orgprojects
                 ),
                 _react2['default'].createElement(

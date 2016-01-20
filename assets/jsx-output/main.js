@@ -68,6 +68,10 @@ var _componentsProjectProjectJs = require('./components/Project/project.js');
 
 var _componentsProjectProjectJs2 = _interopRequireDefault(_componentsProjectProjectJs);
 
+var _componentsEditorganisationEditorganisationJs = require('./components/Editorganisation/editorganisation.js');
+
+var _componentsEditorganisationEditorganisationJs2 = _interopRequireDefault(_componentsEditorganisationEditorganisationJs);
+
 var App = _react2['default'].createClass({
     displayName: 'App',
 
@@ -150,6 +154,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
         _react2['default'].createElement(_reactRouter.Route, { name: 'Create user', path: _componentsNewuserJs2['default'].path, component: _componentsNewuserJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Organisation', path: _componentsOrganisationOrganisationJs2['default'].path, component: _componentsOrganisationOrganisationJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Project', path: _componentsProjectProjectJs2['default'].path, component: _componentsProjectProjectJs2['default'] }),
+        _react2['default'].createElement(_reactRouter.Route, { name: 'Edit organisation', path: _componentsEditorganisationEditorganisationJs2['default'].path, component: _componentsEditorganisationEditorganisationJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'Account setting', path: _componentsAccountsettingAccountsettingJs2['default'].path, component: _componentsAccountsettingAccountsettingJs2['default'] }),
         _react2['default'].createElement(_reactRouter.Route, { name: 'System setting', path: _componentsSystemsettingSystemsettingJs2['default'].path, component: _componentsSystemsettingSystemsettingJs2['default'] })
     )

@@ -36,23 +36,6 @@ var OrganisationItem = React.createClass({
     
     render: function(){
     
-    var organisationLogo = function(){
-        if (this.props.org.orgphoto == ""){
-            return (
-                    <div className="orglogo">
-                         niks
-                    </div>
-                    )    
-        }
-        else {
-            return (
-                    <div className="orglogo">
-                        <img src={this.props.org.orgphoto} />
-                    </div>
-            )
-        }
-    }
-    
         return (
                 <div className="mdl-card mdl-shadow--2dp cards ">
                 
@@ -75,7 +58,7 @@ var OrganisationItem = React.createClass({
                                 <ul className="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                     htmlFor={this.props.org.organisationid}>
                                     <li className="mdl-menu__item">
-                                        Edit
+                                        <Link to={`/editorganisation/${this.props.org.organisationid}/${this.props.countdata}`}>Edit</Link>
                                     </li>
                                     <li className="mdl-menu__item" onClick={this.deleteOrganisation}> Delete</li>
                                 </ul>
@@ -83,7 +66,9 @@ var OrganisationItem = React.createClass({
 
                         <div className="card_data">
                         
-                            {organisationLogo}
+                            <div className="orglogo">
+                                <img src={this.props.org.orgphoto} />
+                            </div>
                     
                             <div className="card_title">
                                 {this.props.org.orgname}
@@ -100,7 +85,7 @@ var OrganisationItem = React.createClass({
                         <div className="mdl-card__actions mdl-card--border detailinfo">
 
                             <div className="card_projects">
-                                {this.props.org.orgprojects}
+                            Aantal projecten:    {this.props.org.orgprojects}
                             </div>
 
                             <div className="card_project_status">

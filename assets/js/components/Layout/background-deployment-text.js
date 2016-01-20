@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import React from 'react'
+ import React from 'react'
 
 var Background = React.createClass({
     render : function(){
