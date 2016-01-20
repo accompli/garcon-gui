@@ -50,6 +50,27 @@ var ProjectBox = _react2['default'].createClass({
         });
     },
 
+    addNewProject: function addNewProject() {},
+
+    stopPropagation: function stopPropagation(e) {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+    },
+
+    handleSubmit: function handleSubmit(e) {
+        e.preventDefault();
+
+        var projectname = this.refs.projectname.value;
+        var id = this.props.orgid;
+
+        if (projectname !== "") {
+            this.addNewProject({
+                name: projectname,
+                id: id
+            });
+        }
+    },
+
     render: function render() {
 
         return _react2['default'].createElement(
@@ -60,7 +81,55 @@ var ProjectBox = _react2['default'].createClass({
                 null,
                 'Hier komen de filters ...'
             ),
-            _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data })
+            _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data }),
+            _react2['default'].createElement(
+                'button',
+                { className: 'mdl-button mdl-js-button add_user',
+                    type: '',
+                    name: 'submit',
+                    id: 'neworganisation' },
+                _react2['default'].createElement(
+                    'svg',
+                    { className: 'add_icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                    _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })
+                )
+            ),
+            _react2['default'].createElement(
+                'ul',
+                { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
+                    htmlFor: 'neworganisation' },
+                _react2['default'].createElement(
+                    'div',
+                    { onClick: this.stopPropagation, className: 'mdl-card add_organisation' },
+                    _react2['default'].createElement(
+                        'div',
+                        { className: 'mdl-card__title mdl-card--expand' },
+                        _react2['default'].createElement(
+                            'h5',
+                            null,
+                            ' New project '
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        'div',
+                        { className: 'mdl-card__supporting-text' },
+                        'Project name ',
+                        _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+                            type: 'text',
+                            id: 'name',
+                            ref: 'orgname' }),
+                        _react2['default'].createElement('p', null)
+                    ),
+                    _react2['default'].createElement(
+                        'button',
+                        { className: 'mdl-button mdl-js-button',
+                            type: 'submit',
+                            onClick: this.handleSubmit,
+                            name: 'submit' },
+                        'Add Project'
+                    )
+                )
+            )
         );
     }
 });

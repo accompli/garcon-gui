@@ -72,8 +72,29 @@ var OrganisationItem = _react2['default'].createClass({
         });
     },
 
+    Projects: function Projects() {
+
+        var projectLength = this.state.project.length;
+
+        if (projectLength > 0) {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'card_projects' },
+                'Projecten: ',
+                this.state.project.length
+            );
+        } else {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'card_projects' },
+                'No projects'
+            );
+        }
+    },
     render: function render() {
+
         console.log(this.state.project);
+
         return _react2['default'].createElement(
             'div',
             { className: 'mdl-card mdl-shadow--2dp cards ' },
@@ -139,12 +160,7 @@ var OrganisationItem = _react2['default'].createClass({
             _react2['default'].createElement(
                 'div',
                 { className: 'mdl-card__actions mdl-card--border detailinfo' },
-                _react2['default'].createElement(
-                    'div',
-                    { className: 'card_projects' },
-                    'Aantal projecten: ',
-                    this.state.project.length
-                ),
+                this.Projects(),
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_project_status' },

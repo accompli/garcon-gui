@@ -74,7 +74,6 @@ var OrganisationBox = React.createClass({
             success:
                     function(data){ 
                         if (data.status === "success"){
-                            this.loadOrganisationData();
                             console.log('new user added complete');
                         }
                         else if (data.status === "fail"){
@@ -88,6 +87,8 @@ var OrganisationBox = React.createClass({
                          alert( jqXHR);
                     }.bind(this)
         });
+        
+        this.loadOrganisationData();
     },
     
     render : function(){

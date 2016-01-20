@@ -60,9 +60,30 @@ var OrganisationItem = React.createClass({
                     }.bind(this)
         });
     },
-    
-    render: function(){
+
+    Projects: function(){
+        
+        var projectLength = this.state.project.length;
+        
+        if (projectLength > 0){
+            return (
+                    <div className="card_projects">
+                            Projecten: {this.state.project.length}
+                    </div>
+                    )
+        }
+        else {
+            return (
+                    <div className="card_projects">
+                        No projects
+                    </div>
+                    )
+        }    
+    },    
+    render: function(){    
+        
     console.log(this.state.project)
+
         return (
                 <div className="mdl-card mdl-shadow--2dp cards ">
                 
@@ -111,9 +132,11 @@ var OrganisationItem = React.createClass({
 
                         <div className="mdl-card__actions mdl-card--border detailinfo">
 
-                            <div className="card_projects">
-                            Aantal projecten: {this.state.project.length}
-                            </div>
+
+                            
+                                {this.Projects()}
+                            
+
 
                             <div className="card_project_status">
                                 Available
