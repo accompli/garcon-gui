@@ -684,3 +684,7 @@ input::-moz-placeholder {
 .add_organisation{
     width: 400px;
 }
+
+.applicationdata {
+    background-color: #EFECEC;
+}

@@ -31,11 +31,13 @@ var ProjectTable = React.createClass({
                                 <th><div className="edit">Edit</div></th>
                         
                             </tr>
+
                         </thead>
                 
-                        <tbody>
-                            {projectData}
-                        </tbody>     
+                        <tbody >            
+                                               {projectData}
+                        </tbody>
+                
                     </table>
                 </div>
                 );

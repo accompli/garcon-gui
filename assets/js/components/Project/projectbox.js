@@ -40,7 +40,7 @@ var ProjectBox = React.createClass({
     addNewProject: function(newproject){
 
         $.ajax({
-            url: this.props.serverUrl+"addproject",
+            url: this.props.serverUrl+"/addproject",
             dataType: 'json',
             type: 'POST',
             data: newproject,

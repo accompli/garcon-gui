@@ -7,38 +7,47 @@
  import React from 'react'
  import { Router, Route, Link } from 'react-router'
  
+
 var Projects = React.createClass({
     
     getInitialState: function() {
          return {
-            application: []
+            application: [],
+            countApp: []
+            
          };
      },
      
     showApplication: function(){
-    console.log('clicked')
-      $.ajax({
-            url: this.props.serverUrl+"/application",
-            dataType: 'json',
-            data: {id: this.props.project.projectid},
-            success: function(data) {
-                console.log(data.applicationdata)
-                        this.setState({
-                            application: data.applicationdata
-                        });
-            }.bind(this),
-            error:  function(xhr, status, err) {
-                    console.error(this.props.url, status, err.toString());
-                    }.bind(this)
-        });
+        console.log('clicked')
+          $.ajax({
+                url: this.props.serverUrl+"/application",
+                dataType: 'json',
+                data: {id: this.props.project.projectid},
+                success: function(data) {
+                    console.log(data.applicationdata, data.count)
+                            this.setState({
+                                application: data.applicationdata,
+                                countApp: data.count
+                            });
+                }.bind(this),
+                error:  function(xhr, status, err) {
+                        console.error(this.props.url, status, err.toString());
+                        }.bind(this)
+            });
     },
+    
+    componentDidMount: function(){
+        this.showApplication();
+     },
     
     render: function(){
         return (
+                
                 <tr>
-                    <td onClick={this.showApplication}>{this.props.project.projectname}</td>
+                    <td>{this.props.project.projectname}</td>
                     <td>{this.props.project.editdate}</td>
-                    <td><div className="status"></div></td>
+                    <td><div className="status">{this.state.countApp.length}</div></td>
                     <td><div className="status"></div></td>
                     <td >
                         <div className="status">

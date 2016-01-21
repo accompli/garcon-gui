@@ -23,7 +23,9 @@ var Projects = _react2['default'].createClass({
 
     getInitialState: function getInitialState() {
         return {
-            application: []
+            application: [],
+            countApp: []
+
         };
     },
 
@@ -34,9 +36,10 @@ var Projects = _react2['default'].createClass({
             dataType: 'json',
             data: { id: this.props.project.projectid },
             success: (function (data) {
-                console.log(data.applicationdata);
+                console.log(data.applicationdata, data.count);
                 this.setState({
-                    application: data.applicationdata
+                    application: data.applicationdata,
+                    countApp: data.count
                 });
             }).bind(this),
             error: (function (xhr, status, err) {
@@ -45,13 +48,17 @@ var Projects = _react2['default'].createClass({
         });
     },
 
+    componentDidMount: function componentDidMount() {
+        this.showApplication();
+    },
+
     render: function render() {
         return _react2['default'].createElement(
             'tr',
             null,
             _react2['default'].createElement(
                 'td',
-                { onClick: this.showApplication },
+                null,
                 this.props.project.projectname
             ),
             _react2['default'].createElement(
@@ -62,7 +69,11 @@ var Projects = _react2['default'].createClass({
             _react2['default'].createElement(
                 'td',
                 null,
-                _react2['default'].createElement('div', { className: 'status' })
+                _react2['default'].createElement(
+                    'div',
+                    { className: 'status' },
+                    this.state.countApp.length
+                )
             ),
             _react2['default'].createElement(
                 'td',

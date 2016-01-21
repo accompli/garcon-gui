@@ -464,3 +464,42 @@ import SystemSetting from './components/Systemsetting/systemsetting.js'
 import RecentActivity from './components/Recentactivity/recentactivity.js'
 import EditUser from './components/Edituser/edituser.js'
 import Project from './components/Project/project.js'
+
+
+
+           
+                        <tbody className="applicationdata">            
+                            <tr>
+                                <th className="mdl-data-table__cell--non-numeric">Application</th>
+                                <th>Edited</th>
+                                <th><div className="status">Version</div></th>
+                                <th><div className="status">Status</div></th>
+                                <th><div className="edit">Edit</div></th>
+                        
+                            </tr>
+                        </tbody>
+
+
+
+
+    <div className="projecttable">
+                    <table className="mdl-data-table mdl-js-data-table">
+                        <thead>               
+                            <tr>
+                               <th className="mdl-data-table__cell--non-numeric">Application</th>
+                                <th>Edited</th>
+                                <th><div className="status">Version</div></th>
+                                <th><div className="status">Status</div></th>
+                                <th><div className="edit">Edit</div></th>
+                            </tr>
+                            
+                        </thead>
+                
+                        <tbody >            
+                            {applicationData}
+                        <tr>button</tr>
+                        </tbody>
+                
+                    </table>
+                </div>
+                );
