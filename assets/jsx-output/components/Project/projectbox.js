@@ -53,7 +53,7 @@ var ProjectBox = _react2['default'].createClass({
     addNewProject: function addNewProject(newproject) {
 
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/addproject",
+            url: this.props.serverUrl + "addproject",
             dataType: 'json',
             type: 'POST',
             data: newproject,
@@ -101,7 +101,7 @@ var ProjectBox = _react2['default'].createClass({
                 null,
                 'Hier komen de filters ...'
             ),
-            _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data }),
+            _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data, serverUrl: this.props.serverUrl }),
             _react2['default'].createElement(
                 'button',
                 { className: 'mdl-button mdl-js-button add_user',

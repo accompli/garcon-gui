@@ -8,10 +8,35 @@
  import { Router, Route, Link } from 'react-router'
  
 var Projects = React.createClass({
+    
+    getInitialState: function() {
+         return {
+            application: []
+         };
+     },
+     
+    showApplication: function(){
+    console.log('clicked')
+      $.ajax({
+            url: this.props.serverUrl+"/application",
+            dataType: 'json',
+            data: {id: this.props.project.projectid},
+            success: function(data) {
+                console.log(data.applicationdata)
+                        this.setState({
+                            application: data.applicationdata
+                        });
+            }.bind(this),
+            error:  function(xhr, status, err) {
+                    console.error(this.props.url, status, err.toString());
+                    }.bind(this)
+        });
+    },
+    
     render: function(){
         return (
                 <tr>
-                    <td>{this.props.project.projectname}</td>
+                    <td onClick={this.showApplication}>{this.props.project.projectname}</td>
                     <td>{this.props.project.editdate}</td>
                     <td><div className="status"></div></td>
                     <td><div className="status"></div></td>
@@ -42,6 +67,7 @@ var Projects = React.createClass({
                         </div>
                     </td>
                 </tr>
+                
                 );
     }
 });

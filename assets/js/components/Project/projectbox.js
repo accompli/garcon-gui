@@ -40,7 +40,7 @@ var ProjectBox = React.createClass({
     addNewProject: function(newproject){
 
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/addproject",
+            url: this.props.serverUrl+"addproject",
             dataType: 'json',
             type: 'POST',
             data: newproject,
@@ -89,7 +89,7 @@ var ProjectBox = React.createClass({
                 <div className = "box">
                     <div>Hier komen de filters ...</div>
             
-                    <ProjectTable data={this.state.data}/>
+                    <ProjectTable data={this.state.data} serverUrl={this.props.serverUrl}/>
                 
                     <button className = "mdl-button mdl-js-button add_user"
                                     type=""

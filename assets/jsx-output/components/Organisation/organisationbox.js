@@ -87,7 +87,7 @@ var OrganisationBox = _react2['default'].createClass({
             data: newuser,
             success: (function (data) {
                 if (data.status === "success") {
-                    console.log('new user added complete');
+                    this.loadOrganisationData();
                 } else if (data.status === "fail") {
                     console.log("failed");
                 }
@@ -98,8 +98,6 @@ var OrganisationBox = _react2['default'].createClass({
                 alert(jqXHR);
             }).bind(this)
         });
-
-        this.loadOrganisationData();
     },
 
     render: function render() {

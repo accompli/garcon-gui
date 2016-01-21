@@ -21,13 +21,37 @@ var _reactRouter = require('react-router');
 var Projects = _react2['default'].createClass({
     displayName: 'Projects',
 
+    getInitialState: function getInitialState() {
+        return {
+            application: []
+        };
+    },
+
+    showApplication: function showApplication() {
+        console.log('clicked');
+        $.ajax({
+            url: this.props.serverUrl + "/application",
+            dataType: 'json',
+            data: { id: this.props.project.projectid },
+            success: (function (data) {
+                console.log(data.applicationdata);
+                this.setState({
+                    application: data.applicationdata
+                });
+            }).bind(this),
+            error: (function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }).bind(this)
+        });
+    },
+
     render: function render() {
         return _react2['default'].createElement(
             'tr',
             null,
             _react2['default'].createElement(
                 'td',
-                null,
+                { onClick: this.showApplication },
                 this.props.project.projectname
             ),
             _react2['default'].createElement(

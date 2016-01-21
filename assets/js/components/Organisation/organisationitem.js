@@ -62,13 +62,12 @@ var OrganisationItem = React.createClass({
     },
 
     Projects: function(){
-        
         var projectLength = this.state.project.length;
         
         if (projectLength > 0){
             return (
                     <div className="card_projects">
-                            Projecten: {this.state.project.length}
+                            Projects: {this.state.project.length}
                     </div>
                     )
         }
@@ -126,7 +125,7 @@ var OrganisationItem = React.createClass({
                                 {this.props.org.orgdate}
                             </div>
 
-                            <ProjectButton orgid={this.props.org.organisationid} orgname={this.props.org.orgname}/>
+                            <ProjectButton orgid={this.props.org.organisationid} orgname={this.props.org.orgname} projects={this.state.project}/>
                             
                         </div> 
 

@@ -26,8 +26,8 @@ var Organisation = React.createClass({
     }
 });
 
-Organisation.title = 'Organisations'
-Organisation.path = '/organisation'
+Organisation.title = 'Organisations';
+Organisation.path = '/organisation';
 
 
 export default Organisation;

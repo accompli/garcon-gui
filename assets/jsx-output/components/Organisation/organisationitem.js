@@ -73,14 +73,13 @@ var OrganisationItem = _react2['default'].createClass({
     },
 
     Projects: function Projects() {
-
         var projectLength = this.state.project.length;
 
         if (projectLength > 0) {
             return _react2['default'].createElement(
                 'div',
                 { className: 'card_projects' },
-                'Projecten: ',
+                'Projects: ',
                 this.state.project.length
             );
         } else {
@@ -155,7 +154,7 @@ var OrganisationItem = _react2['default'].createClass({
                     { className: 'card_updatedate' },
                     this.props.org.orgdate
                 ),
-                _react2['default'].createElement(_organisationProjectBtnJs2['default'], { orgid: this.props.org.organisationid, orgname: this.props.org.orgname })
+                _react2['default'].createElement(_organisationProjectBtnJs2['default'], { orgid: this.props.org.organisationid, orgname: this.props.org.orgname, projects: this.state.project })
             ),
             _react2['default'].createElement(
                 'div',
