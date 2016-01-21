@@ -80,11 +80,7 @@ var ProjectTable = _react2['default'].createClass({
                         )
                     )
                 ),
-                _react2['default'].createElement(
-                    'tbody',
-                    null,
-                    projectData
-                )
+                projectData
             )
         );
     }

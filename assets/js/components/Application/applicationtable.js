@@ -5,3 +5,21 @@
  */
 
 
+ import React from 'react'
+ import { render } from 'react-dom'
+ import { Router, Route, Link, History } from 'react-router'
+
+
+
+
+var ApplicationTable = React.createClass({
+    
+    render : function(){
+        return (
+               <div></div>
+                );
+    }
+});
+
+
+export default ApplicationTable;

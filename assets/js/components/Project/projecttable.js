@@ -34,9 +34,9 @@ var ProjectTable = React.createClass({
 
                         </thead>
                 
-                        <tbody >            
-                                               {projectData}
-                        </tbody>
+                                    
+                         {projectData}
+                        
                 
                     </table>
                 </div>
