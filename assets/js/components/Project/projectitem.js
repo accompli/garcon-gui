@@ -7,14 +7,24 @@
  import React from 'react'
  import { Router, Route, Link } from 'react-router'
  
- import Application from '../Application/application.js'
+ import ApplicationItem from '../Application/applicationitem.js'
  
 var Projects = React.createClass({
+    
+    componentDidUpdate: function() {
+        componentHandler.upgradeDom();
+    },
     
     getInitialState: function() {
          return {
             application: [],
-            countApp: []
+            countApp: [],
+            open: false,
+            class:"application hide",
+            onClick: "projectname default",
+            newAppForm: "applicationform hide",
+            openform: false,
+            buttontxt: "New application"
          };
      },
      
@@ -40,18 +50,84 @@ var Projects = React.createClass({
         this.showApplication();
      },
      
-     showAppData: function(){
-       
-     },
+    showAppData: function(){
+        if (this.state.open){
+            this.setState({
+                open: false,
+                class:"application hide",
+                onClick: "projectname default"
+            });
+        } else {
+            this.setState({
+                open: true,
+                class:"application show",
+                onClick: "projectname "
+            });
+        }
+    },
+
+    handleClick: function(e){
+        e.preventDefault();
+        
+        var appname = this.refs.appname.value;
+        var projectid = this.props.project.projectid;
+        var version = this.refs.version.value;
+        var user = "Jinhua";
+        
+        if (appname !== ""){
+            this.addNewApplication({
+                applicationname: appname,
+                version: version,
+                userid: user,
+                projectid: projectid
+            });
+        }      
+    },
     
+    
+    addNewApplication: function(applidata){
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/addapplication",
+            dataType: 'json',
+            type: 'POST',
+            data: applidata,
+            success:
+                    function(data){ 
+                        if (data.status === "success"){
+                            console.log('added gelukt!')
+                        }
+                        else if (data.status === "fail"){
+                            console.log("failed");
+                        }
+                    }.bind(this),
+                    
+            error:
+                    function(xhr, status, err, jqXHR){
+                        console.error(this.props.url, status, err.toString());
+                         alert( jqXHR);
+                    }.bind(this)
+        });
+    },
+    
+    stopPropagation: function(e){
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+    },
     render: function(){
+        
+        var applicationData = this.state.application.map(function(application, index) {
+            return (
+                    <ApplicationItem app={application} key={index} countdata={index} serverUrl={this.props.serverUrl} state={this.state.class}>
+                    </ApplicationItem>
+                    );
+        }.bind(this));
 
         return (
                 <tbody>
-                    <tr id={this.props.project.projectid}>
-                        <td>{this.props.project.projectname}</td>
-                        <td>{this.props.project.editdate}</td>
-                        <td><div className="status">{this.state.countApp.length}</div></td>
+                    <tr>
+                        <td onClick={this.showAppData}><div className={this.state.onClick}>{this.props.project.projectname}</div></td>
+                        <td><div className={this.state.onClick}>{this.props.project.editdate}</div></td>
+                        <td><div className={`status ${this.state.onClick}`}>{this.state.countApp.length}</div></td>
                         <td><div className="status"></div></td>
                         <td >
                             <div className="status">
@@ -82,19 +158,64 @@ var Projects = React.createClass({
                     </tr>
                          
 
-                       
-                        <tr>
-                           <th className="mdl-data-table__cell--non-numeric">Application</th>
-                            <th>Edited</th>
-                            <th><div className="status">Version</div></th>
-                            <th><div className="status">Status</div></th>
-                            <th><div className="edit">Edit</div></th>
-                        </tr>
-                                                        
-                        
+                    <tr className={this.state.class}>
+                        <th className="mdl-data-table__cell--non-numeric"><div className="first-detail-data">Application</div></th>
+                        <th>Edited</th>
+                        <th><div className="status">Version</div></th>
+                        <th><div className="status">Status</div></th>
+                        <th><div className="edit">Edit</div></th>
+                    </tr>
+    
+                    {applicationData}
 
-                    <Application data={this.state.application}/>
+                    <tr className={this.state.class}>
+                        <td>
+                            <button className="mdl-button mdl-js-button add-app" id={this.props.editId}>
+                                <svg className="add-application-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                                    {this.state.buttontxt}
+                            </button>
+                    
+                     <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
+                        htmlFor={this.props.editId}>
+                                
+                        <div onClick={this.stopPropagation} className="mdl-card add_organisation">
+                            <div className="mdl-card__title mdl-card--expand">
+                                <h5> New Application </h5>
+                            </div>
+                    
+                            <div className="mdl-card__supporting-text">
+                                Application name <input className="mdl-textfield__input"
+                                    type="text"
+                                    id="appname"
+                                    ref="appname"/>
+                                <p></p>
+                                Version: <input  className="mdl-textfield__input"
+                                    type="text"
+                                    id="version"
+                                    ref="version"/>
+                                <p></p>
+                            </div>
 
+                    <button className="mdl-button mdl-js-button"
+                        type="submit"
+                        onClick={this.handleClick}
+                        name="submit">Add Application
+                    </button>      
+
+                        </div>
+                    </ul>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
 
                 </tbody>
                 );

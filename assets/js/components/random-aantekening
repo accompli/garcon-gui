@@ -538,3 +538,24 @@ import Project from './components/Project/project.js'
                         </div>
                     </td>
                 </tr>
+
+
+
+
+    var applicationData = this.state.application.map(function(application, index) {
+            return (
+                    <ApplicationItem app={application} key={index} countdata={index}serverUrl={this.props.serverUrl}>
+                    </ApplicationItem>
+                    );
+        }.bind(this));
+
+
+<div className={`mdl-textfield mdl-js-textfield mdl-textfield--floating-label ${this.state.newAppForm}`}>
+                                 <input  className="mdl-textfield__input"
+                                    type="text"
+                                    ref="version"
+                                    id="version" />
+                            <label  className ="mdl-textfield__label" htmlFor="version" >
+                                Version
+                            </label>    
+                            </div>

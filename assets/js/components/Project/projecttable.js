@@ -14,7 +14,7 @@ var ProjectTable = React.createClass({
         
         var projectData = this.props.data.map(function(project, index) {
                 return (
-                        <Projects project={project} key={index} serverUrl={this.props.serverUrl}>
+                        <Projects project={project} key={index} serverUrl={this.props.serverUrl} editId={index}>
                         </Projects>
                         );
         }.bind(this));

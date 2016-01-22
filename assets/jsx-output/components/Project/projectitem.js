@@ -18,17 +18,27 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
-var _ApplicationApplicationJs = require('../Application/application.js');
+var _ApplicationApplicationitemJs = require('../Application/applicationitem.js');
 
-var _ApplicationApplicationJs2 = _interopRequireDefault(_ApplicationApplicationJs);
+var _ApplicationApplicationitemJs2 = _interopRequireDefault(_ApplicationApplicationitemJs);
 
 var Projects = _react2['default'].createClass({
     displayName: 'Projects',
 
+    componentDidUpdate: function componentDidUpdate() {
+        componentHandler.upgradeDom();
+    },
+
     getInitialState: function getInitialState() {
         return {
             application: [],
-            countApp: []
+            countApp: [],
+            open: false,
+            'class': "application hide",
+            onClick: "projectname default",
+            newAppForm: "applicationform hide",
+            openform: false,
+            buttontxt: "New application"
         };
     },
 
@@ -54,32 +64,101 @@ var Projects = _react2['default'].createClass({
         this.showApplication();
     },
 
-    showAppData: function showAppData() {},
+    showAppData: function showAppData() {
+        if (this.state.open) {
+            this.setState({
+                open: false,
+                'class': "application hide",
+                onClick: "projectname default"
+            });
+        } else {
+            this.setState({
+                open: true,
+                'class': "application show",
+                onClick: "projectname "
+            });
+        }
+    },
 
+    handleClick: function handleClick(e) {
+        e.preventDefault();
+
+        var appname = this.refs.appname.value;
+        var projectid = this.props.project.projectid;
+        var version = this.refs.version.value;
+        var user = "Jinhua";
+
+        if (appname !== "") {
+            this.addNewApplication({
+                applicationname: appname,
+                version: version,
+                userid: user,
+                projectid: projectid
+            });
+        }
+    },
+
+    addNewApplication: function addNewApplication(applidata) {
+        $.ajax({
+            url: "http://garcon-server.jinhua.choffice.nl/addapplication",
+            dataType: 'json',
+            type: 'POST',
+            data: applidata,
+            success: (function (data) {
+                if (data.status === "success") {
+                    console.log('added gelukt!');
+                } else if (data.status === "fail") {
+                    console.log("failed");
+                }
+            }).bind(this),
+
+            error: (function (xhr, status, err, jqXHR) {
+                console.error(this.props.url, status, err.toString());
+                alert(jqXHR);
+            }).bind(this)
+        });
+    },
+
+    stopPropagation: function stopPropagation(e) {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+    },
     render: function render() {
+
+        var applicationData = this.state.application.map((function (application, index) {
+            return _react2['default'].createElement(_ApplicationApplicationitemJs2['default'], { app: application, key: index, countdata: index, serverUrl: this.props.serverUrl, state: this.state['class'] });
+        }).bind(this));
 
         return _react2['default'].createElement(
             'tbody',
             null,
             _react2['default'].createElement(
                 'tr',
-                { id: this.props.project.projectid },
+                null,
                 _react2['default'].createElement(
                     'td',
-                    null,
-                    this.props.project.projectname
-                ),
-                _react2['default'].createElement(
-                    'td',
-                    null,
-                    this.props.project.editdate
+                    { onClick: this.showAppData },
+                    _react2['default'].createElement(
+                        'div',
+                        { className: this.state.onClick },
+                        this.props.project.projectname
+                    )
                 ),
                 _react2['default'].createElement(
                     'td',
                     null,
                     _react2['default'].createElement(
                         'div',
-                        { className: 'status' },
+                        { className: this.state.onClick },
+                        this.props.project.editdate
+                    )
+                ),
+                _react2['default'].createElement(
+                    'td',
+                    null,
+                    _react2['default'].createElement(
+                        'div',
+                        { className: 'status ' + this.state.onClick },
                         this.state.countApp.length
                     )
                 ),
@@ -142,11 +221,15 @@ var Projects = _react2['default'].createClass({
             ),
             _react2['default'].createElement(
                 'tr',
-                null,
+                { className: this.state['class'] },
                 _react2['default'].createElement(
                     'th',
                     { className: 'mdl-data-table__cell--non-numeric' },
-                    'Application'
+                    _react2['default'].createElement(
+                        'div',
+                        { className: 'first-detail-data' },
+                        'Application'
+                    )
                 ),
                 _react2['default'].createElement(
                     'th',
@@ -181,7 +264,71 @@ var Projects = _react2['default'].createClass({
                     )
                 )
             ),
-            _react2['default'].createElement(_ApplicationApplicationJs2['default'], { data: this.state.application })
+            applicationData,
+            _react2['default'].createElement(
+                'tr',
+                { className: this.state['class'] },
+                _react2['default'].createElement(
+                    'td',
+                    null,
+                    _react2['default'].createElement(
+                        'button',
+                        { className: 'mdl-button mdl-js-button add-app', id: this.props.editId },
+                        _react2['default'].createElement(
+                            'svg',
+                            { className: 'add-application-icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                            _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })
+                        ),
+                        this.state.buttontxt
+                    ),
+                    _react2['default'].createElement(
+                        'ul',
+                        { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
+                            htmlFor: this.props.editId },
+                        _react2['default'].createElement(
+                            'div',
+                            { onClick: this.stopPropagation, className: 'mdl-card add_organisation' },
+                            _react2['default'].createElement(
+                                'div',
+                                { className: 'mdl-card__title mdl-card--expand' },
+                                _react2['default'].createElement(
+                                    'h5',
+                                    null,
+                                    ' New Application '
+                                )
+                            ),
+                            _react2['default'].createElement(
+                                'div',
+                                { className: 'mdl-card__supporting-text' },
+                                'Application name ',
+                                _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+                                    type: 'text',
+                                    id: 'appname',
+                                    ref: 'appname' }),
+                                _react2['default'].createElement('p', null),
+                                'Version: ',
+                                _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+                                    type: 'text',
+                                    id: 'version',
+                                    ref: 'version' }),
+                                _react2['default'].createElement('p', null)
+                            ),
+                            _react2['default'].createElement(
+                                'button',
+                                { className: 'mdl-button mdl-js-button',
+                                    type: 'submit',
+                                    onClick: this.handleClick,
+                                    name: 'submit' },
+                                'Add Application'
+                            )
+                        )
+                    )
+                ),
+                _react2['default'].createElement('td', null),
+                _react2['default'].createElement('td', null),
+                _react2['default'].createElement('td', null),
+                _react2['default'].createElement('td', null)
+            )
         );
     }
 });

@@ -24,9 +24,10 @@ var Application = React.createClass({
         }.bind(this));
         
         
-        return (<tr>
+        return (
+                    <tr>
                {applicationData}
-               </tr>
+                    </tr>
                 );
     }
 });

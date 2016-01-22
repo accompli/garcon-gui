@@ -685,6 +685,64 @@ input::-moz-placeholder {
     width: 400px;
 }
 
+/*PROJECTS*/
+.projectname.default{
+    color: #767e8A;
+    font-weight: normal;
+}
+
+.projectname {
+    color: #3d76c3;
+    font-weight: bold;
+}
+
+/*APPLICATION*/
 .applicationdata {
-    background-color: #EFECEC;
+
+}
+
+.application.hide {
+    display: none;
+
+}
+
+.application.show {
+    background-color: #FAFAFA;
+
+}
+
+.first-detail-data {
+    margin-left: 30px;
+}
+
+.add-app {
+    background-color: #fff;
+    color: #3C88B9;
+    text-transform: none;
+    margin: 20px 0 20px 30px;
+    
+}
+
+.add-application-icon {
+    fill: #3C88B9;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.add-app:hover {
+    background-color: #fff;
+}
+
+.app-edit {
+    background-color: transparent;
+    border: 0px;
+}
+
+.applicationform {
+    
+}
+
+.applicationform.hide{
+
 }

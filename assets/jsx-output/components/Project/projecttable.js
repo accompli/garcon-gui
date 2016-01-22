@@ -26,7 +26,7 @@ var ProjectTable = _react2['default'].createClass({
     render: function render() {
 
         var projectData = this.props.data.map((function (project, index) {
-            return _react2['default'].createElement(_projectitemJs2['default'], { project: project, key: index, serverUrl: this.props.serverUrl });
+            return _react2['default'].createElement(_projectitemJs2['default'], { project: project, key: index, serverUrl: this.props.serverUrl, editId: index });
         }).bind(this));
 
         return _react2['default'].createElement(
