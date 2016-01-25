@@ -28,6 +28,7 @@ var OrganisationItem = _react2['default'].createClass({
     displayName: 'OrganisationItem',
 
     countProjects: function countProjects(data) {
+
         $.ajax({
             url: this.props.serverUrl + "/projects",
             dataType: 'json',
@@ -45,7 +46,8 @@ var OrganisationItem = _react2['default'].createClass({
 
     getInitialState: function getInitialState() {
         return {
-            project: []
+            project: [],
+            status: []
         };
     },
 
@@ -61,9 +63,7 @@ var OrganisationItem = _react2['default'].createClass({
             success: (function (data) {
                 if (data.status === "success") {
                     this.props.reload();
-                } else if (data.status === "fail") {
-                    console.log("Failed with delete...");
-                }
+                } else if (data.status === "fail") {}
             }).bind(this),
             error: (function (xhr, status, err, jqXHR) {
                 console.error(this.props.url, status, err.toString());
@@ -90,14 +90,70 @@ var OrganisationItem = _react2['default'].createClass({
             );
         }
     },
-    render: function render() {
 
-        console.log(this.state.project);
+    loadStatus: function loadStatus() {
+
+        $.ajax({
+            url: this.props.serverUrl + "/applicationstatus",
+            dataType: 'json',
+            data: { orgid: this.props.org.organisationid },
+            success: (function (data) {
+                this.setState({
+                    status: data.status
+                });
+            }).bind(this),
+            error: (function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }).bind(this)
+        });
+
+        if (this.state.status === "Error") {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'status error' },
+                _react2['default'].createElement(
+                    'span',
+                    null,
+                    _react2['default'].createElement(
+                        'svg',
+                        { className: 'error', fill: '#000000', height: '20', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                        _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+                        _react2['default'].createElement('path', { d: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z' })
+                    )
+                ),
+                _react2['default'].createElement(
+                    'span',
+                    null,
+                    'Error'
+                )
+            );
+        } else if (this.state.status === "Available") {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'status available' },
+                _react2['default'].createElement(
+                    'svg',
+                    { className: 'available', fill: '#000000', height: '20', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                    _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+                    _react2['default'].createElement('path', { d: 'M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z' })
+                ),
+                'Available'
+            );
+        } else {
+            return _react2['default'].createElement(
+                'div',
+                null,
+                'No status'
+            );
+        }
+    },
+
+    render: function render() {
 
         return _react2['default'].createElement(
             'div',
             { className: 'mdl-card mdl-shadow--2dp cards ' },
-            _react2['default'].createElement('div', { className: 'status_bar' }),
+            _react2['default'].createElement('div', { className: 'status_bar ' + this.state.status }),
             _react2['default'].createElement(
                 'div',
                 { className: 'status' },
@@ -163,7 +219,7 @@ var OrganisationItem = _react2['default'].createClass({
                 _react2['default'].createElement(
                     'div',
                     { className: 'card_project_status' },
-                    'Available'
+                    this.loadStatus()
                 )
             )
         );

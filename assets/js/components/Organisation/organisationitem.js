@@ -13,6 +13,7 @@
 var OrganisationItem = React.createClass({
     
     countProjects: function(data){
+        
         $.ajax({
             url: this.props.serverUrl+"/projects",
             dataType: 'json',
@@ -30,7 +31,8 @@ var OrganisationItem = React.createClass({
     
     getInitialState: function() {
          return {
-             project: []
+             project: [],
+             status: []
          };
      },
 
@@ -50,7 +52,6 @@ var OrganisationItem = React.createClass({
                             this.props.reload();
                         }
                         else if (data.status === "fail"){
-                            console.log("Failed with delete...");
                         }
                     }.bind(this),     
             error:
@@ -79,14 +80,69 @@ var OrganisationItem = React.createClass({
                     )
         }    
     },    
+    
+    loadStatus: function(){
+        
+         $.ajax({
+            url: this.props.serverUrl+"/applicationstatus",
+            dataType: 'json',
+            data: {orgid: this.props.org.organisationid},
+            success: function(data) {
+                        this.setState({
+                            status: data.status
+                        })
+            }.bind(this),
+            error:  function(xhr, status, err) {
+                    console.error(this.props.url, status, err.toString());
+                    }.bind(this)
+        });
+        
+        if (this.state.status === "Error"){
+            return (
+                    <div className="status error">
+                        <span>
+                            <svg className="error" fill="#000000" height="20" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                            </svg>
+                        </span>
+                
+                        <span>
+                            Error
+                        </span>
+                
+                    </div>
+                    )
+        }
+        else if (this.state.status === "Available") {
+            return (
+                    <div className="status available">
+                    
+                       <svg className="available" fill="#000000" height="20" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+
+                        Available
+                    </div>
+                    )
+        }
+        else {
+            return (
+                    <div>
+                        No status
+                    </div>
+                    )
+        }
+
+    },
+
     render: function(){    
         
-    console.log(this.state.project)
-
         return (
                 <div className="mdl-card mdl-shadow--2dp cards ">
                 
-                    <div className="status_bar"></div>
+                    <div className={`status_bar ${this.state.status}`}></div>
 
                         <div className="status">
                             <button className="edit-options"
@@ -138,7 +194,7 @@ var OrganisationItem = React.createClass({
 
 
                             <div className="card_project_status">
-                                Available
+                                {this.loadStatus()}
                             </div>
                 
                         </div>

@@ -49,18 +49,43 @@ var UsersTable= React.createClass({
                
                     <UsersList refreshUsersList={this.refreshUsers} data={this.state.data} serverUrl={this.props.serverUrl}/>   
                     
-                    <Link to="/newuser">
+
                         <button className = "mdl-button mdl-js-button add_user"
                                     type=""
-                                    name="submit">
+                                    name="submit"
+                                    id="addnewuser">
                             <svg className="add_icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                             </svg>
                     
                         </button>
                 
-                    </Link>
-            
+                        <ul className="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect "
+                        htmlFor="addnewuser">
+                                
+                            <div className="mdl-cardbox" onClick={this.stopPropagation}>
+                                <Link to="/usersettings"> Terug-btn </Link>
+                                    <h5>Add new user </h5>
+
+                                    Username: <input  className="mdl-textfield__input"
+                                        type="text"
+                                        id="username"
+                                        ref="username"/>
+                                    <p></p>
+                                    E-mail: <input  className="mdl-textfield__input"
+                                        type="text"
+                                        id="email"
+                                        ref="email"/>
+                                    <p></p>
+
+
+                                    <button className="mdl-button mdl-js-button"
+                                            type="submit"
+                                            onClick={this.handleSubmit}
+                                            name="submit">Add user
+                                            </button>
+                                </div>
+                        </ul>
                 </div>
                 );
     }

@@ -647,6 +647,14 @@ input::-moz-placeholder {
     fill:  #24c58f;
 }
 
+.Error {
+    background-color: #EF4248;
+}
+
+.Available {
+    background-color: #24c58f;
+}
+
 /*Organisations*/
 .cardslist {
     
@@ -663,7 +671,6 @@ input::-moz-placeholder {
 
 .status_bar {
     position: relative;
-    background-color: #24c58f;
     width: auto;
     height: 5px;
 }
