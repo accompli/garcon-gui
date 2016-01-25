@@ -150,17 +150,26 @@ var LoginForm = _react2['default'].createClass({
 
         if (!username || !password) {
             this.setState({
-                errormessage: 'Empty username or password'
+                errormessage: 'Empty username or password',
+                infoclass: "alert alert-info alert-block",
+                notification: "",
+                errorclass: ""
             });
 
             return;
+        } else if (this.props.notification === "Incorrect username or password") {
+            this.setState({
+                notification: this.props.notification,
+                errorclass: "alert alert-error alert-block",
+                errormessage: '',
+                infoclass: ""
+            });
         }
 
         //Empty form & errormessage
         this.setState({
             username: '',
-            password: '',
-            errormessage: ''
+            password: ''
         });
 
         //Send request to the server
@@ -184,12 +193,12 @@ var LoginForm = _react2['default'].createClass({
                 { className: 'inlogForm', onSubmit: this.handleSubmit },
                 _react2['default'].createElement(
                     'div',
-                    { className: 'errormsg-box' },
-                    this.props.notification
+                    { className: this.state.errorclass },
+                    this.state.notification
                 ),
                 _react2['default'].createElement(
                     'div',
-                    { className: 'errormsg-box' },
+                    { className: this.state.infoclass },
                     this.state.errormessage
                 ),
                 _react2['default'].createElement(

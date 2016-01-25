@@ -20,10 +20,6 @@ var Forgetpass = React.createClass({
     handleResetSubmit: function(email){
         var that = this;
         
-        that.setState({
-            message: ''
-        }),
-        
         //Submit to the server
         $.ajax({
             url: this.props.ajaxUrl+"/email",
@@ -33,19 +29,18 @@ var Forgetpass = React.createClass({
             success:
                     function(data){
                         if (data.status === "success"){
-                            //location.href="user_settings.php";
-                            var sendMessage = "Thank you. Please make sure you check your inbox for our confirmation.";
+                            var sendMessage = "Success";
                             that.setState({
-                                message: sendMessage
+                                message: sendMessage,
+                                successmessage: "Thank you. Please make sure you check your inbox for our confirmation.",
+                                successclass:"alert alert-success alert-block"
                             });
-                            console.log('Gelukt');
+                            console.log("success")
                         }
                         else if (data.status === "fail"){
-                            console.log(data.message);
                             var errormessage = "Wrong email";
-                            console.log(errormessage);
                             that.setState({
-                                message: data.message
+                                message: errormessage
                             });
                         }
                     },
@@ -66,7 +61,10 @@ var Forgetpass = React.createClass({
                                 <div className="mdl-cardbox">
                                     <div className="head">Reset password</div>
                                     <EmailForm  onResetSubmit={this.handleResetSubmit}
-                                                foo={this.state.message}/>
+                                                notification={this.state.message}
+                                                succesnotification={this.state.successmessage}
+                                                infoclass={this.state.infoclass}
+                                                successclass={this.state.successclass}/>
                                 </div>
                             </div>
                         </div>
@@ -96,16 +94,25 @@ var EmailForm = React.createClass({
         
         if (!email){
             this.setState({
-                errormessage: 'Empty email'
+                notification: '',
+                infoclass: "alert alert-info alert-block",
+                warningnotification: "Empty email",
+                errornotification: ""
             });
-            
-            return;
+        }
+        
+        else if( this.props.notification === "Wrong email"){
+            this.setState({
+                notification: "",
+                infoclass: "alert alert-error alert-block",
+                warningnotification: "",
+                errornotification: "This email does not exist"
+            });
         }
         
         //Empty form & errormessage
         this.setState({
-            email: '',
-            errormessage: ''
+            email: ''
         });
         
         //Send request to the server
@@ -114,16 +121,29 @@ var EmailForm = React.createClass({
         });
     },
     
+    showMessage: function(){
+        if (this.props.notification === "Success"){
+            return (
+                    <div className={this.props.successclass}>
+                        {this.props.succesnotification}
+                    </div>
+                    )
+        }
+        else {
+                   return(
+                    <div className={this.state.infoclass}>
+                        {this.state.errornotification}
+                        {this.state.warningnotification}
+                    </div>
+            )
+        }
+    },
+    
     render: function() {
         return (
                 <form className="emailForm" onSubmit={this.handleSubmit}>
-   
-                    <div className="errormsg-box">
-                        {this.props.foo}
-                    </div>
-                    <div className="errormsg-box">
-                        {this.state.errormessage}
-                    </div>
+                
+                {this.showMessage()}
    
                     <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input  className="mdl-textfield__input"
@@ -143,7 +163,7 @@ var EmailForm = React.createClass({
                     </div>
 
                     <div className="forget_pwd">
-                        <span><Link to="/">Back to login</Link></span>
+                        <span><Link to="/login">Back to login</Link></span>
                         <button className="mdl-button mdl-js-button login"
                                 type="submit"
                                 name="submit">RESET</button>

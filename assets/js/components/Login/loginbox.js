@@ -96,7 +96,7 @@ var LoginBox = React.createClass({
                             <div className="head">Login {this.props.data}</div>
                      
                             <LoginForm  onInlogSubmit={this.handleInlogSubmit}
-                                        notification={this.state.invalidmessage}/>
+                        notification={this.state.invalidmessage}/>
                             <ExternLoginBox />
                         </div>
                     </div>
@@ -133,17 +133,28 @@ var LoginForm = React.createClass({
         
         if (!username || !password){
             this.setState({
-                errormessage: 'Empty username or password'
+                errormessage: 'Empty username or password',
+                infoclass: "alert alert-info alert-block",
+                notification: "",
+                errorclass: "",
             });
             
             return;
+        }
+        else if( this.props.notification === "Incorrect username or password"){
+            this.setState({
+                notification: this.props.notification,
+                errorclass: "alert alert-error alert-block",
+                errormessage: '',
+                infoclass: ""
+            });
+
         }
         
         //Empty form & errormessage
         this.setState({
             username: '',
-            password: '',
-            errormessage: ''
+            password: ''
         });
         
         //Send request to the server
@@ -164,10 +175,10 @@ var LoginForm = React.createClass({
                 <div className="loginForm">
                     <form className="inlogForm" onSubmit={this.handleSubmit}>
 
-                        <div className="errormsg-box">
-                            {this.props.notification}
+                        <div className={this.state.errorclass}>
+                            {this.state.notification}
                         </div>
-                        <div className="errormsg-box">
+                        <div className={this.state.infoclass}>
                             {this.state.errormessage}
                         </div>
 

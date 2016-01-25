@@ -36,10 +36,6 @@ var Forgetpass = _react2['default'].createClass({
     handleResetSubmit: function handleResetSubmit(email) {
         var that = this;
 
-        that.setState({
-            message: ''
-        }),
-
         //Submit to the server
         $.ajax({
             url: this.props.ajaxUrl + "/email",
@@ -48,18 +44,17 @@ var Forgetpass = _react2['default'].createClass({
             data: email,
             success: function success(data) {
                 if (data.status === "success") {
-                    //location.href="user_settings.php";
-                    var sendMessage = "Thank you. Please make sure you check your inbox for our confirmation.";
+                    var sendMessage = "Success";
                     that.setState({
-                        message: sendMessage
+                        message: sendMessage,
+                        successmessage: "Thank you. Please make sure you check your inbox for our confirmation.",
+                        successclass: "alert alert-success alert-block"
                     });
-                    console.log('Gelukt');
+                    console.log("success");
                 } else if (data.status === "fail") {
-                    console.log(data.message);
                     var errormessage = "Wrong email";
-                    console.log(errormessage);
                     that.setState({
-                        message: data.message
+                        message: errormessage
                     });
                 }
             },
@@ -92,7 +87,10 @@ var Forgetpass = _react2['default'].createClass({
                                 'Reset password'
                             ),
                             _react2['default'].createElement(EmailForm, { onResetSubmit: this.handleResetSubmit,
-                                foo: this.state.message })
+                                notification: this.state.message,
+                                succesnotification: this.state.successmessage,
+                                infoclass: this.state.infoclass,
+                                successclass: this.state.successclass })
                         )
                     )
                 )
@@ -123,16 +121,23 @@ var EmailForm = _react2['default'].createClass({
 
         if (!email) {
             this.setState({
-                errormessage: 'Empty email'
+                notification: '',
+                infoclass: "alert alert-info alert-block",
+                warningnotification: "Empty email",
+                errornotification: ""
             });
-
-            return;
+        } else if (this.props.notification === "Wrong email") {
+            this.setState({
+                notification: "",
+                infoclass: "alert alert-error alert-block",
+                warningnotification: "",
+                errornotification: "This email does not exist"
+            });
         }
 
         //Empty form & errormessage
         this.setState({
-            email: '',
-            errormessage: ''
+            email: ''
         });
 
         //Send request to the server
@@ -141,20 +146,28 @@ var EmailForm = _react2['default'].createClass({
         });
     },
 
+    showMessage: function showMessage() {
+        if (this.props.notification === "Success") {
+            return _react2['default'].createElement(
+                'div',
+                { className: this.props.successclass },
+                this.props.succesnotification
+            );
+        } else {
+            return _react2['default'].createElement(
+                'div',
+                { className: this.state.infoclass },
+                this.state.errornotification,
+                this.state.warningnotification
+            );
+        }
+    },
+
     render: function render() {
         return _react2['default'].createElement(
             'form',
             { className: 'emailForm', onSubmit: this.handleSubmit },
-            _react2['default'].createElement(
-                'div',
-                { className: 'errormsg-box' },
-                this.props.foo
-            ),
-            _react2['default'].createElement(
-                'div',
-                { className: 'errormsg-box' },
-                this.state.errormessage
-            ),
+            this.showMessage(),
             _react2['default'].createElement(
                 'div',
                 { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' },
@@ -187,7 +200,7 @@ var EmailForm = _react2['default'].createClass({
                     null,
                     _react2['default'].createElement(
                         _reactRouter.Link,
-                        { to: '/' },
+                        { to: '/login' },
                         'Back to login'
                     )
                 ),
