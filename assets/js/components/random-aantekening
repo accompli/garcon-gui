@@ -602,3 +602,29 @@ import Project from './components/Project/project.js'
     }
     
 ]
+
+
+
+
+
+if (this.state.project.lenghth > 1){
+            return (
+                    <div className="status error">
+                        Error
+                    </div>
+                    )
+        }
+        else if (status === "Available") {
+            return (
+                    <div className="status available"
+                        Available
+                    </div>
+                    )
+        }
+        else {
+            return (
+                    <div>
+                        No status
+                    </div>
+                    )
+        }

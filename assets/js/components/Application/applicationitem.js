@@ -48,7 +48,7 @@ var ApplicationItem = React.createClass({
                     <td><div className="first-detail-data">{this.props.app.appname}</div></td>
                     <td>{this.props.app.editdate}</td>
                     <td><div className="status">{this.props.app.version}</div></td>
-                    <td><div className="status">{this.showAppStatus())}</div></td>
+                    <td><div className="status">{this.showAppStatus()}</div></td>
                     <td >
                         <div className="status">
                             <button className="edit-options app-edit"
@@ -67,7 +67,6 @@ var ApplicationItem = React.createClass({
 
                             <ul className="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect "
                                     htmlFor={this.props.app.appid}>
-                                        <Link to="/RecentActivity"><li className="mdl-menu__item">Recent activity</li></Link>
                                             <li className="mdl-menu__item">
                                                 Edit
                                             </li>

@@ -789,3 +789,102 @@ input::-moz-placeholder {
 .applicationform.hide{
 
 }
+
+/*PRPOFILE SETINGS*/
+
+.profile {
+
+    
+}
+
+.profilecards {
+    display: inline-block;
+    border: 1px solid #C6C9C9;
+    border-radius: 4px;
+    height: 420px;
+    width: 400px;
+}
+
+.profilephoto {
+    background-color: #EFECEC;
+    border-right: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.profiledata {
+    border-left: 1px solid #C6C9C9;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 600px;
+}
+.photobox {
+    text-align: center;
+}
+
+.titel {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.photobox {
+    padding-top: 40px;
+}
+
+.photoframe {
+    padding-top: 40px;
+}
+
+.setphoto {   
+    margin-left: 80px;
+    padding: 20px;
+    border: 2px #999 dashed;
+    color: #3d76c3;
+    background-color: #fff;
+    width: 200px;
+    height: 210px;
+}
+
+.phototxt {
+
+}
+
+.personalbox {
+    padding: 40px;
+}
+
+.personalform {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mailcheckbox {
+    padding-top: 10px;
+}
+
+.blue {
+    background-color: #3C88B9;
+    width: 180px;
+}
+
+.blue:hover {
+    background-color: #3d76c3;
+}
+
+.rightbtn {
+    padding-top: 60px;
+    float: right;
+}
+
+.information {
+    color: #24c58f;
+}
+
+.defaultpic {
+}
+
+.insertphoto {
+    fill: #E5E5E5;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

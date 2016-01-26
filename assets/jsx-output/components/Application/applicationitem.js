@@ -121,15 +121,6 @@ var ApplicationItem = _react2['default'].createClass({
                         { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
                             htmlFor: this.props.app.appid },
                         _react2['default'].createElement(
-                            _reactRouter.Link,
-                            { to: '/RecentActivity' },
-                            _react2['default'].createElement(
-                                'li',
-                                { className: 'mdl-menu__item' },
-                                'Recent activity'
-                            )
-                        ),
-                        _react2['default'].createElement(
                             'li',
                             { className: 'mdl-menu__item' },
                             'Edit'
@@ -139,24 +130,6 @@ var ApplicationItem = _react2['default'].createClass({
                             { className: 'mdl-menu__item' },
                             'Delete'
                         )
-                    )
-                )
-            ),
-            _react2['default'].createElement(
-                'tr',
-                null,
-                _react2['default'].createElement(
-                    'td',
-                    null,
-                    _react2['default'].createElement(
-                        'button',
-                        { className: 'mdl-button mdl-js-button add-app' },
-                        _react2['default'].createElement(
-                            'svg',
-                            { className: 'add-application-icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
-                            _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })
-                        ),
-                        'New application'
                     )
                 )
             )
