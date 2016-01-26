@@ -8,7 +8,7 @@ import React from 'react'
 
 import GreenBox from '../Layout/greenbox.js'
 import BreadcrumbsBox from '../Layout/breadcrumbs.js'
-import SystemSettingBox from './systemsettingbox.js'
+import SystemSettingsBox from './systemsettingbox.js'
 
 var SystemSetting = React.createClass({
     render: function(){
@@ -16,6 +16,7 @@ var SystemSetting = React.createClass({
                 <div className="systemsetting">
                     <GreenBox title={SystemSetting.title}/>
                     <BreadcrumbsBox />
+                    <SystemSettingsBox />
                 </div>
                 );
     }

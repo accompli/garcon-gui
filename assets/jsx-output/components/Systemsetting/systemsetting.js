@@ -36,7 +36,8 @@ var SystemSetting = _react2['default'].createClass({
             'div',
             { className: 'systemsetting' },
             _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: SystemSetting.title }),
-            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null)
+            _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null),
+            _react2['default'].createElement(_systemsettingboxJs2['default'], null)
         );
     }
 });
