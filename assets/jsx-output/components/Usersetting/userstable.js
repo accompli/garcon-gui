@@ -65,53 +65,18 @@ var UsersTable = _react2['default'].createClass({
             { className: 'list users' },
             _react2['default'].createElement(UsersList, { refreshUsersList: this.refreshUsers, data: this.state.data, serverUrl: this.props.serverUrl }),
             _react2['default'].createElement(
-                'button',
-                { className: 'mdl-button mdl-js-button add_user',
-                    type: '',
-                    name: 'submit',
-                    id: 'addnewuser' },
+                _reactRouter.Link,
+                { to: '/newuser' },
                 _react2['default'].createElement(
-                    'svg',
-                    { className: 'add_icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
-                    _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })
-                )
-            ),
-            _react2['default'].createElement(
-                'ul',
-                { className: 'mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect ',
-                    htmlFor: 'addnewuser' },
-                _react2['default'].createElement(
-                    'div',
-                    { className: 'mdl-cardbox', onClick: this.stopPropagation },
+                    'button',
+                    { className: 'mdl-button mdl-js-button add_user',
+                        type: '',
+                        name: 'submit',
+                        id: 'addnewuser' },
                     _react2['default'].createElement(
-                        _reactRouter.Link,
-                        { to: '/usersettings' },
-                        ' Terug-btn '
-                    ),
-                    _react2['default'].createElement(
-                        'h5',
-                        null,
-                        'Add new user '
-                    ),
-                    'Username: ',
-                    _react2['default'].createElement('input', { className: 'mdl-textfield__input',
-                        type: 'text',
-                        id: 'username',
-                        ref: 'username' }),
-                    _react2['default'].createElement('p', null),
-                    'E-mail: ',
-                    _react2['default'].createElement('input', { className: 'mdl-textfield__input',
-                        type: 'text',
-                        id: 'email',
-                        ref: 'email' }),
-                    _react2['default'].createElement('p', null),
-                    _react2['default'].createElement(
-                        'button',
-                        { className: 'mdl-button mdl-js-button',
-                            type: 'submit',
-                            onClick: this.handleSubmit,
-                            name: 'submit' },
-                        'Add user'
+                        'svg',
+                        { className: 'add_icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' },
+                        _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })
                     )
                 )
             )

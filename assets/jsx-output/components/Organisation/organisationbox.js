@@ -81,7 +81,7 @@ var OrganisationBox = _react2['default'].createClass({
 
     addNewOrganisation: function addNewOrganisation(newuser) {
         $.ajax({
-            url: "http://garcon-server.jinhua.choffice.nl/addorganisation",
+            url: this.props.serverUrl + "/addorganisation",
             dataType: 'json',
             type: 'POST',
             data: newuser,

@@ -87,7 +87,7 @@ var ProjectBox = React.createClass({
         
         return (
                 <div className = "box">
-                    <div>Hier komen de filters ...</div>
+                    <div></div>
             
                     <ProjectTable data={this.state.data} serverUrl={this.props.serverUrl}/>
                 

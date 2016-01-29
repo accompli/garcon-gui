@@ -109,7 +109,7 @@ var Header = React.createClass({
                     </li>
 
                     <li className="mdl-menu__item">
-                        <Link to="/" onClick={this.logout}>Logout</Link>
+                        <Link to="/login" onClick={this.logout}>Logout</Link>
                     </li>
                 </ul>
 

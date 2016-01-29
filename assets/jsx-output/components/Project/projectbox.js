@@ -96,11 +96,7 @@ var ProjectBox = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { className: 'box' },
-            _react2['default'].createElement(
-                'div',
-                null,
-                'Hier komen de filters ...'
-            ),
+            _react2['default'].createElement('div', null),
             _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data, serverUrl: this.props.serverUrl }),
             _react2['default'].createElement(
                 'button',

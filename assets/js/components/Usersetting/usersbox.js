@@ -13,7 +13,7 @@ var UsersBox = React.createClass({
         return (
                 <div className = "box">
                 
-                    <FilterBox />          
+  
 
                     <UsersTable serverUrl={this.props.serverUrl}/>
                     

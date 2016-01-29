@@ -193,23 +193,23 @@
 
 	var _componentsAccountsettingAccountsettingJs2 = _interopRequireDefault(_componentsAccountsettingAccountsettingJs);
 
-	var _componentsSystemsettingSystemsettingJs = __webpack_require__(249);
+	var _componentsSystemsettingSystemsettingJs = __webpack_require__(251);
 
 	var _componentsSystemsettingSystemsettingJs2 = _interopRequireDefault(_componentsSystemsettingSystemsettingJs);
 
-	var _componentsRecentactivityRecentactivityJs = __webpack_require__(251);
+	var _componentsRecentactivityRecentactivityJs = __webpack_require__(253);
 
 	var _componentsRecentactivityRecentactivityJs2 = _interopRequireDefault(_componentsRecentactivityRecentactivityJs);
 
-	var _componentsEdituserEdituserJs = __webpack_require__(252);
+	var _componentsEdituserEdituserJs = __webpack_require__(254);
 
 	var _componentsEdituserEdituserJs2 = _interopRequireDefault(_componentsEdituserEdituserJs);
 
-	var _componentsProjectProjectJs = __webpack_require__(254);
+	var _componentsProjectProjectJs = __webpack_require__(256);
 
 	var _componentsProjectProjectJs2 = _interopRequireDefault(_componentsProjectProjectJs);
 
-	var _componentsEditorganisationEditorganisationJs = __webpack_require__(259);
+	var _componentsEditorganisationEditorganisationJs = __webpack_require__(261);
 
 	var _componentsEditorganisationEditorganisationJs2 = _interopRequireDefault(_componentsEditorganisationEditorganisationJs);
 
@@ -302,7 +302,7 @@
 
 
 	// module
-	exports.push([module.id, "/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : Oct 27, 2015, 10:24:38 AM\n    Author     : jinhua\n*/\n\n\nhtml, body {\n    height: 100%;\n    background-color: #f7f7f8;\n    color: #999;\n    font-family: Lato;\n    \n}\n\nbody input {\n    font-family: Lato;\n}\n\n.mdl-card__title-text {\n    font-size: 36px;\n}\n\na {\n    color: #24c58f;\n    font-size: 16px;\n}\n\nol {\n    list-style-type: none;\n}\n\nli {\n    display: inline-block;\n}\n\nul{\n    line-height: 0;\n}\n\n/*HEADER*/\n.mdl-layout__header-row {\n    padding: 0 0 0 0;\n}\n\n.garconlogo {\n    max-width: 150px;\n    margin: 0 0 0 20px;\n    vertical-align: middle;\n}\n\n.garconlogo img {\n    width: 100%;\n}\n\n.no_login_header {\n    background-color: #FFFFFF;\n}\n\n.mdl-layout__header-row {\n    height: 90px;\n    position: relative;\n}\n\n/*NAVIGATION*/\n.navigation a {\n    color: #767e8a;\n    display: table-cell;\n    vertical-align: middle;\n    text-decoration: none;\n    font-family: Lato;\n    font-size: 16px;\n    text-transform: uppercase;\n    height: 90px;\n    padding-right: 30px;\n}\n\n.navigation {\n    color: red;\n}\n\n.menu {\n    padding: 0px 30px 0px;\n}\n\n.menu a {\n   padding: 0 10px 0 10px;\n   border-bottom: 6px solid #fff;\n}\n\n.menu a:hover {\n   color: #24c58f;\n   border-bottom: 6px solid #E5E5E5;\n}\n\n.mdl-menu__outline {\n    border-radius: 0;\n}\n\n.mdl-menu__item a:hover{\n        color: #24c58f;\n}\n\n.tabmenu_item a {\n    height: 0px;\n}\n\n.tabmenu_item a:hover {\n    color: #24c58f;\n}\n\n.login_button {\n    background-color: #fff;\n    border-left:#EBEBEB solid 1px;\n}\n\n.login_button a:hover {\n    color: #24c58f;\n}\n\n\n#icon_login {\n    padding: 0 10px 0 35px;\n    fill: #C6C9C9;\n    height: 30%;\n}\n\n.login_txt {\n    padding-right: 35px;\n}\n\n#arrow_dropdown {\n    fill: #C6C9C9;\n}\n\n.profilepic {\n\n}\n\n/*BACKGROUND*/\n\n.mdl-layout__content {\n    width: 100%;\n    height: 100%;\n}\n\n#bot {\n    width: 100%;\n    overflow: hidden;\n    background-color: #f7f7f8;\n    margin: 0px;\n    position: absolute;\n}\n\n.deployment_txt {\n    width: 250px;\n    color: white;\n    font-size: 32px;\n    z-index: 2;\n    position: absolute;\n    margin-top: 750px;\n    margin-left: 30px;\n    font-family: Ubuntu;\n    font-weight: bold;\n    letter-spacing: 3px;\n    line-height: 30px;\n    text-transform: uppercase;\n}\n\n.top { \n    width: 0; \n    height: 0; \n    border-top: 1000px solid #24c58f; \n    border-right: 2000px solid transparent;\n    z-index: 1;\n}\n\n\n/*LOGIN*/\n .white_block {\n     position: absolute;\n     left: 50%;\n     transform: translate(-50%, 0%);\n     padding-top: 50px;\n     max-width: 560px;\n     width: 100%;\n }\n \n @media (min-width: 320px) {\n    .white_block {\n        padding-top: 150px;\n    }\n}\n\n.demo-card-square.mdl-card {\n    width: 100%;\n    max-width: 560px;\n    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n    \n}\n\n .mdl-card__supporting-text {\n     \n }\n\n .mdl-cardbox {\n     padding:40px;\n }\n\n .head {\n     font-size: 36px;\n     margin-bottom: 30px;\n     color: #24c58f;\n     font-family: Ubuntu;\n     font-weight: bold;\n }\n \n .mdl-textfield {\n     width: 100%;\n }\n \n .mdl-textfield__label {\n     font-size: 16px;\n     color: #999;\n     font-family: Lato;\n     width: 100%;\n     white-space: normal;\n }\n \n .mdl-textfield__input {\n     padding-bottom: 5px;\n     \n }\n \n .form_icon {\n     float: right;\n     fill: #C6C9C9;\n }\n \n .mdl-checkbox__input {\n\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__box-outline {\n     border: none;\n }\n \n .mdl-checkbox__box-outline {\n     border: 2px solid #C6C9C9;\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {\n    background: #24c58f url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K\") repeat scroll 0% 0%;\n}\n\n .mdl-checkbox__label {\n    font-size: 16px;\n    color: #999;\n    font-family: Lato;\n    line-height: 0;\n }\n \n .forget_pwd {\n    padding: 50px 0 30px 0;\n    font-family: Lato;\n }\n \n .forget_pwd a:hover {\n    color: #0BAC76;\n }\n \n .forget_pwd span {\n     transform: translateY(-25%);\n }\n \n .mdl-button {\n     background-color: #24c58f;\n     color: #fff;\n     height: 50px;\n     font-family: Lato;\n     font-size: 18px;\n     border-radius: 4px;\n     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n }\n \n .mdl-button:hover {\n    background-color: #0BAC76;\n }\n \n .login {\n     float: right;\n     transform: translateY(-25%);\n     width: 130px;\n }\n \n .errormsg-box {\n     color: #24c58f;\n }\n \n hr {\n    width: 200%;\n    position: relative;\n    margin-left: -50%;\n    background-color: #fff;\n    border-color: #EFECEC\n }\n\n .circle {\n    width:30px;\n    height:30px;\n    border-radius:250px;\n    border: solid #EFECEC 1px;\n    font-family: Lato;\n    font-size:12px;\n    color:#ccc;\n    line-height:30px;\n    text-align:center;\n    background-color: #fff;\n    position: absolute;\n    z-index: 2;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n}\n\n.extern_login {\n    padding-top: 20px;\n }\n \n.ext_login_button {\n    background-color: #fff ;\n    font-size: 16px;\n    font-family: Lato;\n    font-weight: bold;\n    padding: 10px 30px 10px 20px;\n    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);\n    border:none;\n    border-radius: 3px;\n    width: 100%;\n    max-width: 220px;\n    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;\n}\n\n.ext_login_button:hover {\n    background-color: #E6E6E6;\n}\n\n.icon-ext {\n    margin-right: 10px;\n    width: 20px;\n    height: 20px;\n}\n\n.github {\n    color: #3d76c3;\n    fill: #3d76c3;\n    \n}\n.google {\n    color: #dc4e41;\n    fill: #dc4e41;\n    float: right;\n}\n\n.externLoginBox{\n    padding-top: 30px;\n}\n\n/*GREEN BLOCK*/\n.block_text {\n    font-family: Ubuntu;\n    font-weight: bold;\n    font-size: 32px;\n    text-transform: uppercase;\n    color: #fff;\n    position: absolute;\n    top: 50%;\n    left: 10%;\n    \n}\n\n.block {\n    width: 100%;\n    position: relative;\n}\n\n.green {\n    height: 250px;\n    background-color: #24c58f;\n}\n\n.white {\n    height: 50px;\n    background-color: #fff;\n}\n\n/*BREADCRUMBS MENU*/\n.breadcrumbs {\n    position: absolute;\n    left: 10%;\n    padding-top: 15px;\n\n\n}\n\n.breadcrumbs a {\n    text-decoration: none;\n    color: #767e8a;\n    \n}\n\n/*USERS*/\ninput::-moz-placeholder {\n  color: #767e8a;\n  font-size: 16px;\n}\n\n.box{\n    width: 100%;\n    margin: 20px 0px;\n    position: relative;\n}\n@media (min-width: 1024px) {\n    .box {\n        width: 1024px;\n        margin: 20px auto;\n    }\n}\n\n\n.add_user {\n    border-radius: 50%;\n    height: 56px;\n    float: right;\n    margin-right: -150px;\n    width: 56px;\n    min-width: 56px;\n    box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.24);\n}\n\n.filterbox {\n    width: 100%;\n}\n\n.filter {\n    border: 1px gainsboro solid;\n    border-radius: 5px;\n    height: 48px;\n}\n\n.search {\n    float: left;\n}\n\n.searchbox {\n/*    border: 1px red solid;*/\n    transform: translateY(50%);\n    margin-left: 20px;\n}\n\n.sort {\n    float: right;\n}\n\n.add_icon {\n    fill: #fff;\n    vertical-align: middle;\n}\n\n.search_icon {\n}\n\n.dropdown_icon{\n    padding-top: 7px;\n}\n\n.dropup_icon{\n    position: absolute;\n}\n\n.filtericons {\n    fill: #767e8a;\n}\n\n.searchform {\n    background-color: transparent;\n    color: #767e8a;\n    width: 80%;\n    border: none;\n    margin-left: 10px;\n}\n\n.sortbox {\n    border-radius: 5px;\n    font-size: 16px;\n    border: 1px gainsboro solid;\n    \n}\n\n.sortbox_text {\n/*    border: 1px blue solid;*/\n    transform: translateY(60%);\n    font-size: 16px;\n    margin-left: 20px;\n    \n}\n\n.sort_arrows {\n    float: right;\n    transform: translateY(-15%);\n    padding-left: 30px;\n}\n\n.list {\n    padding-top: 70px;\n}\n\n.users {\n    position: relative;\n}\n\n.mdl-data-table {\n    font-size: 15px;\n    width: 100%;\n    position: relative;\n}\n.mdl-data-table td {\n    text-align: left;\n    color: #767e8A;\n    vertical-align: middle;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    \n}\n\n.mdl-data-table th {\n    text-align: left;\n    color: #999;\n    \n}\n\n#usericons {\n    height: 30px;\n}\n\n.edit {\n    text-align: right;\n    padding-right: 15px;\n}\n\n.edit_icon{\n    fill: #999;\n}\n\n.edit-options {\n    background-color: #fff;\n    height:50px;\n    width: 50px;\n    border-radius:50px;\n    border: solid #fff;\n}\n\n.edit-btn {\n    \n}\n\n/*Dashboard*/\n.tablebox{\n/*    border: 1px solid red;*/\n    width: 49%;\n    padding-top: 3%;\n    \n}\n\n.changes {\n    float: left;\n}\n\n.problems {\n    float: right;\n}\n\n.table-title {\n    color: #767e8a;\n    font-weight: bold;\n    font-size: 30px;\n/*    border: solid 1px blue;*/\n    margin-bottom: 20px;\n}\n\n.dashboardtable {\n    white-space: normal;\n}\n\n.status {\n    text-align: right;\n}\n\n.error {\n    color: #EF4248;\n    fill: #EF4248;\n}\n\n.available {\n    color: #24c58f;\n    fill:  #24c58f;\n}\n\n/*Organisations*/\n.cardslist {\n    \n}\n\n.cards {\n    margin-bottom: 2%;\n    border-radius: 2dp;\n    width: 320px;\n    display: inline-block;\n    vertical-align: top;\n    margin: 10px;\n}\n\n.status_bar {\n    position: relative;\n    background-color: #24c58f;\n    width: auto;\n    height: 5px;\n}\n\n.orglogo {\n    height: 150px;\n    line-height: 150px;\n    text-align: center;\n}\n\n.orglogo img {\n    width: 150px;\n    text-align: center;\n}\n\n.card_data {\n    text-align: center;\n}\n\n.card_title {\n    font-size: 20px;\n    font-weight: bold;\n    color: #767e8a;\n}\n\n.card_updatedate {\n    color: #C6C9C9;\n    margin: 10px 0 40px 0;\n}\n\n.card_button {\n    margin-bottom: 40px;\n}\n\n.edit-cards {\n\n}\n\n.card {\n    fill: #C6C9C9;\n}\n.detailinfo {\n    margin: 20px 0px 20px 0px;\n}\n\n.card_projects {\n    float: left;\n}\n\n.card_project_status {\n    float: right;\n}\n\n.add_organisation{\n    width: 400px;\n}\n\n/*PROJECTS*/\n.projectname.default{\n    color: #767e8A;\n    font-weight: normal;\n}\n\n.projectname {\n    color: #3d76c3;\n    font-weight: bold;\n}\n\n/*APPLICATION*/\n.applicationdata {\n\n}\n\n.application.hide {\n    display: none;\n\n}\n\n.application.show {\n    background-color: #FAFAFA;\n\n}\n\n.first-detail-data {\n    margin-left: 30px;\n}\n\n.add-app {\n    background-color: #fff;\n    color: #3C88B9;\n    text-transform: none;\n    margin: 20px 0 20px 30px;\n    \n}\n\n.add-application-icon {\n    fill: #3C88B9;\n    height: 20px;\n    margin-right: 10px;\n    vertical-align: middle;\n}\n\n.add-app:hover {\n    background-color: #fff;\n}\n\n.app-edit {\n    background-color: transparent;\n    border: 0px;\n}\n\n.applicationform {\n    \n}\n\n.applicationform.hide{\n\n}", ""]);
+	exports.push([module.id, "/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : Oct 27, 2015, 10:24:38 AM\n    Author     : jinhua\n*/\n\n\nhtml, body {\n    height: 100%;\n    background-color: #f7f7f8;\n    color: #999;\n    font-family: Lato;\n    \n}\n\nbody input {\n    font-family: Lato;\n}\n\n.mdl-card__title-text {\n    font-size: 36px;\n}\n\na {\n    color: #24c58f;\n    font-size: 16px;\n}\n\nol {\n    list-style-type: none;\n}\n\nli {\n    display: inline-block;\n}\n\nul{\n    line-height: 0;\n}\n/*ALERT*/\n.alert {\n    padding: 8px 35px 8px 14px;\n    margin-bottom: 18px;\n    color: #c09853;\n    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);\n    background-color: #fcf8e3;\n    border: 1px solid #fbeed5;\n    -webkit-border-radius: 4px;\n    -moz-border-radius: 4px;\n    border-radius: 4px;\n}\n\n.alert-danger,\n.alert-error {\n    color: #b94a48;\n    background-color: #f2dede;\n    border-color: #eed3d7;\n}\n\n.alert-success {\n    color: #468847;\n    background-color: #dff0d8;\n    border-color: #d6e9c6;\n}\n\n.alert-info {\n    color: #3a87ad;\n    background-color: #d9edf7;\n    border-color: #bce8f1;\n}\n\n.alert-block {\n    padding-top: 14px;\n    padding-bottom: 14px;\n}\n\n\n/*HEADER*/\n.mdl-layout__header-row {\n    padding: 0 0 0 0;\n}\n\n.garconlogo {\n    max-width: 150px;\n    margin: 0 0 0 20px;\n    vertical-align: middle;\n}\n\n.garconlogo img {\n    width: 100%;\n}\n\n.no_login_header {\n    background-color: #FFFFFF;\n}\n\n.mdl-layout__header-row {\n    height: 90px;\n    position: relative;\n}\n\n/*NAVIGATION*/\n.navigation a {\n    color: #767e8a;\n    display: table-cell;\n    vertical-align: middle;\n    text-decoration: none;\n    font-family: Lato;\n    font-size: 16px;\n    text-transform: uppercase;\n    height: 90px;\n    padding-right: 30px;\n}\n\n.navigation {\n    color: red;\n}\n\n.menu {\n    padding: 0px 30px 0px;\n}\n\n.menu a {\n   padding: 0 10px 0 10px;\n   border-bottom: 6px solid #fff;\n}\n\n.menu a:hover {\n   color: #24c58f;\n   border-bottom: 6px solid #E5E5E5;\n}\n\n.mdl-menu__outline {\n    border-radius: 0;\n}\n\n.mdl-menu__item a:hover{\n        color: #24c58f;\n}\n\n.tabmenu_item a {\n    height: 0px;\n}\n\n.tabmenu_item a:hover {\n    color: #24c58f;\n}\n\n.login_button {\n    background-color: #fff;\n    border-left:#EBEBEB solid 1px;\n}\n\n.login_button a:hover {\n    color: #24c58f;\n}\n\n\n#icon_login {\n    padding: 0 10px 0 35px;\n    fill: #C6C9C9;\n    height: 30%;\n}\n\n.login_txt {\n    padding-right: 35px;\n}\n\n#arrow_dropdown {\n    fill: #C6C9C9;\n}\n\n.profilepic {\n\n}\n\n/*BACKGROUND*/\n\n.mdl-layout__content {\n    width: 100%;\n    height: 100%;\n}\n\n#bot {\n    width: 100%;\n    overflow: hidden;\n    background-color: #f7f7f8;\n    margin: 0px;\n    position: absolute;\n}\n\n.deployment_txt {\n    width: 250px;\n    color: white;\n    font-size: 32px;\n    z-index: 2;\n    position: absolute;\n    margin-top: 750px;\n    margin-left: 30px;\n    font-family: Ubuntu;\n    font-weight: bold;\n    letter-spacing: 3px;\n    line-height: 30px;\n    text-transform: uppercase;\n}\n\n.top { \n    width: 0; \n    height: 0; \n    border-top: 1000px solid #24c58f; \n    border-right: 2000px solid transparent;\n    z-index: 1;\n}\n\n\n/*LOGIN*/\n .white_block {\n     position: absolute;\n     left: 50%;\n     transform: translate(-50%, 0%);\n     padding-top: 50px;\n     max-width: 560px;\n     width: 100%;\n }\n \n @media (min-width: 320px) {\n    .white_block {\n        padding-top: 150px;\n    }\n}\n\n.demo-card-square.mdl-card {\n    width: 100%;\n    max-width: 560px;\n    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n    \n}\n\n .mdl-card__supporting-text {\n     \n }\n\n .mdl-cardbox {\n     padding:40px;\n }\n\n .head {\n     font-size: 36px;\n     margin-bottom: 30px;\n     color: #24c58f;\n     font-family: Ubuntu;\n     font-weight: bold;\n }\n \n .mdl-textfield {\n     width: 100%;\n }\n \n .mdl-textfield__label {\n     font-size: 16px;\n     color: #999;\n     font-family: Lato;\n     width: 100%;\n     white-space: normal;\n }\n \n .mdl-textfield__input {\n     padding-bottom: 5px;\n     \n }\n \n .form_icon {\n     float: right;\n     fill: #C6C9C9;\n }\n \n .mdl-checkbox__input {\n\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__box-outline {\n     border: none;\n }\n \n .mdl-checkbox__box-outline {\n     border: 2px solid #C6C9C9;\n }\n \n .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {\n    background: #24c58f url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K\") repeat scroll 0% 0%;\n}\n\n .mdl-checkbox__label {\n    font-size: 16px;\n    color: #999;\n    font-family: Lato;\n    line-height: 0;\n }\n \n .forget_pwd {\n    padding: 50px 0 30px 0;\n    font-family: Lato;\n }\n \n .forget_pwd a:hover {\n    color: #0BAC76;\n }\n \n .forget_pwd span {\n     transform: translateY(-25%);\n }\n \n .mdl-button {\n     background-color: #24c58f;\n     color: #fff;\n     height: 50px;\n     font-family: Lato;\n     font-size: 18px;\n     border-radius: 4px;\n     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\n }\n \n .mdl-button:hover {\n    background-color: #0BAC76;\n }\n \n .login {\n     float: right;\n     transform: translateY(-25%);\n     width: 130px;\n }\n \n .errormsg-box {\n     color: #24c58f;\n }\n \n hr {\n    width: 200%;\n    position: relative;\n    margin-left: -50%;\n    background-color: #fff;\n    border-color: #EFECEC\n }\n\n .circle {\n    width:30px;\n    height:30px;\n    border-radius:250px;\n    border: solid #EFECEC 1px;\n    font-family: Lato;\n    font-size:12px;\n    color:#ccc;\n    line-height:30px;\n    text-align:center;\n    background-color: #fff;\n    position: absolute;\n    z-index: 2;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n}\n\n.extern_login {\n    padding-top: 20px;\n }\n \n.ext_login_button {\n    background-color: #fff ;\n    font-size: 16px;\n    font-family: Lato;\n    font-weight: bold;\n    padding: 10px 30px 10px 20px;\n    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);\n    border:none;\n    border-radius: 3px;\n    width: 100%;\n    max-width: 220px;\n    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;\n}\n\n.ext_login_button:hover {\n    background-color: #E6E6E6;\n}\n\n.icon-ext {\n    margin-right: 10px;\n    width: 20px;\n    height: 20px;\n}\n\n.github {\n    color: #3d76c3;\n    fill: #3d76c3;\n    \n}\n.google {\n    color: #dc4e41;\n    fill: #dc4e41;\n    float: right;\n}\n\n.externLoginBox{\n    padding-top: 30px;\n}\n\n/*GREEN BLOCK*/\n.block_text {\n    font-family: Ubuntu;\n    font-weight: bold;\n    font-size: 32px;\n    text-transform: uppercase;\n    color: #fff;\n    position: absolute;\n    top: 50%;\n    left: 10%;\n    \n}\n\n.block {\n    width: 100%;\n    position: relative;\n}\n\n.green {\n    height: 250px;\n    background-color: #24c58f;\n}\n\n.white {\n    height: 50px;\n    background-color: #fff;\n}\n\n/*BREADCRUMBS MENU*/\n.breadcrumbs {\n    position: absolute;\n    left: 10%;\n    padding-top: 15px;\n\n\n}\n\n.breadcrumbs a {\n    text-decoration: none;\n    color: #767e8a;\n    \n}\n\n/*USERS*/\ninput::-moz-placeholder {\n  color: #767e8a;\n  font-size: 16px;\n}\n\n.box{\n    width: 100%;\n    margin: 20px 0px;\n    position: relative;\n}\n@media (min-width: 1024px) {\n    .box {\n        width: 1024px;\n        margin: 20px auto;\n    }\n}\n\n\n.add_user {\n    border-radius: 50%;\n    height: 56px;\n    float: right;\n    margin-right: -150px;\n    width: 56px;\n    min-width: 56px;\n    box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.24);\n}\n\n.filterbox {\n    width: 100%;\n}\n\n.filter {\n    border: 1px gainsboro solid;\n    border-radius: 5px;\n    height: 48px;\n}\n\n.search {\n    float: left;\n}\n\n.searchbox {\n/*    border: 1px red solid;*/\n    transform: translateY(50%);\n    margin-left: 20px;\n}\n\n.sort {\n    float: right;\n}\n\n.add_icon {\n    fill: #fff;\n    vertical-align: middle;\n}\n\n.search_icon {\n}\n\n.dropdown_icon{\n    padding-top: 7px;\n}\n\n.dropup_icon{\n    position: absolute;\n}\n\n.filtericons {\n    fill: #767e8a;\n}\n\n.searchform {\n    background-color: transparent;\n    color: #767e8a;\n    width: 80%;\n    border: none;\n    margin-left: 10px;\n}\n\n.sortbox {\n    border-radius: 5px;\n    font-size: 16px;\n    border: 1px gainsboro solid;\n    \n}\n\n.sortbox_text {\n/*    border: 1px blue solid;*/\n    transform: translateY(60%);\n    font-size: 16px;\n    margin-left: 20px;\n    \n}\n\n.sort_arrows {\n    float: right;\n    transform: translateY(-15%);\n    padding-left: 30px;\n}\n\n.list {\n    padding-top: 70px;\n}\n\n.users {\n    position: relative;\n}\n\n.mdl-data-table {\n    font-size: 15px;\n    width: 100%;\n    position: relative;\n}\n.mdl-data-table td {\n    text-align: left;\n    color: #767e8A;\n    vertical-align: middle;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    \n}\n\n.mdl-data-table th {\n    text-align: left;\n    color: #999;\n    \n}\n\n#usericons {\n    height: 30px;\n}\n\n.edit {\n    text-align: right;\n    padding-right: 15px;\n}\n\n.edit_icon{\n    fill: #999;\n}\n\n.edit-options {\n    background-color: #fff;\n    height:50px;\n    width: 50px;\n    border-radius:50px;\n    border: solid #fff;\n}\n\n.edit-btn {\n    \n}\n\n/*Dashboard*/\n.tablebox{\n/*    border: 1px solid red;*/\n    width: 49%;\n    padding-top: 3%;\n    \n}\n\n.changes {\n    float: left;\n}\n\n.problems {\n    float: right;\n}\n\n.table-title {\n    color: #767e8a;\n    font-weight: bold;\n    font-size: 30px;\n/*    border: solid 1px blue;*/\n    margin-bottom: 20px;\n}\n\n.dashboardtable {\n    white-space: normal;\n}\n\n.status {\n    text-align: right;\n}\n\n.error {\n    color: #EF4248;\n    fill: #EF4248;\n}\n\n.available {\n    color: #24c58f;\n    fill:  #24c58f;\n}\n\n.Error {\n    background-color: #EF4248;\n}\n\n.Available {\n    background-color: #24c58f;\n}\n\n/*Organisations*/\n.cardslist {\n    \n}\n\n.cards {\n    margin-bottom: 2%;\n    border-radius: 2dp;\n    width: 320px;\n    display: inline-block;\n    vertical-align: top;\n    margin: 10px;\n}\n\n.status_bar {\n    position: relative;\n    width: auto;\n    height: 5px;\n}\n\n.orglogo {\n    height: 150px;\n    line-height: 150px;\n    text-align: center;\n}\n\n.orglogo img {\n    width: 150px;\n    text-align: center;\n}\n\n.card_data {\n    text-align: center;\n}\n\n.card_title {\n    font-size: 20px;\n    font-weight: bold;\n    color: #767e8a;\n}\n\n.card_updatedate {\n    color: #C6C9C9;\n    margin: 10px 0 40px 0;\n}\n\n.card_button {\n    margin-bottom: 40px;\n}\n\n.edit-cards {\n\n}\n\n.card {\n    fill: #C6C9C9;\n}\n.detailinfo {\n    margin: 20px 0px 20px 0px;\n}\n\n.card_projects {\n    float: left;\n}\n\n.card_project_status {\n    float: right;\n}\n\n.add_organisation{\n    width: 400px;\n}\n\n/*PROJECTS*/\n.projectname.default{\n    color: #767e8A;\n    font-weight: normal;\n}\n\n.projectname {\n    color: #3d76c3;\n    font-weight: bold;\n}\n\n/*APPLICATION*/\n.applicationdata {\n\n}\n\n.application.hide {\n    display: none;\n\n}\n\n.application.show {\n    background-color: #FAFAFA;\n\n}\n\n.first-detail-data {\n    margin-left: 30px;\n}\n\n.add-app {\n    background-color: #fff;\n    color: #3C88B9;\n    text-transform: none;\n    margin: 20px 0 20px 30px;\n    \n}\n\n.add-application-icon {\n    fill: #3C88B9;\n    height: 20px;\n    margin-right: 10px;\n    vertical-align: middle;\n}\n\n.add-app:hover {\n    background-color: #fff;\n}\n\n.app-edit {\n    background-color: transparent;\n    border: 0px;\n}\n\n.applicationform {\n    \n}\n\n.applicationform.hide{\n\n}\n\n/*PRPOFILE SETINGS*/\n\n.profile {\n\n    \n}\n\n.profilecards {\n    display: inline-block;\n    border: 1px solid #C6C9C9;\n    border-radius: 4px;\n    height: 420px;\n    width: 400px;\n}\n\n.profilephoto {\n    background-color: #EFECEC;\n    border-right: none;\n    border-bottom-right-radius: 0px;\n    border-top-right-radius: 0px;\n}\n\n.profiledata {\n    border-left: 1px solid #C6C9C9;\n    border-top-left-radius: 0px;\n    border-bottom-left-radius: 0px;\n    width: 600px;\n}\n.photobox {\n    text-align: center;\n}\n\n.titel {\n    font-size: 30px;\n    font-weight: bold;\n}\n\n.photobox {\n    padding-top: 40px;\n}\n\n.photoframe {\n    padding-top: 40px;\n}\n\n.setphoto {   \n    margin-left: 80px;\n    padding: 20px;\n    border: 2px #999 dashed;\n    color: #3d76c3;\n    background-color: #fff;\n    width: 200px;\n    height: 210px;\n}\n\n.phototxt {\n\n}\n\n.personalbox {\n    padding: 40px;\n}\n\n.personalform {\n    padding-top: 20px;\n    padding-bottom: 20px;\n}\n\n.mailcheckbox {\n    padding-top: 10px;\n}\n\n.blue {\n    background-color: #4b7ec0;\n    width: 180px;\n}\n\n.blue:hover {\n    background-color: #3a87ad;\n}\n\n.rightbtn {\n    padding-top: 60px;\n    float: right;\n}\n\n.information {\n    color: #24c58f;\n}\n\n.defaultpic {\n}\n\n.insertphoto {\n    fill: #E5E5E5;\n    padding-top: 40px;\n    padding-bottom: 40px;\n}\n\n/*SYSTEMSETTINGS*/\n\n.systemcard {\n    width: 100%;\n    border-radius: 4px\n}\n\n.system {\n    margin: 40px;\n}\n\n.middle {\n    padding-top: 40px;\n    overflow: hidden;\n}\n\n.setlogo {\n    text-align: center;\n    border: 3px #E5E5E5 dashed;\n    color: #3d76c3;\n    background-color: #fff;\n    width: 200px;\n    height: 240px;\n    display: inline-block;\n}\n\n.systxt {\n    padding-top: 20px;\n}\n\n.colorpickbox {\n    display: inline-block;\n    margin-left: 30px;\n    background-color: #EBEBEB;\n    width: 700px;\n    display: inline-block;\n    height: 240px;\n    vertical-align: top;\n}\n\n.foot {\n    padding: 40px 0px 0px 0px;\n}\n\n.left{\n    float: left;\n    \n}\n\n.right {\n    float: right;\n}", ""]);
 
 	// exports
 
@@ -34641,10 +34641,6 @@
 	    handleResetSubmit: function handleResetSubmit(email) {
 	        var that = this;
 
-	        that.setState({
-	            message: ''
-	        }),
-
 	        //Submit to the server
 	        $.ajax({
 	            url: this.props.ajaxUrl + "/email",
@@ -34653,18 +34649,17 @@
 	            data: email,
 	            success: function success(data) {
 	                if (data.status === "success") {
-	                    //location.href="user_settings.php";
-	                    var sendMessage = "Thank you. Please make sure you check your inbox for our confirmation.";
+	                    var sendMessage = "Success";
 	                    that.setState({
-	                        message: sendMessage
+	                        message: sendMessage,
+	                        successmessage: "Thank you. Please make sure you check your inbox for our confirmation.",
+	                        successclass: "alert alert-success alert-block"
 	                    });
-	                    console.log('Gelukt');
+	                    console.log("success");
 	                } else if (data.status === "fail") {
-	                    console.log(data.message);
 	                    var errormessage = "Wrong email";
-	                    console.log(errormessage);
 	                    that.setState({
-	                        message: data.message
+	                        message: errormessage
 	                    });
 	                }
 	            },
@@ -34676,7 +34671,10 @@
 
 	    render: function render() {
 	        return _react2['default'].createElement('div', null, _react2['default'].createElement(_LayoutBackgroundDeploymentTextJs2['default'], null), _react2['default'].createElement('div', { className: 'white_block' }, _react2['default'].createElement('div', { className: 'resetBox' }, _react2['default'].createElement('div', { className: 'demo-card-square mdl-card mdl-shadow--2dp' }, _react2['default'].createElement('div', { className: 'mdl-cardbox' }, _react2['default'].createElement('div', { className: 'head' }, 'Reset password'), _react2['default'].createElement(EmailForm, { onResetSubmit: this.handleResetSubmit,
-	            foo: this.state.message }))))));
+	            notification: this.state.message,
+	            succesnotification: this.state.successmessage,
+	            infoclass: this.state.infoclass,
+	            successclass: this.state.successclass }))))));
 	    }
 	});
 
@@ -34702,16 +34700,23 @@
 
 	        if (!email) {
 	            this.setState({
-	                errormessage: 'Empty email'
+	                notification: '',
+	                infoclass: "alert alert-info alert-block",
+	                warningnotification: "Empty email",
+	                errornotification: ""
 	            });
-
-	            return;
+	        } else if (this.props.notification === "Wrong email") {
+	            this.setState({
+	                notification: "",
+	                infoclass: "alert alert-error alert-block",
+	                warningnotification: "",
+	                errornotification: "This email does not exist"
+	            });
 	        }
 
 	        //Empty form & errormessage
 	        this.setState({
-	            email: '',
-	            errormessage: ''
+	            email: ''
 	        });
 
 	        //Send request to the server
@@ -34720,12 +34725,20 @@
 	        });
 	    },
 
+	    showMessage: function showMessage() {
+	        if (this.props.notification === "Success") {
+	            return _react2['default'].createElement('div', { className: this.props.successclass }, this.props.succesnotification);
+	        } else {
+	            return _react2['default'].createElement('div', { className: this.state.infoclass }, this.state.errornotification, this.state.warningnotification);
+	        }
+	    },
+
 	    render: function render() {
-	        return _react2['default'].createElement('form', { className: 'emailForm', onSubmit: this.handleSubmit }, _react2['default'].createElement('div', { className: 'errormsg-box' }, this.props.foo), _react2['default'].createElement('div', { className: 'errormsg-box' }, this.state.errormessage), _react2['default'].createElement('div', { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' }, _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	        return _react2['default'].createElement('form', { className: 'emailForm', onSubmit: this.handleSubmit }, this.showMessage(), _react2['default'].createElement('div', { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' }, _react2['default'].createElement('input', { className: 'mdl-textfield__input',
 	            type: 'text',
 	            value: this.state.email,
 	            onChange: this.handleEmailChange,
-	            id: 'email' }), _react2['default'].createElement('label', { className: 'mdl-textfield__label', htmlFor: 'email' }, 'E-mail adress', _react2['default'].createElement('span', { className: 'form_icon' }, _react2['default'].createElement('svg', { height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' }), _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }))))), _react2['default'].createElement('div', { className: 'forget_pwd' }, _react2['default'].createElement('span', null, _react2['default'].createElement(_reactRouter.Link, { to: '/' }, 'Back to login')), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button login',
+	            id: 'email' }), _react2['default'].createElement('label', { className: 'mdl-textfield__label', htmlFor: 'email' }, 'E-mail adress', _react2['default'].createElement('span', { className: 'form_icon' }, _react2['default'].createElement('svg', { height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' }), _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }))))), _react2['default'].createElement('div', { className: 'forget_pwd' }, _react2['default'].createElement('span', null, _react2['default'].createElement(_reactRouter.Link, { to: '/login' }, 'Back to login')), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button login',
 	            type: 'submit',
 	            name: 'submit' }, 'RESET')));
 	    }
@@ -34977,17 +34990,26 @@
 
 	        if (!username || !password) {
 	            this.setState({
-	                errormessage: 'Empty username or password'
+	                errormessage: 'Empty username or password',
+	                infoclass: "alert alert-info alert-block",
+	                notification: "",
+	                errorclass: ""
 	            });
 
 	            return;
+	        } else if (this.props.notification === "Incorrect username or password") {
+	            this.setState({
+	                notification: this.props.notification,
+	                errorclass: "alert alert-error alert-block",
+	                errormessage: '',
+	                infoclass: ""
+	            });
 	        }
 
 	        //Empty form & errormessage
 	        this.setState({
 	            username: '',
-	            password: '',
-	            errormessage: ''
+	            password: ''
 	        });
 
 	        //Send request to the server
@@ -35003,7 +35025,7 @@
 	    //    },
 
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'loginForm' }, _react2['default'].createElement('form', { className: 'inlogForm', onSubmit: this.handleSubmit }, _react2['default'].createElement('div', { className: 'alert alert-info fade in' }, this.props.notification), _react2['default'].createElement('div', { className: 'alert alert-warning' }, this.state.errormessage), _react2['default'].createElement('div', { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' }, _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	        return _react2['default'].createElement('div', { className: 'loginForm' }, _react2['default'].createElement('form', { className: 'inlogForm', onSubmit: this.handleSubmit }, _react2['default'].createElement('div', { className: this.state.errorclass }, this.state.notification), _react2['default'].createElement('div', { className: this.state.infoclass }, this.state.errormessage), _react2['default'].createElement('div', { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' }, _react2['default'].createElement('input', { className: 'mdl-textfield__input',
 	            type: 'text',
 	            value: this.state.username,
 	            onChange: this.handleUsernameChange,
@@ -35573,7 +35595,7 @@
 	    displayName: 'UsersBox',
 
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement(_filterboxJs2['default'], null), _react2['default'].createElement(_userstableJs2['default'], { serverUrl: this.props.serverUrl }));
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement(_userstableJs2['default'], { serverUrl: this.props.serverUrl }));
 	    }
 	});
 
@@ -35692,7 +35714,8 @@
 	    render: function render() {
 	        return _react2['default'].createElement('div', { className: 'list users' }, _react2['default'].createElement(UsersList, { refreshUsersList: this.refreshUsers, data: this.state.data, serverUrl: this.props.serverUrl }), _react2['default'].createElement(_reactRouter.Link, { to: '/newuser' }, _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button add_user',
 	            type: '',
-	            name: 'submit' }, _react2['default'].createElement('svg', { className: 'add_icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })))));
+	            name: 'submit',
+	            id: 'addnewuser' }, _react2['default'].createElement('svg', { className: 'add_icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })))));
 	    }
 	});
 
@@ -36076,7 +36099,7 @@
 
 	    addNewOrganisation: function addNewOrganisation(newuser) {
 	        $.ajax({
-	            url: "http://garcon-server.jinhua.choffice.nl/addorganisation",
+	            url: this.props.serverUrl + "/addorganisation",
 	            dataType: 'json',
 	            type: 'POST',
 	            data: newuser,
@@ -36226,6 +36249,7 @@
 	    displayName: 'OrganisationItem',
 
 	    countProjects: function countProjects(data) {
+
 	        $.ajax({
 	            url: this.props.serverUrl + "/projects",
 	            dataType: 'json',
@@ -36243,7 +36267,8 @@
 
 	    getInitialState: function getInitialState() {
 	        return {
-	            project: []
+	            project: [],
+	            status: []
 	        };
 	    },
 
@@ -36259,9 +36284,7 @@
 	            success: (function (data) {
 	                if (data.status === "success") {
 	                    this.props.reload();
-	                } else if (data.status === "fail") {
-	                    console.log("Failed with delete...");
-	                }
+	                } else if (data.status === "fail") {}
 	            }).bind(this),
 	            error: (function (xhr, status, err, jqXHR) {
 	                console.error(this.props.url, status, err.toString());
@@ -36279,13 +36302,37 @@
 	            return _react2['default'].createElement('div', { className: 'card_projects' }, 'No projects');
 	        }
 	    },
+
+	    loadStatus: function loadStatus() {
+
+	        $.ajax({
+	            url: this.props.serverUrl + "/applicationstatus",
+	            dataType: 'json',
+	            data: { orgid: this.props.org.organisationid },
+	            success: (function (data) {
+	                this.setState({
+	                    status: data.status
+	                });
+	            }).bind(this),
+	            error: (function (xhr, status, err) {
+	                console.error(this.props.url, status, err.toString());
+	            }).bind(this)
+	        });
+
+	        if (this.state.status === "Error") {
+	            return _react2['default'].createElement('div', { className: 'status error' }, _react2['default'].createElement('span', null, _react2['default'].createElement('svg', { className: 'error', fill: '#000000', height: '20', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }), _react2['default'].createElement('path', { d: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z' }))), _react2['default'].createElement('span', null, 'Error'));
+	        } else if (this.state.status === "Available") {
+	            return _react2['default'].createElement('div', { className: 'status available' }, _react2['default'].createElement('svg', { className: 'available', fill: '#000000', height: '20', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }), _react2['default'].createElement('path', { d: 'M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z' })), 'Available');
+	        } else {
+	            return _react2['default'].createElement('div', null, 'No status');
+	        }
+	    },
+
 	    render: function render() {
 
-	        console.log(this.state.project);
-
-	        return _react2['default'].createElement('div', { className: 'mdl-card mdl-shadow--2dp cards ' }, _react2['default'].createElement('div', { className: 'status_bar' }), _react2['default'].createElement('div', { className: 'status' }, _react2['default'].createElement('button', { className: 'edit-options',
+	        return _react2['default'].createElement('div', { className: 'mdl-card mdl-shadow--2dp cards ' }, _react2['default'].createElement('div', { className: 'status_bar ' + this.state.status }), _react2['default'].createElement('div', { className: 'status' }, _react2['default'].createElement('button', { className: 'edit-options',
 	            id: this.props.org.organisationid }, _react2['default'].createElement('i', { className: 'material-icons' }, _react2['default'].createElement('svg', { className: 'edit_icon card', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }), _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect',
-	            htmlFor: this.props.org.organisationid }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/editorganisation/' + this.props.org.organisationid + '/' + this.props.countdata }, 'Edit')), _react2['default'].createElement('li', { className: 'mdl-menu__item', onClick: this.deleteOrganisation }, ' Delete'))), _react2['default'].createElement('div', { className: 'card_data' }, _react2['default'].createElement('div', { className: 'orglogo' }, _react2['default'].createElement('img', { src: this.props.org.orgphoto })), _react2['default'].createElement('div', { className: 'card_title' }, this.props.org.orgname), _react2['default'].createElement('div', { className: 'card_updatedate' }, this.props.org.orgdate), _react2['default'].createElement(_organisationProjectBtnJs2['default'], { orgid: this.props.org.organisationid, orgname: this.props.org.orgname, projects: this.state.project })), _react2['default'].createElement('div', { className: 'mdl-card__actions mdl-card--border detailinfo' }, this.Projects(), _react2['default'].createElement('div', { className: 'card_project_status' }, 'Available')));
+	            htmlFor: this.props.org.organisationid }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/editorganisation/' + this.props.org.organisationid + '/' + this.props.countdata }, 'Edit')), _react2['default'].createElement('li', { className: 'mdl-menu__item', onClick: this.deleteOrganisation }, ' Delete'))), _react2['default'].createElement('div', { className: 'card_data' }, _react2['default'].createElement('div', { className: 'orglogo' }, _react2['default'].createElement('img', { src: this.props.org.orgphoto })), _react2['default'].createElement('div', { className: 'card_title' }, this.props.org.orgname), _react2['default'].createElement('div', { className: 'card_updatedate' }, this.props.org.orgdate), _react2['default'].createElement(_organisationProjectBtnJs2['default'], { orgid: this.props.org.organisationid, orgname: this.props.org.orgname, projects: this.state.project })), _react2['default'].createElement('div', { className: 'mdl-card__actions mdl-card--border detailinfo' }, this.Projects(), _react2['default'].createElement('div', { className: 'card_project_status' }, this.loadStatus())));
 	    }
 	});
 
@@ -36385,7 +36432,7 @@
 	        if (firstName === 'Login') {
 	            return _react2['default'].createElement('div', { className: 'mdl-layout__header-row' }, _react2['default'].createElement('div', { className: 'garconlogo' }, _react2['default'].createElement(_reactRouter.Link, { to: '/login' }, _react2['default'].createElement('img', { className: 'image', src: 'assets/img/logo.png', alt: 'garcon-logo' }))), _react2['default'].createElement('div', { className: 'mdl-layout-spacer' }), _react2['default'].createElement('div', { className: 'navigation login_button' }, _react2['default'].createElement(_reactRouter.Link, { to: '/login' }, _react2['default'].createElement('span', null, _react2['default'].createElement('svg', { id: 'icon_login', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z' }), _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }))), _react2['default'].createElement('span', { className: 'login_text' }, this.props.status, ' '))));
 	        } else {
-	            return _react2['default'].createElement('div', { className: 'mdl-layout__header-row' }, _react2['default'].createElement('div', { className: 'garconlogo' }, _react2['default'].createElement(_reactRouter.Link, { to: '/' }, _react2['default'].createElement('img', { className: 'image', src: 'assets/img/logo.png', alt: 'garcon-logo' }))), _react2['default'].createElement('div', { className: 'mdl-layout-spacer' }), _react2['default'].createElement('div', { className: 'navigation menu' }, _react2['default'].createElement(_reactRouter.Link, { to: '/' }, 'Dashboard'), _react2['default'].createElement(_reactRouter.Link, { to: '/organisation' }, 'Organisations'), _react2['default'].createElement('a', { id: 'settings' }, 'Settings', _react2['default'].createElement('span', null, _react2['default'].createElement('svg', { id: 'arrow_dropdown', fill: '#000000', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M7 10l5 5 5-5z' }), _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }))))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-js-menu navigation tabmenu_item', htmlFor: 'settings' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/usersettings' }, 'Users')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/systemsetting' }, 'System'))), _react2['default'].createElement('div', { id: 'btn-login', className: 'navigation login_button' }, _react2['default'].createElement('a', null, _react2['default'].createElement('span', null, _react2['default'].createElement('img', { src: this.props.photo, id: 'icon_login' })), _react2['default'].createElement('span', { className: 'login_text' }, this.props.status, ' '))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-js-menu navigation tabmenu_item', htmlFor: 'btn-login' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/accountsetting' }, 'Edit profile')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/', onClick: this.logout }, 'Logout'))));
+	            return _react2['default'].createElement('div', { className: 'mdl-layout__header-row' }, _react2['default'].createElement('div', { className: 'garconlogo' }, _react2['default'].createElement(_reactRouter.Link, { to: '/' }, _react2['default'].createElement('img', { className: 'image', src: 'assets/img/logo.png', alt: 'garcon-logo' }))), _react2['default'].createElement('div', { className: 'mdl-layout-spacer' }), _react2['default'].createElement('div', { className: 'navigation menu' }, _react2['default'].createElement(_reactRouter.Link, { to: '/' }, 'Dashboard'), _react2['default'].createElement(_reactRouter.Link, { to: '/organisation' }, 'Organisations'), _react2['default'].createElement('a', { id: 'settings' }, 'Settings', _react2['default'].createElement('span', null, _react2['default'].createElement('svg', { id: 'arrow_dropdown', fill: '#000000', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M7 10l5 5 5-5z' }), _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }))))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-js-menu navigation tabmenu_item', htmlFor: 'settings' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/usersettings' }, 'Users')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/systemsetting' }, 'System'))), _react2['default'].createElement('div', { id: 'btn-login', className: 'navigation login_button' }, _react2['default'].createElement('a', null, _react2['default'].createElement('span', null, _react2['default'].createElement('img', { src: this.props.photo, id: 'icon_login' })), _react2['default'].createElement('span', { className: 'login_text' }, this.props.status, ' '))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-js-menu navigation tabmenu_item', htmlFor: 'btn-login' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/accountsetting' }, 'Edit profile')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, _react2['default'].createElement(_reactRouter.Link, { to: '/login', onClick: this.logout }, 'Logout'))));
 	        }
 	    }
 	});
@@ -36464,35 +36511,132 @@
 	 * and open the template in the editor.
 	 */
 
-	"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 
 	function _interopRequireDefault(obj) {
-	    return obj && obj.__esModule ? obj : { "default": obj };
+	    return obj && obj.__esModule ? obj : { 'default': obj };
 	}
 
 	var _react = __webpack_require__(8);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var MyProfileBox = _react2["default"].createClass({
-	    displayName: "MyProfileBox",
+	var _profileinformationJs = __webpack_require__(249);
+
+	var _profileinformationJs2 = _interopRequireDefault(_profileinformationJs);
+
+	var _profilephotoJs = __webpack_require__(250);
+
+	var _profilephotoJs2 = _interopRequireDefault(_profilephotoJs);
+
+	var MyProfileBox = _react2['default'].createClass({
+	    displayName: 'MyProfileBox',
 
 	    render: function render() {
-	        return _react2["default"].createElement("div", { className: "myprofilebox" }, "Hello");
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement('div', { className: 'profile' }, _react2['default'].createElement('div', { className: 'mdl-card profilecards profilephoto' }, _react2['default'].createElement(_profilephotoJs2['default'], null)), _react2['default'].createElement('div', { className: 'mdl-card profilecards profiledata' }, _react2['default'].createElement(_profileinformationJs2['default'], null))));
 	    }
 	});
 
-	exports["default"] = MyProfileBox;
-	module.exports = exports["default"];
+	exports['default'] = MyProfileBox;
+	module.exports = exports['default'];
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "myprofile.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(165);
+
+	var ProfileInformation = _react2['default'].createClass({
+	    displayName: 'ProfileInformation',
+
+	    render: function render() {
+	        return _react2['default'].createElement('div', { className: 'personalbox' }, _react2['default'].createElement('div', { className: 'titel information' }, 'Personal information'), _react2['default'].createElement('div', { className: 'informationform' }, _react2['default'].createElement('div', { className: 'personalform' }, _react2['default'].createElement('div', { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' }, _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	            type: 'text',
+	            id: 'name' }), _react2['default'].createElement('label', { className: 'mdl-textfield__label', htmlFor: 'name' }, 'Name')), _react2['default'].createElement('div', { className: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label' }, _react2['default'].createElement('input', { className: 'mdl-textfield__input',
+	            type: 'text',
+	            id: 'mail' }), _react2['default'].createElement('label', { className: 'mdl-textfield__label', htmlFor: 'mail' }, 'E-mail adress'))), _react2['default'].createElement('label', { className: 'mdl-checkbox mdl-js-checkbox showemail', htmlFor: 'checkbox-signin' }, _react2['default'].createElement('input', { className: 'mdl-checkbox__input',
+	            id: 'checkbox-signin',
+	            type: 'checkbox',
+	            defaultChecked: 'defaultChecked' }), _react2['default'].createElement('span', { className: 'mdl-checkbox__label' }, ' Don\'t show my e-mail to other users')), _react2['default'].createElement('div', { className: 'rightbtn' }, _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button' }, 'Save settings'))));
+	    }
+	});
+
+	exports['default'] = ProfileInformation;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "profileinformation.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	/* 
+	 * To change this license header, choose License Headers in Project Properties.
+	 * To change this template file, choose Tools | Templates
+	 * and open the template in the editor.
+	 */
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(165);
+
+	var ProfilePhoto = _react2['default'].createClass({
+	    displayName: 'ProfilePhoto',
+
+	    render: function render() {
+	        return _react2['default'].createElement('div', { className: 'photobox' }, _react2['default'].createElement('div', { className: 'titel photo' }, 'Profile photo'), _react2['default'].createElement('div', { className: 'photoframe' }, _react2['default'].createElement('div', { className: 'setphoto' }, _react2['default'].createElement('div', { className: 'phototxt' }, 'Drag your profile photo in here'), _react2['default'].createElement('div', { className: 'defaultpic' }, _react2['default'].createElement('svg', { className: 'insertphoto', height: '50', viewBox: '0 0 24 24', width: '48', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z' }), _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }))), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button blue' }, 'Or browse...'))));
+	    }
+	});
+
+	exports['default'] = ProfilePhoto;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "profilephoto.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36525,7 +36669,7 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-	var _systemsettingboxJs = __webpack_require__(250);
+	var _systemsettingboxJs = __webpack_require__(252);
 
 	var _systemsettingboxJs2 = _interopRequireDefault(_systemsettingboxJs);
 
@@ -36533,7 +36677,7 @@
 	    displayName: 'SystemSetting',
 
 	    render: function render() {
-	        return _react2['default'].createElement('div', { className: 'systemsetting' }, _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: SystemSetting.title }), _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null));
+	        return _react2['default'].createElement('div', { className: 'systemsetting' }, _react2['default'].createElement(_LayoutGreenboxJs2['default'], { title: SystemSetting.title }), _react2['default'].createElement(_LayoutBreadcrumbsJs2['default'], null), _react2['default'].createElement(_systemsettingboxJs2['default'], null));
 	    }
 	});
 
@@ -36546,24 +36690,46 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "systemsetting.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 250 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	"use strict"
 
 	/* 
 	 * To change this license header, choose License Headers in Project Properties.
 	 * To change this template file, choose Tools | Templates
 	 * and open the template in the editor.
 	 */
-	;
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { "default": obj };
+	}
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var SystemSettingsBox = _react2["default"].createClass({
+	    displayName: "SystemSettingsBox",
+
+	    render: function render() {
+	        return _react2["default"].createElement("div", { className: "box" }, _react2["default"].createElement("div", { className: "mdl-card mdl-shadow--2dp systemcard" }, _react2["default"].createElement("div", { className: "system" }, _react2["default"].createElement("div", { className: "titel" }, "Visual settings"), _react2["default"].createElement("div", { className: "middle" }, _react2["default"].createElement("div", { className: "setlogo" }, _react2["default"].createElement("div", { className: "systxt" }, "Drag your logo here"), _react2["default"].createElement("div", { className: "defaultpic" }, _react2["default"].createElement("svg", { className: "insertphoto", height: "48", viewBox: "0 0 24 24", width: "48", xmlns: "http://www.w3.org/2000/svg" }, _react2["default"].createElement("path", { d: "M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" }), _react2["default"].createElement("path", { d: "M0 0h24v24H0z", fill: "none" }))), _react2["default"].createElement("button", { className: "mdl-button mdl-js-button blue" }, "Or browse...")), _react2["default"].createElement("div", { className: "colorpickbox" }, " Brandcolor")), _react2["default"].createElement("div", { className: "foot" }, _react2["default"].createElement("span", { className: "left" }, _react2["default"].createElement("a", { href: "" }, "Restore original settings")), _react2["default"].createElement("span", { className: "right" }, _react2["default"].createElement("button", { className: "mdl-button mdl-js-button" }, "Save settings"))))));
+	    }
+	});
+
+	exports["default"] = SystemSettingsBox;
+	module.exports = exports["default"];
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "systemsettingbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 251 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36615,7 +36781,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "recentactivity.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 252 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36650,7 +36816,7 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-	var _edituserboxJs = __webpack_require__(253);
+	var _edituserboxJs = __webpack_require__(255);
 
 	var _edituserboxJs2 = _interopRequireDefault(_edituserboxJs);
 
@@ -36701,7 +36867,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "edituser.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 253 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36813,7 +36979,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "edituserbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 254 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36848,7 +37014,7 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-	var _projectboxJs = __webpack_require__(255);
+	var _projectboxJs = __webpack_require__(257);
 
 	var _projectboxJs2 = _interopRequireDefault(_projectboxJs);
 
@@ -36869,7 +37035,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "project.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 255 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -36894,7 +37060,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _projecttableJs = __webpack_require__(256);
+	var _projecttableJs = __webpack_require__(258);
 
 	var _projecttableJs2 = _interopRequireDefault(_projecttableJs);
 
@@ -36971,7 +37137,7 @@
 
 	    render: function render() {
 
-	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement('div', null, 'Hier komen de filters ...'), _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data, serverUrl: this.props.serverUrl }), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button add_user',
+	        return _react2['default'].createElement('div', { className: 'box' }, _react2['default'].createElement('div', null), _react2['default'].createElement(_projecttableJs2['default'], { data: this.state.data, serverUrl: this.props.serverUrl }), _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button add_user',
 	            type: '',
 	            name: 'submit',
 	            id: 'neworganisation' }, _react2['default'].createElement('svg', { className: 'add_icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' }))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
@@ -36991,7 +37157,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "projectbox.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 256 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -37016,7 +37182,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _projectitemJs = __webpack_require__(257);
+	var _projectitemJs = __webpack_require__(259);
 
 	var _projectitemJs2 = _interopRequireDefault(_projectitemJs);
 
@@ -37039,7 +37205,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "projecttable.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 257 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -37066,7 +37232,7 @@
 
 	var _reactRouter = __webpack_require__(166);
 
-	var _ApplicationApplicationitemJs = __webpack_require__(258);
+	var _ApplicationApplicationitemJs = __webpack_require__(260);
 
 	var _ApplicationApplicationitemJs2 = _interopRequireDefault(_ApplicationApplicationitemJs);
 
@@ -37199,7 +37365,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "projectitem.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 258 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -37242,7 +37408,7 @@
 	    render: function render() {
 	        return _react2['default'].createElement('tr', { className: this.props.state }, _react2['default'].createElement('td', null, _react2['default'].createElement('div', { className: 'first-detail-data' }, this.props.app.appname)), _react2['default'].createElement('td', null, this.props.app.editdate), _react2['default'].createElement('td', null, _react2['default'].createElement('div', { className: 'status' }, this.props.app.version)), _react2['default'].createElement('td', null, _react2['default'].createElement('div', { className: 'status' }, this.showAppStatus())), _react2['default'].createElement('td', null, _react2['default'].createElement('div', { className: 'status' }, _react2['default'].createElement('button', { className: 'edit-options app-edit',
 	            id: this.props.app.appid }, _react2['default'].createElement('i', { className: 'material-icons' }, _react2['default'].createElement('svg', { className: 'edit_icon', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }), _react2['default'].createElement('path', { d: 'M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' })))), _react2['default'].createElement('ul', { className: 'mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect ',
-	            htmlFor: this.props.app.appid }, _react2['default'].createElement(_reactRouter.Link, { to: '/RecentActivity' }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Recent activity')), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Edit'), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Delete')))), _react2['default'].createElement('tr', null, _react2['default'].createElement('td', null, _react2['default'].createElement('button', { className: 'mdl-button mdl-js-button add-app' }, _react2['default'].createElement('svg', { className: 'add-application-icon', fill: '#000000', height: '24', viewBox: '0 0 24 24', width: '24', xmlns: 'http://www.w3.org/2000/svg' }, _react2['default'].createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' })), 'New application'))));
+	            htmlFor: this.props.app.appid }, _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Edit'), _react2['default'].createElement('li', { className: 'mdl-menu__item' }, 'Delete')))));
 	    }
 	});
 
@@ -37252,7 +37418,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "applicationitem.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 259 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -37287,7 +37453,7 @@
 
 	var _LayoutBreadcrumbsJs2 = _interopRequireDefault(_LayoutBreadcrumbsJs);
 
-	var _editorganisationboxJs = __webpack_require__(260);
+	var _editorganisationboxJs = __webpack_require__(262);
 
 	var _editorganisationboxJs2 = _interopRequireDefault(_editorganisationboxJs);
 
@@ -37337,7 +37503,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "editorganisation.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 260 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/var/www/sources/garcon-gui/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {

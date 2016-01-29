@@ -49,7 +49,7 @@ var UsersTable= React.createClass({
                
                     <UsersList refreshUsersList={this.refreshUsers} data={this.state.data} serverUrl={this.props.serverUrl}/>   
                     
-
+                    <Link to="/newuser">
                         <button className = "mdl-button mdl-js-button add_user"
                                     type=""
                                     name="submit"
@@ -59,33 +59,7 @@ var UsersTable= React.createClass({
                             </svg>
                     
                         </button>
-                
-                        <ul className="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect "
-                        htmlFor="addnewuser">
-                                
-                            <div className="mdl-cardbox" onClick={this.stopPropagation}>
-                                <Link to="/usersettings"> Terug-btn </Link>
-                                    <h5>Add new user </h5>
-
-                                    Username: <input  className="mdl-textfield__input"
-                                        type="text"
-                                        id="username"
-                                        ref="username"/>
-                                    <p></p>
-                                    E-mail: <input  className="mdl-textfield__input"
-                                        type="text"
-                                        id="email"
-                                        ref="email"/>
-                                    <p></p>
-
-
-                                    <button className="mdl-button mdl-js-button"
-                                            type="submit"
-                                            onClick={this.handleSubmit}
-                                            name="submit">Add user
-                                            </button>
-                                </div>
-                        </ul>
+                </Link>
                 </div>
                 );
     }
